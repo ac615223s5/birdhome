@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="scroll-smooth">
+
+  {%- include head.html -%}
+
+  <body class="bg-cover bg-fixed bg-[url(../../assets/images/wp5619857-fantasy-anime-wallpapers.jpg)]">
+    <div class="fixed max-xl:w-screen xl:h-screen z-20 bg-white/60 dark:bg-indigo-950/60">
+      {%- include header.html -%}
+    </div>
+    <div class="flex flex-col grow">
+      <div class="coding mb-16">
+        <div class="h-screen bg-[url(../../assets/images/wp5619865-fantasy-anime-wallpapers.jpg)] bg-cover bg-fixed overflow-auto flex items-center justify-center">
+          <div class="grow max-w-screen-sm p-5 bg-white/20 text-black dark:bg-indigo-950/20 dark:text-white text-xl">
+            <h1 class="text-4xl my-7">Algorithm design</h1>
+            <p>Dmoj: <a href="https://dmoj.ca/user/Aaeria" style="color:darkviolet;">Aaeria</a> |
+              Codeforces: <a href="https://codeforces.com/profile/Aaeria" style="color:orange;">Aaeria</a></p>
+            <ol>
+              <li><a class="decoration-inherit !text-inherit" href="#algorithm-contests">Algorithm Contests</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#problemsetting">Problemsetting</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#resources">Resources</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#other">Other</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="mx-auto md:py-24 md:px-10 max-w-screen-md bg-white dark:bg-indigo-950 shadow-[0_0_10px_0_white]" style="margin-top: 150px;">
+          {{content}}
+        </div>
+      </div>
+      <div class="bg-white/80 dark:bg-indigo-950/60">
+        {% include footer.html %}
+      </div>
+    </div>
+  </body>
+
+</html>
