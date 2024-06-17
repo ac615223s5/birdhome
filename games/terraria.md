@@ -65,6 +65,11 @@ images:
     label: ""
   - path: "/assets/images/terraria 89.png"
     label: "this world is covered with crimson so all the houses have to be in the air. I also found the design online."
+secondary_nav:
+  - title: "Buildings"
+    url: "#buildings"
+  - title: "BetterFlightControls"
+    url: "#betterflightcontrols"
 ---
 
 ## Buildings
@@ -74,3 +79,21 @@ images:
 {%- for image in page.images -%}
 {%include image.html src=image.path caption=image.label %}
 {%- endfor -%}
+
+-
+
+## BetterFlightControls
+
+I made my own mod containing mostly small edits I think the game should have. Let me tell you, Terraria's source code is not easy to read.
+
+[Code and summary](https://codeberg.org/nieve/ImprovedFlightControls/)
+
+[Download](https://codeberg.org/nieve/ImprovedFlightControls/releases)  
+
+### Terraria festival
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/25fS4ngupGs?si=IDLnxypeSQ-VKVCN" title="YouTube video player" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
