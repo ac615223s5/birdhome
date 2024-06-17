@@ -21,6 +21,7 @@
 title: Birdhome
 author:
   email: kciqcmhk@duck.com
+  matrix: "@alnvyuitw34:matrix.org"
   name:  nieve
 description: >- # this means to ignore newlines until "baseurl:"
   Run Free
@@ -53,6 +54,9 @@ minima:
   social_links:
     - { platform: codeberg, user_url: "https://codeberg.org/nieve" }
     - { platform: github, user_url: "https://github.com/ac615223s5" }
+    - platform: simplex
+      user_url: "https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2FlMAI_ct62DZ8LSS5w-TtWG4G8pT1kVr_%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAbhB6mjf8jT0GO3m5eqLEgRLZ7THEJRcnmXiKn-7aDHc%253D%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion"
+    
 
 header_pages:
   - pages/algorithm.md
