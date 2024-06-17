@@ -5,7 +5,6 @@ permalink: /coding
 ---
 
 - [Fairylands museum](https://fairylands.stellar.agew.tech)
-  - [WebGL Fluid Simulation](https://github.com/ac615223s5/WebGL-Fluid-Simulation)
   - [Fireworks](https://codeberg.org/nieve/fireworks)
   - [WebGL Fluid Simulation](https://codeberg.org/nieve/WebGL-Fluid-Simulation)
   - [Lines](https://fairylands.stellar.agew.tech/widgets/2021-04-13-line-art.html) 
@@ -30,8 +29,6 @@ permalink: /coding
   - [Piped](https://github.com/ac615223s5/Piped)
 - [Lossless Cut](https://github.com/ac615223s5/lossless-cut)
 - [VS theme switcher](https://github.com/ac615223s5/vs-theme-switcher)
-- []()
-- []()
 
 
   

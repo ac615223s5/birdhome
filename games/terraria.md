@@ -68,8 +68,8 @@ images:
 secondary_nav:
   - title: "Buildings"
     url: "#buildings"
-  - title: "BetterFlightControls"
-    url: "#betterflightcontrols"
+  - title: "ImprovedFlightControls"
+    url: "#improvedflightcontrols"
 ---
 
 ## Buildings
@@ -82,7 +82,7 @@ secondary_nav:
 
 -
 
-## BetterFlightControls
+## ImprovedFlightControls
 
 I made my own mod containing mostly small edits I think the game should have. Let me tell you, Terraria's source code is not easy to read.
 
