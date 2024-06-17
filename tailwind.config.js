@@ -13,6 +13,10 @@ module.exports = {
     'grid-cols-4',
     'grid-cols-5',
     'grid-cols-6',
+    'dark:bg-zinc-950',
+    'dark:bg-zinc-900',
+    'dark:bg-black',
+    '!dark:border-0',
   ],
   theme: {
     theme: {
