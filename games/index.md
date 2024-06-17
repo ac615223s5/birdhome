@@ -5,8 +5,8 @@ nav_list: game-pages
 ---
 
 ## Mine
-- [Flight Control](https://github.com/ac615223s5/FlightControl) Terraria mod
 - [Spiral Dreams](https://github.com/ac615223s5/Spiral-Dreams)
+- [ImprovedFlightControls]({% link games/terraria.md%}#improvedflightcontrols) Terraria mod
 
 ## Not mine
 {% for game in site.data.game-pages %}{%unless game.title=="Games"%}
