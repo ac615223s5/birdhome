@@ -56,6 +56,7 @@ minima:
     - { platform: github, user_url: "https://github.com/ac615223s5" }
     - platform: simplex
       user_url: "https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2FlMAI_ct62DZ8LSS5w-TtWG4G8pT1kVr_%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAbhB6mjf8jT0GO3m5eqLEgRLZ7THEJRcnmXiKn-7aDHc%253D%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion"
+    - { platform: youtube, user_url: "https://www.youtube.com/channel/UCm8GhQcqqMeWz67SiMgCwTQ" }
     
 
 header_pages:
