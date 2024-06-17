@@ -6,7 +6,7 @@ So uh, the site got updated. First, I added a bunch of pages and made some new o
 
 I also did some decorating and moved the navigation bar to the right. Since it's hard to read very long lines of text, all the posts are limited in width. On a 4k screen, the post ends up only taking about 30% of the screen width, so all the extra unused space on the side is perfect for adding other elements. 
 
-I installed tailwind css alongside jekyll and alpine to help with my styling. I'll call it the chamomile stack, cause during setup I was drinking chamomile tea. I'm really liking it so far. It's great for websites that don't have user generated content (for that, my preference so far is Vue with a separate backend API).
+I installed tailwind css alongside jekyll and alpine to help with my styling. I'll call it the CHAMOMILE stack, cause during setup I was drinking chamomile tea. I'm really liking it so far. It's great for websites that don't have user generated content (for that, my preference so far is Vue with a backend json API).
 
 ## Web Hosting
 

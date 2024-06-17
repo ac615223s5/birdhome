@@ -1,0 +1,14 @@
+---
+author: nieve
+title: Youtube Injects Ads Server-Side (and Implications)
+---
+
+After months of attempts to prevent adblocker use, youtube has started experimenting with server-side ad injection. Since these advertisements are being directly added into the video data coming from youtube, current adblockers which block html elements or content coming from ad domains (well, ad domains other than youtube itself) will not be effective without blocking the video itself. It's even possible for downloaded videos to contain the ads.
+
+That sucks, how to we get rid of them? Since it's just an experiment for now, there will probably by many workarounds to trick youtube into not giving the ads such as switching (or pretending to switch) to an unsupported browser, video codec, or country. But I wouldn't count on it lasting long.
+
+If video stream does contain ads, the most obvious solution would be to bypass the user interface and just skip past them. Then youtube can encrypt or refuse to send the the video data until the ad finishes playing, but how will they know what time this happens? What if the user skips ahead and plays the ad early, or pretends to be another user who already watched the ads? To prevent this, youtube will have to put all ads at the start of the video and give each user a key when they start watching the video. Then for each key youtube will only provide the video one time after the duration of the ad has passed key. Anyone whose internet connection cuts out during one of the segments will have to watch the ad again. Even then, you could always start loading the videos you want to watch a few minutes in advance or load several videos in parallel.
+
+The next challenge would be detecting the ads in the first place. If Youtube attempts to stop the user from skipping past ads or changes the UI at all, this will be easy. But if they opt for stealth and try to disguise the ad as a regular video segment, we might start using Sponsorblock to manually mark youtube ads in addition to the sponsored ads from the creator. The ad positions will have to be randomized but not too random to prevent detection by comparing two copies of the same video. A good option is to choose a set of ads for each video and slightly modify this set every hour. In that case we will have to store a hash for every non-ad video segment and discard foreign segments. With a 64 bit checksum and 10 second segments, this would require 2.88 gB for a million hours of video.
+
+Anyway, these are all options assuming youtube actually makes the changes. Let's hope they decide that these ads are not worth the cost.
