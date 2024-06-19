@@ -4,6 +4,7 @@ module.exports = {
     './collections/_posts/**/*.{html,md,markdown}',
     './_includes/**/*.html',
     './_layouts/**/*.html',
+    './pages/*.{html,md,markdown}',
     './*.{html,md,markdown}',
   ],
   safelist:[
