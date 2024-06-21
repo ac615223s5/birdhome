@@ -1,2 +1,2 @@
-bundle exec jekyll serve --drafts --livereload
+bundle exec jekyll serve --drafts --livereload --future
 pause
