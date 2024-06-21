@@ -9,4 +9,4 @@ On another note, I mirrored all my repositories from Github to [Codeberg](https:
 
 The weather's been unbearably hot all month, but today it dropped to an amazing 15 degrees. I decided to go on a walk through the forest. Someone planted some flowers by the lake this year which was nice. I also saw bunch of waterfowl. These days the eggs have hatched and they are all too busy taking care of their children to pay attention to me. Still, it's always nice to see them. 
 
-And yeah that's everything I have to say. I hope you have a chance this week to do something that makes you smile. Goodbye everyone.
+And yeah that's everything I have to say. I hope you have a chance this week to do something that makes you smile. Goodbye now.
