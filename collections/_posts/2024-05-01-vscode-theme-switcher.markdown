@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 ![Themes]({{"/assets/images/vsthemes.png"|relative_url}})

@@ -60,6 +60,7 @@ minima:
     
 
 header_pages:
+  - pages/blog.html
   - pages/algorithm.md
   - pages/coding.md
   - games/index.md

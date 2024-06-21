@@ -1,6 +1,7 @@
 ---
 author: nieve
 title: Youtube Injects Ads Server-Side (and Implications)
+tags: external-news discussion
 ---
 
 After months of attempts to prevent adblocker use, youtube has started experimenting with server-side ad injection. Since these advertisements are being directly added into the video data coming from youtube, current adblockers which block html elements or content coming from ad domains (well, ad domains other than youtube itself) will not be effective without blocking the video itself. It's even possible for downloaded videos to contain the ads.

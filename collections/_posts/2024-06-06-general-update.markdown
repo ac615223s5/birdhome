@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 So uh, the site got updated. First, I added a bunch of pages and made some new ones, but then I decided to move the widgets out into their own website again. This website will be for blogs and other posts, and the other legacy widgets will be in the museum. But if I want to make a new blog that includes an interactive program... I'll just add the blog here. So I guess the museum is just an archive? Sorry if this sounds confusing, it confuses me too.

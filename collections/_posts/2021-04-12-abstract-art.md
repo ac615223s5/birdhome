@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 Abstract art using intersecting lines that divide the image into many sections.
 

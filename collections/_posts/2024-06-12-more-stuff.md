@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 Would you look at that, another post, wow.
 

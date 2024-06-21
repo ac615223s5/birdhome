@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 Here's a fireworks simulation. It's a nice decoration for holidays and syncs up with whatever music you are listening to. You can set it as your desktop wallpaper using [Lively](https://github.com/rocksdanister/lively).

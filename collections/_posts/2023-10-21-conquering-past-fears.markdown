@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: writeup
 ---
 
 With my training nearing completion, I decided to revisit a few past problems I had failed on and find some catharsis.

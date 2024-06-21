@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 A lot of the stuff from the main website will be moving in, including the pages about programming and coding contests. I realized they were actually blogs just in a different style lol. Birdhome will be renovated to fit these new additions.

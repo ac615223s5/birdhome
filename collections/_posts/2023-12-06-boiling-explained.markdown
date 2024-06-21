@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: discussion
 ---
 
 So realized I didn't really understand how water boils. I used to think it was because the higher the temperature, the larger the fraction of molecules that had enough energy to break free.

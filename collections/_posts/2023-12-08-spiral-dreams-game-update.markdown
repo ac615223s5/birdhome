@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 Spiral Dreams is in development. Here are some new feature previews.

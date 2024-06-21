@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 Here's a fluid simulation that responds to sound. It ebbs and flows in sync with your computer's audio and is a great background for music. You can set it as your desktop wallpaper using [Lively](https://github.com/rocksdanister/lively).

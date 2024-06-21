@@ -1,5 +1,6 @@
 ---
 author: nieve
+tags: internal-news
 ---
 
 If you want to use the new built-in discord themes without a premium subscription, you can do so by injecting the following styles:
