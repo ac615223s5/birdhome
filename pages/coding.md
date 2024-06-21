@@ -15,20 +15,21 @@ permalink: /coding
   - [Solar System](https://SolarSystem.stellar.agew.tech)
 - [Games]({% link games/index.md%})
 - Website themes/scripts
-  - [discord-adblock](https://github.com/ac615223s5/discord-adblock)
+  - [discord-adblock](https://codeberg.org/nieve/discord-adblock)
   - [discord premium theme](https://codeberg.org/nieve/discord-premium-theme)
-  - [Private frontends manager](https://github.com/ac615223s5/redirect)
+  - [Private frontends manager](https://codeberg.org/nieve/redirect)
 - firefox addons/themes
-  - [container-bookmarks](https://github.com/ac615223s5/container-bookmarks)
-  - [Ruby Fairy](https://github.com/ac615223s5/firefox-red-fairy)
+  - [container-bookmarks](https://codeberg.org/nieve/container-bookmarks)
+  - [Ruby Fairy](https://codeberg.org/nieve/firefox-red-fairy)
 - discord bot
-  - [JOMD](https://github.com/ac615223s5/JOMD)
-  - [tle](https://github.com/ac615223s5/tle)
+  - [JOMD](https://codeberg.org/nieve/JOMD-Adelaide)
+  - [tle](https://codeberg.org/nieve/tle)
 - websites
   - [Herriot](https://herriot.stellar.agew.tech/)
-  - [Piped](https://github.com/ac615223s5/Piped)
+  - [Piped](https://github.com/TeamPiped/Piped/)
+  - [redlib](https://github.com/redlib-org/redlib)
 - [Lossless Cut](https://github.com/ac615223s5/lossless-cut)
-- [VS theme switcher](https://github.com/ac615223s5/vs-theme-switcher)
+- [VS theme switcher](https://codeberg.org/nieve/vs-theme-switcher)
 
 
   
