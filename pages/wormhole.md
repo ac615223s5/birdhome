@@ -31,12 +31,12 @@ Select your destination
   - [Credits]({{"/credits"|relative_url}})
   - [Images]({{"/images"|relative_url}})
 - nieve space
-  - [Birdhome](https://birdhome.stellar.agew.tech/) (You are here)
   - [Stellar search (SearXNG)](https://stellar.agew.tech/)
   - [Redlib](https://redlib.agew.tech/)
   - [Piped](https://piped.agew.tech/)
   - [Proxitok](https://proxitok.stellar.agew.tech/)
   - [Proxigram](https://proxigram.agew.tech/)
+  - [Nitter](https://nitter.agew.tech/)
   - [Quetre](https://quetre.agew.tech/)
   - [Rimgo](https://rimgo.agew.tech/)
   - [Fairylands](https://fairylands.stellar.agew.tech/)
@@ -45,6 +45,7 @@ Select your destination
     - [Speedforces](https://speedforces.stellar.agew.tech/)
     - [Solar System](https://SolarSystem.stellar.agew.tech/)
   - [Herriot](https://herriot.stellar.agew.tech/)
+  - [Birdhome](https://birdhome.stellar.agew.tech/) (You are here)
 
 <style>
   @media (prefers-color-scheme: dark) {
