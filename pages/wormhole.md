@@ -7,14 +7,10 @@ footerStyle: dark:bg-black !dark:border-0
 headerStyle: dark:bg-zinc-950 !dark:border-0
 ---
 <a href="https://www.glitter-graphics.com/myspace/text_generator.php" target=_blank>
-  <img src="{{"/assets/images/w.gif"|relative_url}}">
-  <img src="{{"/assets/images/o.gif"|relative_url}}">
-  <img src="{{"/assets/images/r.gif"|relative_url}}">
-  <img src="{{"/assets/images/m.gif"|relative_url}}">
-  <img src="{{"/assets/images/h.gif"|relative_url}}">
-  <img src="{{"/assets/images/o.gif"|relative_url}}">
   <img src="{{"/assets/images/l.gif"|relative_url}}">
-  <img src="{{"/assets/images/e.gif"|relative_url}}">
+  <img src="{{"/assets/images/u.gif"|relative_url}}">
+  <img src="{{"/assets/images/n.gif"|relative_url}}">
+  <img src="{{"/assets/images/a.gif"|relative_url}}">
 </a>
 
 Select your destination
