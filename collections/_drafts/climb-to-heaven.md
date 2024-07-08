@@ -2,6 +2,7 @@
 author: nieve
 layout: post
 date: 9999-01-01
+title: Climb To Heaven (Extremely big numbers)
 ---
 
 Lets try to find the largest number we can.
@@ -48,16 +49,19 @@ Like we did before, we can just define a new ordinal. Let the first ordinal afte
 
 This process takes a lot of definitions and can be hard to think about. So lets look for another way.
 
-<div class="hidden">
-### Option 2: multivariable functions
-We can extend the $$s$$ function so $$s(1,0)$$ is the next number after $$s(s(s(...)))$$, and $$s(x+1,0)$$ is the next one after $$s(x,s(x,s(x,...)))$$.
+### Option 2: Arrays
 
-Then after $$s(x,0),s(s(x,0),0),...$$ we get $$s(s(s(...,0),0),0)=s(1,0,0)$$ and $$s(s(s(...,0,0),0,0),0,0)=s(1,0,0,0)$$, and eventually, $$s(1,0,0,...)$$.
+We can add a second term, and every time the first term reaches infinity, increase the second by one.
 
-And now we are out of room. But maybe we can use more dimensions or make our function input more complicated like $$s(1,,0)=s(1,0,0,...),s(1,,,0)=s(1,,0,,0,,...),s(1;0)=s(1,,,,,,...0)$$. But you would have to explain what all these symbols did.
-</div>
+Let $$s(s(s(...(0)...)))=(1,0), (1,s(s(s(...))))=(2,0), (2,s(...))=(3,0)$$
 
-### Option 2: ordinal expressions
+Then when the second term reaches infinity, add a third term.
+
+$$ (s(s(...)),0)=(1,0,0)$$
+
+and so on.
+
+### Option 3: ordinal expressions
 The same way $$S(0)=0+1$$, we can call $$S(w)=w+1,S(S(w))=w+2,S(S(S(w)))=w+3$$, and the next one after $$S(S(...))=w+1+1+...=w+w=w2$$. By the way, the first ordinal after a series of ordinals is the suprenum of that series. So $$\sup(w,w+1,w+2,...)=w2$$. Then 
 
 $$\sup(w2,w2+1,w2+2...)=w3$$,
@@ -70,31 +74,31 @@ and $$\sup(w,w^2,w^3,...)=w^w$$.
 
 Then we can keep going, $$\sup(w^w,w^w2,...)=w^ww=w^{w+1}, \sup(w^{w},w^{w+1},w^{w+2},...)=w^{w^2},\sup(w^w,w^{w^2},...)=w^{w^w}$$, and so on.
 
-This method feels like the most natural way to write it, since we are familiar addition, multiplication, exponentiation in everyday arithmetic. But it might not be so obvious in the future.
+This method feels like a natural way to write it, since we are familiar with operators such as addition, multiplication, exponentiation in everyday arithmetic.
 
 Comparison of these methods:
 
-|Option 1|Option 2|
-|-|-|
-|$$w  $$|$$w=w^{w^0}$$|
-|$$w_2$$|$$w2$$|
-|$$w_w$$|$$w^2$$|
-|$$a_1$$|$$w^w=w^{w^1}$$|
-|$$w_{a+1}$$|$$w^w+w$$|
-|$$w_{w_{a+1}}$$|$$w^w+w^2$$|
-|$$a_2$$|$$w^w2$$|
-|$$a_w$$|$$w^{w+1}$$|
-|$$a_a$$|$$w^{w2}$$|
-|$$b_1$$|$$w^{w^2}$$|
-|$$b_w$$|$$w^{w^2+1}$$|
-|$$b_b$$|$$w^{w^22}$$|
-|$$b_{b_{b_{...}}}$$|$$w^{w^3}$$|
+| New Variables       | Arrays    | Expressions      |
+|---------------------|-----------|------------------|
+| $$w$$               | (1,0)     | $$w=w^{w^0}$$    |
+| $$w_2$$             | (2,0)     | $$w2$$           |
+| $$w_w$$             | (1,0,0)   | $$w^2$$          |
+| $$w_{w_{w+1}+2}+3$$ | (1,1,2,3) | $$w^3+w^2+2w+3$$ |
+| $$a_1$$             | (1,0,...) | $$w^w=w^{w^1}$$  |
+| $$w_{a+1}$$         |           | $$w^w+w$$        |
+| $$w_{w_{a+1}}$$     |           | $$w^w+w^2$$      |
+| $$a_2$$             |           | $$w^w2$$         |
+| $$a_w$$             |           | $$w^{w+1}$$      |
+| $$a_a$$             |           | $$w^{w2}$$       |
+| $$b_1$$             |           | $$w^{w^2}$$      |
+| $$b_w$$             |           | $$w^{w^2+1}$$    |
+| $$b_b$$             |           | $$w^{w^22}$$     |
+| $$b_{b_{b_{...}}}$$ |           | $$w^{w^3}$$      |
+|                     |           | $$w^{w^w}$$      |
 
 All those $$a,w_a,a_{a_a},b_b$$ symbols seemed confusing before, but now it's as clear as day.
 
-To get a better feel for these ordinals, you can watch 
-[The Search for the Longest Infinite Chess Game](https://piped.video/watch?v=b-Bb_TyhC1A) by Naviary and
-[How To Count Past Infinity](https://piped.video/watch?v=SrU9YDoXE88) by Vsauce.
+To get a better feel for these ordinals, you can watch [How To Count Past Infinity](https://piped.video/watch?v=SrU9YDoXE88) by Vsauce.
 Don't worry if you don't understand the stuff about $$\epsilon_0, \zeta_0, \Gamma_0$$. Remember what I said before about defining new symbols.
 
 
@@ -103,40 +107,62 @@ Don't worry if you don't understand the stuff about $$\epsilon_0, \zeta_0, \Gamm
 
 ## Repetition
 
-Starting from $$s(x)=x+1$$, we took advantage of our intution about everyday arithmetic to get expressions like $$w,w+1,w2,w^2,w^w$$. But we run out of notation to express $$w^{w^{w^{...}}}$$. What if we started with $$s(x)=x+w$$ instead? Then $$2_{x+w}=s(s(0))=w+w=w2$$ And $$w_{x+w}=w+w+...=w^2$$. So by changing the $$s$$ function, we can represent larger ordinals using the same expression.
+Starting from $$s(x)=x+1$$, we took advantage of our intution about everyday arithmetic to get expressions like $$w,w+1,w2,w^2,w^w$$. But we run out of notation to express $$w^{w^{w^{...}}}$$. We want a way to generate ordinals past exponentiation.
 
-|$$x+1$$  |$$x+w$$  |$$xw$$ | $$w^x$$
+What if we started with $$s(x)=x+w$$ instead? Then $$2_{s(x)=x+w}=s(s(0))=w+w=w2$$ And $$w_{s(x)=x+w}=w+w+...=w^2$$. So by changing the $$s$$ function, we can represent larger ordinals using the same expression.
+
+|$$x+1$$            |$$x+w$$      |$$xw$$     | $$w^x$$
+|-      
+|$$w              $$|$$1        $$|$$1      $$|$$1$$
+|$$w2             $$|$$2        $$|           |
+|$$w^2            $$|$$w        $$|$$2      $$|
+|$$w^3            $$|$$w^2      $$|$$3      $$|
+|$$w^w            $$|$$w^{w+1}  $$|$$w      $$|$$2$$
+|$$w^{w2}         $$|$$         $$|$$w2     $$|
+|$$w^{w^w}        $$|$$         $$|$$w^w    $$|$$3$$
+|$$w^{w^{w^{...}}}$$|             |           |$$w$$
+|?                  |             |           |$$w+1$$
+
+Starting with 1 and $$w$$, the ordinal $$x_{s(x)=x+w}=xw$$, and $$xw_{s(x)=xw}=w^x$$. You can see the pattern here, we are generating a higher level operator every time. So what is $$x_{s(x)=w^x}$$? Well it would involve a fourth operation, after addition, multiplication, exponentiation. Lets call it $$*^4$$.
+
+|$$x+1$$            | $$w^x$$ |$$w*^4x$$|
 |-
-|$$w        $$|$$1        $$|$$1      $$|$$1$$
-|$$w2       $$|$$2        $$
-|$$w^2      $$|$$w        $$|$$2      $$
-|$$w^3      $$|$$w^2      $$|$$3      $$
-|$$w^w      $$|$$w^w      $$|$$w      $$|$$2$$
-|$$w^{w2}   $$|$$         $$|$$w2     $$
-|$$w^{w^w}  $$|$$         $$|$$w^w    $$|$$3$$
-|$$w^{w^{w^{...}}}$$|       |           |$$w$$
-|?        |         |       |$$w+1$$
-
-Starting with 1 and $$w$$, the ordinal $$x_{x+w}=wx$$. So by converting the ordinal from the $$s(x)=x+w$$ representation to the $$s(x)=x+1$$ representation we get the $$s(x)=xw$$ operation. By converting from $$xw$$ to $$x+1$$ we get $$w^x$$. So what is the operation that converts between the $$w^x$$ and $$x+1$$ representations? Well it would involve the next operation after addition, multiplication, exponentiation. Using up arrow notation, it would be $$f(x)=w\uparrow\uparrow x$$. So by converting between representations,  we now have a method to generate the next ordinals after $$w^{w^{w^{...}}}=w\uparrow\uparrow w$$
-
-|$$x+1$$                  | $$w^x$$ |$$w\uparrow\uparrow x$$|
-|-
-|$$w\uparrow\uparrow w$$ |$$w$$|$$1$$
-|$$w\uparrow\uparrow w+1$$|$$w+1$$
-|$$w\uparrow\uparrow w^w$$    |$$w^w$$
-|$$w\uparrow\uparrow w\uparrow\uparrow w$$    |$$w\uparrow\uparrow w$$|$$2$$
-|$$w\uparrow\uparrow\uparrow w$$||$$w$$
+|$$w*^4w=w*^52$$    |$$w$$    |$$1$$
+|$$w*^4(w+1)$$      |$$w+1$$
+|$$w*^4(w^w)$$      |$$w^w$$
+|$$w*^4w*^4w=w*^53$$|$$w*^4w$$|$$2$$
+|$$w*^5 w$$         |         |$$w$$
 
 
 $$\underbrace{w+w+w+...}_{w}=w^2$$
 
 $$\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}w=w^w$$
 
-$$\underbrace{\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}\right\}...}_w=w\uparrow\uparrow w$$
+$$\underbrace{\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}\right\}...}_w=w*^4 w$$
+
+What about the symbols from the last video? It's common to call $$\epsilon_0=\sup(w,w^w,w^{w^w}...)$$, and $$\epsilon_1=\sup(\epsilon_0+1,w^{\epsilon_0+1},w^{w^{\epsilon_0+1}}...), \zeta_0=\sup(\epsilon_0,\epsilon_{\epsilon_0},\epsilon_{\epsilon_{\epsilon_0}}...),$$. Notice that this is the same as the $$w,a,b,...$$ symbols we looked at earlier, but starting at $$s(x)=w^x$$ instead of $$s(x)=w+1$$. So now we can decode what they mean:
+
+$$\phi(1,0)=\epsilon_0=(w)_{s(x)=w^x}=w*^4w$$
+
+$$\phi(1,1)=\epsilon_1=(w_2)_{s(x)=w^x}=2w_{s(x)=w^x}=w*^4(2w)$$
+
+$$\phi(2,0)=\zeta_0=w*^4(w^w)$$
+
+$$\phi(3,0)=\eta_0=w*^4(w^{w^2})$$
+
+$$\phi(4,0)=w*^4(w^{w^3})$$
+
+$$\phi(w,0)=w*^4(w^{w^w})$$
+
+$$\phi(\phi(w,0),0)=w*^4 (w*^4 (w^{w^w}))$$
+
+$$\Gamma_0=\phi(1,0,0)=w*^5 w$$
+
+These symbols seem scary in the video with fixed points of fixed points of fixed points and so on. But now you see that $$\Gamma_0$$ is actually a pretty pathetic upgrade, only two steps past exponentiation.
 
 ### Back to the finite
 
-Although theoretically possible to keep adding 1 to get any finite number, in reality we have limited time and space to write stuff. So you can take any of the transfinite ordinals here and replace $$w$$ with a finite number (say, 10) to easily represent some very large finite numbers. For example, $$10\uparrow\uparrow10=\underbrace{10^{10^{10^{...}}}}_{10}$$, a large number indeed.
+Although it is possible to keep adding 1 to get any finite number, in reality we have limited patience to write stuff. We can use same techniques to represent very big finite numbers using less space. For example, there are 8,000,000,000 humans on earth. Instead of writing all those zeros, we can use a log scale, where $$log(1)=0$$ and $$log(x+1)=10x$$. Then $$8000000000=9.903_{s(x)=10x}$$. Going further, $$10*^410=\underbrace{10^{10^{10^{...}}}}_{10}$$, a large number indeed.
 
 Relevant links:
 
@@ -144,140 +170,101 @@ Relevant links:
 
 [Graham's Number on Numberphile](https://piped.video/playlist?list=PLt5AfwLFPxWKZEG7KVg6HfdN2uWFLIB5q&cbrd=1) by Numberphile
 
-## Collapse
+Notice that a string of $$n$$ arrows $$\underbrace{\uparrow\uparrow ...}_n$$ is equivalent to $$*^{n+2}$$.
 
-In the last section, we start with $$+1$$ and $$+w$$ and converted between different $$S$$ functions to build up addition, multiplication, exponentation, tetration, pentation, and higher operations, each one being the previous one repeated $$w$$ times. Now we might think about $$\sup(w\uparrow\uparrow w,w\uparrow\uparrow\uparrow w, w\uparrow\uparrow\uparrow\uparrow w,...)$$, a kind of "superrepetition" where the process of "repeating the previous operation" itself has been repeated infinitely. How would we represent that? 
+## The first fold
 
-Look back to [Option 2](option-2-ordinal-expressions) when we used expressions to represent repeatedly applying $$S$$. But now, what if we set each step $$S(x)$$ to be a repetition of $$x$$? Then $$f(1,w)=w,f(2,w)=w^w,f(3,w)=w\uparrow\uparrow w...$$ and $$f(w)=w\underbrace{\uparrow\uparrow ...}_w w$$ with $$w$$ arrows.
+Lets make a function that uses everything so far. Start with $$f(1,x)=x+1$$. We can apply the function multiple times, and the first term keeps track of how many times it has been applied.
 
-One step after that is $$f(w+1,w)=\left. w\underbrace{\uparrow\uparrow ...}_{\underbrace{\uparrow\uparrow ...}_{...}}w \right\}w$$. Replace the $$w$$s with a finite number (64) and you get $$f(w+1,64)$$, a number comparable to graham’s number. 
+$$f(3,10)=f(1,f(1,f(1,x)))=10+3$$
 
-Next we get $$f(w+2,w),f(w+3,w),...$$, building a whole new series of operations over $$f(w)$$, all the way up to another superrepetition $$f(w2,w)$$. Repeatedly doing superrepetitions gives $$f(w,w),f(w2,w),f(w3,w),...$$ until $$f(w^2,w)$$, an infinitely repeated superrepetition. For now, lets call that a level 3 repetition. Then $$\sup(f(w,w),f(w^2,w),f(w^3,w),...)=f(w^w,w)$$ where even the repetition level is infinite.
+$$f(1,w)=w+1$$
 
-And then you get $$\sup(f(w^w,w),f(w^w2,w),...)=f(w^{w+1},w),\sup(f(w^{w},w),f(w^{w+1},w),f(w^{w+2},w)...)=f(w^{w2},w)$$, and so on. These ordinals are getting extremely big. But you already know how all this works from before. We are just changing the $$S$$ function.
+And then we get to $$f(w,x)$$ where something special happens. Whenever you see $$w$$, you replace it with what is in the last term.
 
-[The Coding Competition You've Probably Never Heard Of (BIGNUM BAKEOFF Part 1)](https://piped.video/watch?v=U1K6TOy6yjU&list=PL-R4p-BRL8NR8THgjx_DW9c92VHTtjZEY&index=1) by Fine Design
+$$f(w,5)=f(5',5)=5+5$$
 
-By the time we get to $$f(w^{w^{...}},w)$$, the ordinal is getting too big for everyday operations again. But wait, didn't we just come up with a way to express ordinals beyond exponentiation? That's right, we can take the output of $$f$$ and plug it right back into $$f$$ 😀
+$$f(w,w)=f(w',w)=w2$$
 
-$$f(f(0,w),w)=f(0,w)$$
+$$f(w+1,w^2)=f(w,w^2+1)=f((w^2+1)',w^2+1)=w^2+1+w^2+1=w^22+1$$
 
-$$f(f(1,w),w)=f(w,w)$$
+This happens again at $$f(w2,x)$$:
 
-$$f(f(2,w),w)=f(w^w,w)$$
+$$f(w2,10)=f(w+w,10)=f(w+10',10)=f(w,20)=f(20',20)=20+20=40$$
 
-$$f(f(3,w),w)=f(w^{w^{...}},w)=f(w\uparrow\uparrow w,w)$$
+You might notice that while the finite numbers in the first term represent addition by 1, each $$w$$ represents multiplication by 2.
 
-$$f(f(4,w),w)=f(w\uparrow\uparrow\uparrow w,w)$$
+Then we get $$f(w^2,x)=f(w\times x')=2^xx$$
 
-![cat think](/assets\images\picmix.com_2250113.gif)
+$$f(w^2,w)=f(ww',w)=2^ww=w^2$$
 
-You might have an idea of what to do next.
+$$f(w^2+w,w)=f(w^2,w)=2^{2w}w2=w^22$$
 
+$$f(w^22,w)=f(w^2,w^2)=w^4$$
 
-### Other notations
-These numbers are so big, they probably aren't relevant to our lives or even anything the universe. The only thing to do with them is compare them to other big numbers made by other people or in other math problems. So let us look at some other numbers and ordinal notations for fun.
+So each $$w^2$$ is like exponentiation/squaring. You can see that we are moving up the operators.
 
-[The Enormous TREE(3) - Numberphile](https://piped.video/watch?v=3P6DWAwwViU) by NumberPhile
+Continuing on, we get $$f(w^3,w)=w^w,f(w^4,w)=w*^4w ...$$ all the way until $$f(w^w,w)=w*^ww$$. We've reached the ackermann ordinal, a special milestone. If each operator is repeating the previous one, then the ackermann function is repeating how many times you do this repetition, a sort of "meta repetition". Although it is often overlooked in favor of $$\epsilon_0, \Gamma_0$$, and the small/large veblen ordinals, I feel that this ordinal is more significant.
 
-[TREE(3) (extra footage) - Numberphile](https://piped.video/watch?v=IihcNa9YAPk) by NumberPhile
+Going back to the finite numbers, $$f(w^w,6)=6*^66=6\uparrow\uparrow\uparrow\uparrow 6$$ which is similar to $$g_1$$ from the construction of graham's number. Now we are ready to ascend.
 
-[TREE vs Graham's Number - Numberphile](https://piped.video/watch?v=0X9DYRLmTNY) by NumberPhile
+At this point the last term is determining the level of operator. And we can increase this last term by adding to the $$w^w$$.
 
-The fast growing hierarchy is approximately the same as $$f$$, except the $$w$$ is replaced by a finite input to generate a large finite ordinal.
+$$f(w^w+w,w)=f(w^w,w2=w*^{w2+2}w$$
 
-It's common to call $$\epsilon_0=\sup(w,w^w,w^{w^w}...)$$, and $$\epsilon_1=\sup(\epsilon_0+1,w^{\epsilon_0+1},w^{w^{\epsilon_0+1}}...), \zeta_0=\sup(\epsilon_0,\epsilon_{\epsilon_0},\epsilon_{\epsilon_{\epsilon_0}}...),$$. Notice that this is the same as the $$w,a,b,...$$ symbols we looked at earlier, but starting at $$s(x)=w^x$$ instead of $$s(x)=w+1$$. So now we can decode what they mean:
+$$f(w^w+w^3,w)=f(w^w,w^w)= w*^{w^w}w$$
 
-$$\phi(1,0)=\epsilon_0=w\uparrow\uparrow w=f(3,w)$$
+$$f(w^w2,w)=w*^{w*^ww}w$$
 
-$$\phi(1,1)=\epsilon_1=w\uparrow\uparrow 2w$$
+$$f(w^w2,6)$$ is like $$g_2$$. And at $$f(w^{w+1},64)=f(w^ww,64)=f(w^w64',64)$$ we are doing it 64 times, creating a number that exceeds graham's number.
 
-$$\phi(2,0)=\zeta_0=w\uparrow\uparrow w^w$$
+Notice that $$f(w^{w+1},x)$$ is applying $$f(w^w,x)$$ over and over, a repetition of the metarepetition. In general, multiplying by $$w$$ gives a repetition of the previous function. At $$f(w^{w2},x)$$, we are doing a whole new meta repetition on $$f(w^w,x)$$. And at $$f(w^{w^2},x)$$, we are repeatedly doing the meta repetition, a sort of level 2 metarepetition. And then we can repeat that ($$w^{w^2+1}$$), or do another metarepetition on it (w^{w^2+w}), or another level 2 metarepetition ($$w^{w^22}$$), or repeatedly do level 2 metarepetitions ($$w^{w^3}$$). At $$f(w^{w^w},x)$$, even the level of repetition becomes arbitrarily large, a superrepetition.
 
-$$\phi(3,0)=\eta_0=w\uparrow\uparrow w^{w^2}$$
+It's getting hard to keep track of all these repetitions, which is expected. The reason we created this function in the first place was to represent this repetition structure. Instead of having to draw or think about diagrams like this:
 
-$$\phi(4,0)=w\uparrow\uparrow w^{w^3}$$
+![diagram of w^{w^2}](/assets/images/wacfeni.png)
 
-$$\phi(w,0)=w\uparrow\uparrow w^{w^w}$$
+The whole structure can be folded down into a neat little function: $$f(w^{w^2},100)$$
 
-$$\phi(\phi(w,0),0)=w\uparrow\uparrow w \uparrow\uparrow w^{w^w}$$
+You can probably imagine doing levels of repetition above the superrepetition, levels of superrepetition, super-super repetitions, building levels of those, hyperrepetitions, and more. By the time we get to $$f(w^{w^{w^w}})$$, we beyond all that. But we can keep going, past $$f(w^{w^{w^{...}}})$$ to $$f(w*^43,x), f(w*^4w,x), f(w*^5w,x)$$, and beyond. At $$f(w*^ww,w)$$ even our folded down ordinal in the first term is getting too big for our liking. But that's ok, we just now came up with a way to express large ordinals. That's right, we can take the output of $$f$$ and plug it right back in :)
 
-$$\Gamma_0=\phi(1,0,0)=w\uparrow\uparrow\uparrow w=f(4,w)$$
+$$f(f(w^w,w),x)=f(w*^ww,x)$$
 
-$$f_{\epsilon_0}(n)=f(f(3),n)$$
+Further reading:
 
-$$f_{\Gamma_0}(n)=f(f(4),n)$$
+- [The Coding Competition You've Probably Never Heard Of (BIGNUM BAKEOFF Part 1)](https://piped.video/watch?v=U1K6TOy6yjU&list=PL-R4p-BRL8NR8THgjx_DW9c92VHTtjZEY&index=1) by Fine Design
+  - Note that the fast growing hierarchy is like our $$f$$ function except $$f_{a}(b)$$ in fast growing hierarchy is $$f(w^a,b)$$ for us. The Goodstein hydra grows as fast as $$f(w*^42, x)$$.
+- [The Enormous TREE(3) - Numberphile](https://piped.video/watch?v=3P6DWAwwViU) by NumberPhile
+- [TREE(3) (extra footage) - Numberphile](https://piped.video/watch?v=IihcNa9YAPk) by NumberPhile
+- [TREE vs Graham's Number - Numberphile](https://piped.video/watch?v=0X9DYRLmTNY) by NumberPhile
+  - Remember that $$\Gamma_0=w*^5 w$$. So $$f_{\Gamma_0}(x)$$ in the fast growing hierarchy is like $$f(w*^5 w,x)=f(f(w^5,w),w)$$
+- [The Search for the Longest Infinite Chess Game](https://piped.video/watch?v=b-Bb_TyhC1A) by Naviary
+  - Continuing with veblen:
 
-These symbols seem scary in the video with many layers of recursion. But having come so far, we now see that $$\Gamma_0$$ is actually a pretty pathetic upgrade, only two steps past exponentiation.
+$$\phi(2,0,0)=w*^6w=f(w^6,w)$$
 
-Continuing with $$\phi$$ (you might recognize this from The Search for the Longest Infinite Chess Game):
+$$\phi(3,0,0)=f(w^7,w)$$
 
-$$\phi(2,0,0)=f(5,w)$$
+$$\phi(w,0,0)=f(w^w,w)$$ (the ackermann ordinal)
 
-$$\phi(3,0,0)=f(6,w)$$
+$$\phi(1,0,0,0)=\phi(\phi(\phi(...,0,0),0,0),0,0)=f(w^w,f(w^w,f(w^w,...)))=f(w^{w+1},w)$$
 
-$$\phi(w,0,0)=f(w,w)$$
+$$\phi(1,0,0,0,0)=f(w^{w^2},w)$$
 
-Ackermann ordinal=$$\phi(1,0,0,0)=f(w+1,w)$$
+$$\phi(1,0,0,0,0,0)=f(w^{w^3},w)$$
 
-$$\phi(1,0,0,0,0)=f(w^2,w)$$
+It's similar to the arrays early in this page.
 
-$$\phi(1,0,0,0,0,0)=f(w^3,w)$$
+Small veblen ordinal=$$\phi(\underbrace{1,0,...}_w)=f(w^{w^w},w)$$
 
-Small veblen ordinal=$$\phi(\underbrace{1,0,...}_w)=f(w^w,w)$$
+Large veblen ordinal=$$\phi(\underbrace{1,0,...}_{\phi(\underbrace{1,0,...}_{...})})=f(w^{w^w+1},w)$$
 
-Large veblen ordinal=$$\phi(\underbrace{1,0,...}_{\phi(\underbrace{1,0,...}_{...})})=f(w^w+1,w)$$
+These are some large ordinals! What if we put them in the fast growing hierarchy?
 
-$$\text{Tree}(n)\approx f(f(w^ww,w),n)$$
+$$f(f(w^{w^w+1},w),x)$$ is $$f_{\text{Large Veblen Ordinal}}(x)$$ in the fast growing hierarchy, which is about the power of the TREE(x) function.
 
-And the so called $$\overline{\text{Tree}}(n)$$ from the video is $$\approx f(f(w^ww,w)+1,n)$$
+Consider the $$\overline{\text{TREE}}(x)$$ function from the Numberphile video. Just going from 2 to 3 seeds in TREE function results in such a massive number, and now we are taking TREE(3) and applying the TREE function again and again. But this new iterated $$\overline{\text{TREE}}(x)$$ function actually only gets us to $$f(f(w^{w^w+1},w)w,x)$$. We have come so far that even repetition, metarepetition, superrepetition, and the such are negligible improvements.
 
-As you can see, the Tree function is so large that repeating it barely feels like an improvement.
+I will stop here for now. But you might have an idea of how to go even higher.
 
-Two long playlists explaining the fast growing hierarchy in detail: 
 
-[Math: Extremely Large Numbers](https://piped.video/playlist?list=PLUZ0A4xAf7nkaYHtnqVDbHnrXzVAOxYYC) by Giroux Studios
-
-[Ridiculously Huge Numbers](https://piped.video/playlist?list=PL3A50BB9C34AB36B3) by David Metzler
-
-### multicollapse
-
-So $$f$$ takes an ordinal $$x$$ and interprets it with $$S(x)=$$ repetition of $$x$$, resulting in a far larger ordinal $$f(x,w)$$. Now we can set $$S(x)=f(x,w)$$ and have a new function $$f(2,x,w)$$. So $$f(2,2,w)=f(f(w,w),w),f(w,3,w)=f(f(f(w,w),w),w),f(w,w,w)=f(f(...,w),w)$$. Remember how powerful just applying $$f(x,w)$$ once is. Now we can not only repeat $$f(x,w)$$ but do it transfinitely! We are definitely entering new territory.
-
-But $$f(2,x,w)$$ needs to be given an input ordinal as well. Once that ordinal gets too large, we can use $$f(x,w)$$ or even another $$f(2,x,w)$$ to express it. And then we can have a third function $$f(3,x,w)$$ which applies $$f(2,x,w)$$ at each step, and then $$f(4,x,w)$$, each function transfinitely repeating the previous one. 
-
-$$\underbrace{\left.\underbrace{f(f(f(...)))}_{\underbrace{f(f(f(...)))}_{...}}\right\}\left.f(2,f(2,...))\right\}\left.f(2,f(2,...))\right\}...}_{\underbrace{f(3,f(3,...))}_{...}}=f(4,w)$$
-
-
-
-
-$$\Omega_1$$
-
-$$\Omega_w$$
-
-$$I,M$$
-
-
-### Collapsing collapse
-
-
-$$
-
-### 
-
-
-
-
-
-Links
-
-
-
-
-
-
-[Ultimate Large Numbers List 2024 - The Biggest Numbers Ever!!!](https://piped.video/watch?v=5hfkzo_ojGE)
-
-[Absolute Infinity - Numberphile](https://piped.video/watch?v=sq-ntG5Mcus)
-
-[Infinity is bigger than you think - Numberphile](https://piped.video/watch?v=elvOZm0d4H0)
