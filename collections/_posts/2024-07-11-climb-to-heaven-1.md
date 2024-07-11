@@ -2,7 +2,7 @@
 author: nieve
 layout: post
 date: 9999-01-01
-title: Climb To Heaven Part 1: Small Transfinite Ordinals
+title: "Climb To Heaven Part 1: Small Transfinite Ordinals"
 ---
 
 Lets try to find the largest number we can.
