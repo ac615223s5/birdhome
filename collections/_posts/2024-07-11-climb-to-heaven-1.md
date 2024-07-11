@@ -1,7 +1,6 @@
 ---
 author: nieve
 layout: post
-date: 9999-01-01
 title: "Climb To Heaven Part 1: Small Transfinite Ordinals"
 ---
 
