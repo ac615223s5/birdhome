@@ -2,6 +2,7 @@
 author: nieve
 layout: post
 title: "Climb To Heaven Part 1: Small Transfinite Ordinals"
+tags: discussion
 ---
 
 Lets try to find the largest number we can.
