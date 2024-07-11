@@ -99,7 +99,7 @@ All those $$a,w_a,a_{a_a},b_b$$ symbols seemed confusing before, but now it's as
 
 ## Repetition
 
-The same way multiplication is like repeated addition and exponentiation is like repeated multiplication, we can have a fourth operation `tetration` that represents repeated exponentiation, and then a fifth operation representing repeated tetration, and so on. Lets call the $nth$ operation $*^n$.
+The same way multiplication is like repeated addition and exponentiation is like repeated multiplication, we can have a fourth operation `tetration` that represents repeated exponentiation, and then a fifth operation representing repeated tetration, and so on. Lets call the nth operation $$*^n$$.
 
 So using this notation, $$w^{w^{w^{...}}}=w*^4w=w*^52$$.
 
