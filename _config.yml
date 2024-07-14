@@ -60,15 +60,14 @@ minima:
     
 
 header_pages:
-  - pages/blog.html
+  - pages/blog.markdown
   - pages/algorithm.md
   - pages/coding.md
   - games/index.md
   - pages/art.md
   - pages/music.md
-  - pages/about.markdown
   - pages/wormhole.md
-  - pages/credits.md
+  - pages/credits.md  
   - pages/images.md
 
 #show_excerpts: true
