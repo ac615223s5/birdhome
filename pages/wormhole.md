@@ -44,9 +44,4 @@ Select your destination
   - [Birdhome](https://birdhome.stellar.agew.tech/) (You are here)
 
 <style>
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: url({{"/assets/images/backgrounds/stars.gif"|relative_url}});
-    }
-  }
 </style>

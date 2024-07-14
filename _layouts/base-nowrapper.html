@@ -7,10 +7,22 @@
   <div class="grow flex flex-col xl:flex-row gap-2.5 justify-center">
     {%- include header.html -%}
     {{ content }}
-    <aside class="container1 p-7">
+    <aside class="container1 p-7 w-48 flex flex-col">
       Decorative Block
+      <div class="grow"></div>
+      <img src="/assets/images/light/1038621yv64mh2h7b.gif">
     </aside>
   </div>
   {% include footer.html %}
 </body>
+<style>
+  body{
+    
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: url(https://sadhost.neocities.org/images/tiles/starbub2.gif);
+    }
+  }
+</style>
 </html>

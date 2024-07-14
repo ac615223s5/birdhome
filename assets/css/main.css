@@ -9,3 +9,9 @@
     max-width: 100%;
   }
 }
+.container1{
+  @apply bg-white dark:bg-black;
+}
+body{
+  @apply bg-pink-50;
+}
