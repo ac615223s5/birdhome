@@ -7,9 +7,6 @@ title: Blog
 permalink: /blog
 ---
 
-## Welcome to birdhome
-
-Enjoy your stay
 
 {% for tag in site.tags %}
   <h3>{{ tag[0] }}</h3>
