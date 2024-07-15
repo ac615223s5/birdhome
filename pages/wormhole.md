@@ -35,6 +35,7 @@ Select your destination
   - [Nitter](https://nitter.agew.tech/)
   - [Quetre](https://quetre.agew.tech/)
   - [Rimgo](https://rimgo.agew.tech/)
+  - [Scribe](https://scribe.agew.tech/)
   - [Fairylands](https://fairylands.stellar.agew.tech/)
     - [Sorting](https://sorting.stellar.agew.tech/)
     - [Maze Simulator](https://maze-simulator/.stellar.agew.tech/)
