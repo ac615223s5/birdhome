@@ -10,7 +10,7 @@
   }
 }
 .container1{
-  @apply bg-pink-100 dark:bg-black p-7 border border-solid border-pink-300;
+  @apply bg-pink-100 dark:bg-black p-3 border border-solid border-pink-300;
 }
 body{
   @apply bg-pink-50;

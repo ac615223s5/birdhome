@@ -26,8 +26,8 @@
     
     {%- for list in page.nav_list -%}
     <div>
-      <a class="header3 block -mx-5 text-" href="{{site.data[list][0].url}}">{{ site.data[list][0].title | escape }}</a>
-      <ul class="list-disc">
+      <a class="header3 block text-" href="{{site.data[list][0].url}}">{{ site.data[list][0].title | escape }}</a>
+      <ul class="list-disc pl-6">
         {%- for page in site.data[list] offset:1-%}
         <li><a class="link" href="{{page.url}}">{{ page.title | escape }}</a></li>
         {%- endfor -%}
