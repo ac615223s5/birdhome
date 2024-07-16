@@ -10,8 +10,59 @@
   }
 }
 .container1{
-  @apply bg-white dark:bg-black;
+  @apply bg-pink-100 dark:bg-black p-7 border border-solid border-pink-300;
 }
 body{
   @apply bg-pink-50;
+}
+.link{
+  @apply text-pink-600;
+}
+.header{
+  @apply text-pink-900 font-semibold;
+}
+.header2{
+  @apply font-bold bg-pink-200 px-1 text-pink-900;
+}
+.header3{
+  @apply font-semibold text-pink-900 text-right border-b border-solid border-pink-900;
+}
+.textColor{
+  @apply text-pink-950;
+}
+.mainStyle{
+  a{
+    @apply link;
+  }
+  .highlight, blockquote, dl, figure, h1, h2, h3, h4, h5, h6, ol, p, pre, ul {
+    @apply mb-4;
+  }
+  h1,h2,h3,h4,h5,h6{
+    @apply header;
+  }
+  h1{
+    @apply font-semibold text-3xl;
+  }
+  h2{
+    @apply font-semibold text-2xl;
+  }
+  h3{
+    @apply font-semibold text-xl;
+  }
+  
+  code {
+    padding:1px 5px;
+  }
+  .highlight {
+    @apply rounded;
+  }
+  .highlight,
+  .highlighter-rouge .highlight {
+    @apply bg-pink-200;
+  }
+  /*
+  pre {
+    overflow-x:auto;
+    padding:8px 12px
+  }*/
 }

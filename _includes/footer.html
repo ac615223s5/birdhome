@@ -1,40 +1,21 @@
-<footer class="site-footer h-card {{page.footerStyle}}">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.matrix -%}
-            <li><a class="u-matrix" href="https://matrix.to/#/{{ site.author.matrix }}">{{ site.author.matrix }}</a></li>
-          {%- endif %}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-
+<footer class="container1 w-64 flex flex-col gap-2.5">
+  <p class="feed-subscribe">
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+      <svg class="inline w-5 h-5">
+        <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+      </svg> Subscribe
+    </a>
+  </p>
+  <div>
+    <h2 class="header2">Contact</h2>
+    <ul class="contact-list mb-1">
+      <li><a class="u-matrix link" href="https://matrix.to/#/{{ site.author.matrix }}">{{ site.author.matrix }}</a></li>
+      <li><a class="u-email link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+    </ul>
     <div class="social-links">
       {%- include social.html -%}
     </div>
-
   </div>
-
+  {%include themed-image.html src1="/assets/images/light/1038621yv64mh2h7b.gif"
+  src2="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngplay.com%2Fwp-content%2Fuploads%2F8%2FSpace-Background-PNG-Image.png&f=1&nofb=1&ipt=e1c9ad2120be8b6cf958af71eb21d831f626ed370086b49d956bbe14b631ee4f&ipo=images"%}
 </footer>

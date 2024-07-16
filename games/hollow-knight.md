@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Hollow Knight
-nav_list: game-pages
+nav_list: 
+  - nav-game
 ---
 
 I found this game one winter and played it over the holidays. It is so much fun.

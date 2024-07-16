@@ -32,7 +32,7 @@ The first thing I noticed was there were many accepted solutions despite the ext
 
 <details>
     <summary>Code</summary>
-    {% highlight c++%} {% raw %}
+    {% highlight c++%}
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -240,7 +240,7 @@ int main(){
 /**
 
 */
-    {% endraw %}{% endhighlight %}
+    {% endhighlight %}
 </details>
 
 No need to prove anything about the transitions.

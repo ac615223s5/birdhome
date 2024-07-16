@@ -2,17 +2,8 @@
 layout: algorithms-layout
 title: Algorithm
 permalink: /algorithm
-secondary_nav:
-  - title: "Top"
-    url: "#"
-  - title: "Contests"
-    url: "#algorithm-contests"
-  - title: "Problemsetting"
-    url: "#problemsetting"
-  - title: "Resources"
-    url: "#resources"
-  - title: "Other"
-    url: "#other"
+nav_list:
+  - nav-algorithm
 contests:
 - year: 2023
   contests:

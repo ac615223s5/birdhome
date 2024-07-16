@@ -3,17 +3,14 @@
 
 {%- include head.html -%}
 
-<body class="flex flex-col grow">
-  <div class="grow flex flex-col xl:flex-row gap-2.5 justify-center">
-    {%- include header.html -%}
-    {{ content }}
-    <aside class="container1 p-7 w-48 flex flex-col">
-      Decorative Block
-      <div class="grow"></div>
-      <img src="/assets/images/light/1038621yv64mh2h7b.gif">
-    </aside>
+<body class="flex flex-col">
+  <div class="grow">
+    <div class="flex flex-col xl:flex-row gap-2.5 justify-center">
+      {%- include header.html -%}
+      {{ content }}
+      {% include footer.html %}
+    </div>
   </div>
-  {% include footer.html %}
 </body>
 <style>
   body{

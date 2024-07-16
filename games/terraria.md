@@ -1,6 +1,8 @@
 ---
 layout: base
-nav_list: game-pages
+nav_list:
+  - nav-game
+  - nav-terraria
 title: Terraria
 images:
   - path: "/assets/images/terraria 12.png"
@@ -65,11 +67,6 @@ images:
     label: ""
   - path: "/assets/images/terraria 89.png"
     label: "this world is covered with crimson so all the houses have to be in the air. I also found the design online."
-secondary_nav:
-  - title: "Buildings"
-    url: "#buildings"
-  - title: "ImprovedFlightControls"
-    url: "#improvedflightcontrols"
 ---
 
 ## Buildings
