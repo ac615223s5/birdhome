@@ -60,6 +60,42 @@ body{
   .highlighter-rouge .highlight {
     @apply bg-pink-200;
   }
+  ul{
+    @apply list-disc list-inside ml-5;
+  }
+  ol{
+    @apply list-decimal list-inside ml-5;
+  }
+  li> ol, li> ul{
+    @apply mb-0;
+  }
+  table {
+    @apply border border-solid border-pink-300;
+    /*border-collapse:collapse;*/
+    @apply mb-7 w-full overflow-x-auto;
+    @apply text-left;
+  }
+  table tr:nth-child(2n) {
+    @apply bg-pink-50;
+  }
+  table td,
+  table th {
+    @apply px-4 py-2.5;
+  }
+  table th {
+    @apply bg-pink-200;
+    @apply border border-solid border-pink-300;
+  }
+  table td {
+    @apply border border-solid border-pink-300;
+  }
+  @media screen and (max-width:800px) {
+    table {
+      display:block;
+      -webkit-overflow-scrolling:touch;
+      -ms-overflow-style:-ms-autohiding-scrollbar;
+    }
+  }
   /*
   pre {
     overflow-x:auto;
