@@ -42,7 +42,7 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
 {% include social.html %}
   </div>
 </div>
-<div class="-mb-3 w-full">
+<div class="-mb-3 flex justify-center">
   {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="https://clipground.com/images/star-overlay-png-4.png"%}
 </div>
 
