@@ -1,4 +1,4 @@
-<footer class="container1 w-64 flex flex-col gap-2.5">
+<footer class="container1 w-64 flex flex-col gap-2.5 max-lg:w-full max-lg:flex-row flex-wrap max-lg:justify-evenly">
   <p class="feed-subscribe">
     <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
       <svg class="inline w-5 h-5">
@@ -16,6 +16,10 @@
       {%- include social.html -%}
     </div>
   </div>
-  {%include themed-image.html src1="/assets/images/light/1038621yv64mh2h7b.gif"
-  src2="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngplay.com%2Fwp-content%2Fuploads%2F8%2FSpace-Background-PNG-Image.png&f=1&nofb=1&ipt=e1c9ad2120be8b6cf958af71eb21d831f626ed370086b49d956bbe14b631ee4f&ipo=images"%}
+  <div class="max-lg:w-full">
+    <div class="max-lg:max-w-32 max-lg:mx-auto">
+      {%include themed-image.html src1="/assets/images/light/1038621yv64mh2h7b.gif"
+      src2="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngplay.com%2Fwp-content%2Fuploads%2F8%2FSpace-Background-PNG-Image.png&f=1&nofb=1&ipt=e1c9ad2120be8b6cf958af71eb21d831f626ed370086b49d956bbe14b631ee4f&ipo=images"%}
+    </div>
+  </div>
 </footer>

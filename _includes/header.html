@@ -1,10 +1,10 @@
-<header class="site-header container1 {{page.headerStyle}} xl:w-44">
+<header class="site-header container1 {{page.headerStyle}} w-44 max-lg:w-full">
 
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.header_pages | default: default_paths -%}
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   {%- if titles_size > 0 -%}
-  <nav class="site-nav z-20 xl:flex xl:flex-col gap-3">
+  <nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between">
     <a class="text-2xl" rel="author" href="{{ " /" | relative_url }}">{{ site.title | escape }}</a>
     <input type="checkbox" id="nav-trigger" class="hidden" />
     <label for="nav-trigger" class="sm:hidden">
@@ -15,7 +15,7 @@
         </svg>
       </span>
     </label>
-    <div class="flex flex-col">
+    <div class="trigger flex flex-col max-lg:flex-row max-lg:gap-4 max-lg:flex-wrap max-sm:hidden max-sm:flex-col max-sm:absolute right-3 top-10">
       {%- for path in page_paths -%}
       {%- assign my_page = site.pages | where: "path", path | first -%}
       {%- if my_page.title -%}
@@ -41,25 +41,7 @@
 
 </header>
 <style>
-  @media (min-width: 1280px) {
-    .site-header {
-      .wrapper {
-        .site-nav {
-          float: none;
-          text-align: left;
-
-          .trigger {
-            display: flex;
-            flex-direction: column;
-
-            {
-              margin: 0;
-              flex-basis: 2.75rem;
-            }
-          }
-        }
-      }
-    }
-
+  .site-nav input:checked~.trigger{
+    display:flex;
   }
 </style>
