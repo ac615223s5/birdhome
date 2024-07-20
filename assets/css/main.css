@@ -12,20 +12,28 @@
   }
 }
 
-.container1 {
-  @apply bg-pink-100 dark:bg-black p-3 border border-solid border-pink-300;
+::selection{
+  @apply bg-pink-300;
+}
+:root{
+  scrollbar-color: rgb(219 39 119 / 1) transparent;
 }
 
 body {
   @apply bg-pink-50;
 }
 
+.container1 {
+  @apply bg-pink-100 dark:bg-black p-3 border border-solid border-pink-300;
+}
+
+
 .link {
-  @apply text-pink-600;
+  @apply text-pink-600 dark:text-violet-600;
 }
 
 .header {
-  @apply text-pink-900 font-semibold;
+  @apply text-pink-900 dark:text-violet-300 font-semibold;
 }
 
 .header2 {
@@ -37,10 +45,17 @@ body {
 }
 
 .textColor {
-  @apply text-pink-950;
+  @apply text-pink-950 dark:text-white;
+}
+
+@media not all and (min-width: 640px) {
+  .trigger{
+    @apply container1;
+  } 
 }
 
 .mainStyle {
+  @apply textColor;
   a {
     @apply link;
   }
