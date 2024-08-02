@@ -1,6 +1,6 @@
 ---
 author: nieve
-title: Thoughts on Incompleteness
+title: Climb to heaven (part 4?) Thoughts on Incompleteness
 tags: discussion
 ---
 Due to videos like [this](https://piped.video/watch?v=HeQX2HjkcNo), a lot of people believe math is "broken" and there are mathematical "secrets" that we will never be able to prove. I wanted to share my thoughts on the matter.
