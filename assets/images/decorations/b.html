@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My title here!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Everything here goes inside of your <body></body> tags! -->
+  <!-- based on http://www.lovelyd.shukuya.com/divs/34/index.htm -->
+
+  <div class="container">
+    <aside class="flex">
+      <aside class="sidebar">
+        <section>
+          <div class="subtitle">Navigation</div>
+          <ul class="links">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </section>
+        <section>
+          <div class="subtitle">Header</div>
+
+          <ul class="links">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="subtitle">Header</div>
+          <ul class="links">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </section>
+        <section>
+          <div class="subtitle">Header</div>
+          <p>You can put some text in this box!</p>
+        </section>
+      </aside>
+      <div class="left">
+        <header></header>
+        <main>
+          <article>
+            <div class="subtitle">Meadow</div>
+            <p>This layout is based on the layout available <a href="http://www.lovelyd.shukuya.com/divs/34/index.htm"
+                target="_blank">here</a> by Lovely Designs. It's not really an exact copy, because the original used a
+              bunch of separated images, but it has that vibe, and you can replace the 'header' image with anything you
+              like!</p>
+            <p>Nullam sagittis condimentum libero consectetur dapibus. Vivamus aliquet elit id orci hendrerit, id congue
+              nulla laoreet. Cras malesuada maximus dui id scelerisque. In convallis ligula non tincidunt ullamcorper.
+              Maecenas risus magna, elementum sit amet arcu non, imperdiet condimentum justo. Aliquam aliquet neque quis
+              luctus tincidunt. Aliquam nec arcu sed nisl viverra tincidunt. </p>
+          </article>
+          <article>
+            <div class="subtitle">Subtitle</div>
+            <p>Nullam sagittis condimentum libero consectetur dapibus. Vivamus aliquet elit id orci hendrerit, id congue
+              nulla laoreet. Cras malesuada maximus dui id scelerisque. In convallis ligula non tincidunt ullamcorper.
+              Maecenas risus magna, elementum sit amet arcu non, imperdiet condimentum justo. Aliquam aliquet neque quis
+              luctus tincidunt. Aliquam nec arcu sed nisl viverra tincidunt. </p>
+          </article>
+          <article>
+            <div class="subtitle">Subtitle</div>
+            <p>Nullam sagittis condimentum libero consectetur dapibus. Vivamus aliquet elit id orci hendrerit, id congue
+              nulla laoreet. Cras malesuada maximus dui id scelerisque. In convallis ligula non tincidunt ullamcorper.
+              Maecenas risus magna, elementum sit amet arcu non, imperdiet condimentum justo. Aliquam aliquet neque quis
+              luctus tincidunt. Aliquam nec arcu sed nisl viverra tincidunt. </p>
+          </article>
+          <article>
+            <div class="subtitle">Subtitle</div>
+            <p>Nullam sagittis condimentum libero consectetur dapibus. Vivamus aliquet elit id orci hendrerit, id congue
+              nulla laoreet. Cras malesuada maximus dui id scelerisque. In convallis ligula non tincidunt ullamcorper.
+              Maecenas risus magna, elementum sit amet arcu non, imperdiet condimentum justo. Aliquam aliquet neque quis
+              luctus tincidunt. Aliquam nec arcu sed nisl viverra tincidunt. </p>
+          </article>
+
+        </main>
+      </div>
+    </aside>
+  </div>
+  </div>
+  <footer>
+    <p>This layout was lovingly re-crafted by <a href="https://sadgrl.online/" target="_blank">sadgrl.online</a>
+  </footer>
+  </div>
+  <style>
+    /* You can either copy the below and paste it between style tags on your HTML page, OR you can copy this to a file and name it .css and link it from your HTML page. */
+    :root {
+      --bg-color: #d7f8e5;
+      --border-color: #7c9b89;
+      --subtitle-color: #35a363;
+      --link-color: rgb(24, 188, 90);
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #a7efb8;
+      background-attachment: fixed;
+      background-image: url('https://i.imgur.com/4x108uF.png');
+    }
+
+    body a {
+      color: var(--link-color);
+    }
+
+    header {
+      width: 400px;
+      height: 400px;
+      background-image: url('https://i.imgur.com/lZZP1Md.png');
+      background-size: 103%;
+
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sidebar {
+      background-color: var(--bg-color);
+      max-width: 250px;
+      width: 200px;
+      height: 100vh;
+      border: 1px solid var(--border-color);
+      //position:fixed;
+    }
+
+    article {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      margin-top: 20px;
+      max-width: 370px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+
+    .subtitle {
+      color: var(--subtitle-color);
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid var(--subtitle-color);
+      margin-left: 10px;
+      margin-right: 10px;
+      text-align: right;
+      padding-top: 20px;
+    }
+
+    article>p {
+      padding: 10px;
+      padding-left: 20px;
+    }
+
+    .links {
+      list-style-type: '+';
+      font-size: 16px;
+
+    }
+
+    .links li a {
+      color: var(--link-color);
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    main {
+      margin-top: -21px;
+    }
+
+    section>p {
+      padding: 10px;
+    }
+
+    footer {
+      margin-left: 20px;
+      max-width: 30%;
+      font-size: 12px;
+    }
+
+    @media only screen and (max-width: 630px) {
+      .sidebar {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+
+      .flex {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      .right {
+        order: 1;
+        width: 100%;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        width: 120px;
+      }
+    }
+  </style>
+</body>
+
+</html>

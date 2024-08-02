@@ -4,8 +4,8 @@
   {%- assign page_paths = site.header_pages | default: default_paths -%}
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   {%- if titles_size > 0 -%}
-  <nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between">
-    <a class="text-2xl" rel="author" href="{{ " /" | relative_url }}">{{ site.title | escape }}</a>
+  <nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between h-full">
+    <a class="text-2xl" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     <input type="checkbox" id="nav-trigger" class="hidden" />
     <label for="nav-trigger" class="sm:hidden">
       <span class="menu-icon">
@@ -34,10 +34,12 @@
       </ul>
     </div>
     {%- endfor -%}
+    <div class="max-lg:hidden grow"></div>
+    <div class="max-lg:hidden">
+      {%include themed-image.html src1="https://www.pinclipart.com/picdir/big/496-4960612_clip-art-bird-bird-sketch-png-transparent-png.png" src2=""%}
+    </div>
   </nav>
   {%- endif -%}
-  <div class="grow"></div>
-  {%include themed-image.html src1="" src2=""%}
 
 </header>
 <style>

@@ -9,7 +9,7 @@ Enjoy your stay
 
   </div>
   <div class="w-2/5 -ml-2">
-    {%include themed-image.html src1="/assets/images/light/q9ykpqwrzesoi81rtvvkpfs9quey-3115486997.png" src2="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fclipart-star-transparent-background-17.png&f=1&nofb=1&ipt=357c0b27f52936efcf4b81be3109343c582fc5f15a6ee7fad73f188f09d3ec84&ipo=images"%}
+    {%include themed-image.html src1="/assets/images/light/q9ykpqwrzesoi81rtvvkpfs9quey-3115486997.png" src2="/assets/images/decorations/Space-Background-PNG-Image-1344297994.png"%}
   </div>
 
 </div>
@@ -43,7 +43,7 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
   </div>
 </div>
 <div class="-mb-3 flex justify-center">
-  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="https://clipground.com/images/star-overlay-png-4.png"%}
+  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/star-overlay-png-4.png"%}
 </div>
 
 <style>
