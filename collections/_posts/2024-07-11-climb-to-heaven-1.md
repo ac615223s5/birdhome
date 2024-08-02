@@ -143,10 +143,12 @@ Although it is possible to keep adding 1 to get any finite number, in reality we
 
 Further reading:
 
+[How To Count Past Infinity](https://youtube.com/watch?v=SrU9YDoXE88) by Vsauce
+
 [From 1,000,000 to Graham’s Number](https://waitbutwhy.com/2014/11/1000000-grahams-number.html) by Tim Urban 
+- Notice that a string of $$n$$ arrows $$\underbrace{\uparrow\uparrow ...}_n$$ is equivalent to $$*^{n+2}$$.
 
 [Graham's Number on Numberphile](https://youtube.com/playlist?list=PLt5AfwLFPxWKZEG7KVg6HfdN2uWFLIB5q&cbrd=1) by Numberphile
-- Notice that a string of $$n$$ arrows $$\underbrace{\uparrow\uparrow ...}_n$$ is equivalent to $$*^{n+2}$$.
 
 [Beyond Infinity Number Comparison](https://youtube.com/watch?v=RJS3Z2DYEO4) by Reigarw Comparisons
 - Everything after graham's number is wrong
