@@ -1,6 +1,5 @@
 ---
 author: nieve
-date: 9999-01-01
 title: Pepperbox is born
 tags: internal-news
 ---
