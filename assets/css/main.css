@@ -1,17 +1,601 @@
 ---
----
+--- 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@layer base{
-  img,video{
-    max-width: 100%;
-  }
+@layer base {
 }
-.container1{
-  @apply bg-white dark:bg-black;
+
+::selection{
+  @apply bg-pink-300;
 }
-body{
+:root{
+  scrollbar-color: rgb(219 39 119 / 1) transparent;
+}
+
+body {
   @apply bg-pink-50;
+}
+
+.container1 {
+  @apply bg-pink-100 dark:bg-pink-950 p-3 border border-solid border-pink-300 dark:border-0;
+}
+
+
+.link {
+  @apply text-pink-600 dark:text-violet-600;
+}
+
+.header {
+  @apply text-pink-900 dark:text-violet-400 font-semibold;
+}
+
+.header2 {
+  @apply font-bold bg-pink-200 px-1 text-pink-900;
+}
+
+.header3 {
+  @apply font-semibold text-pink-900 text-right border-b border-solid border-pink-900;
+}
+
+.textColor {
+  @apply text-pink-950 dark:text-white;
+}
+
+@media not all and (min-width: 640px) {
+  .trigger{
+    @apply container1;
+  } 
+}
+
+.mainStyle {
+  @apply textColor;
+  a {
+    @apply link;
+  }
+
+  .highlight,
+  blockquote,
+  dl,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  p,
+  pre,
+  ul {
+    @apply mb-4;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply header;
+  }
+
+  h1 {
+    @apply font-semibold text-3xl;
+  }
+
+  h2 {
+    @apply font-semibold text-2xl;
+  }
+
+  h3 {
+    @apply font-semibold text-xl;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--minima-border-color-01);
+    color: var(--minima-brand-color);
+    font-size: 1.125rem;
+    font-style: italic;
+    padding-left: 15px
+  }
+
+  blockquote>:last-child {
+    margin-bottom: 0
+  }
+
+  blockquote em,
+  blockquote i {
+    font-style: normal
+  }
+
+  code,
+  pre {
+    @apply border border-solid border-pink-300;
+    font-family: Menlo, Inconsolata, Consolas, Roboto Mono, Ubuntu Mono, Liberation Mono, Courier New, monospace;
+    @apply text-sm;
+  }
+
+  code {
+    @apply py-0.5 px-1;
+  }
+
+  pre {
+    @apply overflow-x-auto px-3 py-2;
+  }
+
+  pre>code {
+    @apply border-0 px-0;
+  }
+
+  .highlight,
+  pre,
+  code {
+    @apply rounded;
+  }
+
+  .highlight,
+  .highlighter-rouge .highlight,
+  code,
+  pre {
+    @apply bg-pink-200;
+  }
+
+  ul {
+    @apply list-disc list-inside ml-5;
+  }
+
+  ol {
+    @apply list-decimal list-inside ml-5;
+  }
+
+  li>ol,
+  li>ul {
+    @apply mb-0;
+  }
+
+  table {
+    @apply border border-solid border-pink-300;
+    /*border-collapse:collapse;*/
+    @apply mb-7 w-full overflow-x-auto;
+    @apply text-left;
+  }
+
+  table tr:nth-child(2n) {
+    @apply bg-pink-50;
+  }
+
+  table td,
+  table th {
+    @apply px-4 py-2.5;
+  }
+
+  table th {
+    @apply bg-pink-200;
+    @apply border border-solid border-pink-300;
+  }
+
+  table td {
+    @apply border border-solid border-pink-300;
+  }
+
+  @media screen and (max-width:800px) {
+    table {
+      display: block;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+  }
+
+  .highlight{
+    .c {
+      color: #998;
+      font-style: italic
+    }
+
+    .err {
+      background-color: #e3d2d2;
+      color: #a61717
+    }
+
+    .k,
+    .o {
+      font-weight: 700
+    }
+
+    .cm {
+      color: #998;
+      font-style: italic
+    }
+
+    .cp {
+      color: #999;
+      font-weight: 700
+    }
+
+    .c1 {
+      color: #998;
+      font-style: italic
+    }
+
+    .cs {
+      color: #999;
+      font-style: italic;
+      font-weight: 700
+    }
+
+    .gd {
+      background-color: #fdd;
+      color: #000
+    }
+
+    .gd .x {
+      background-color: #faa;
+      color: #000
+    }
+
+    .ge {
+      font-style: italic
+    }
+
+    .gr {
+      color: #a00
+    }
+
+    .gh {
+      color: #999
+    }
+
+    .gi {
+      background-color: #dfd;
+      color: #000
+    }
+
+    .gi .x {
+      background-color: #afa;
+      color: #000
+    }
+
+    .go {
+      color: #888
+    }
+
+    .gp {
+      color: #555
+    }
+
+    .gs {
+      font-weight: 700
+    }
+
+    .gu {
+      color: #aaa
+    }
+
+    .gt {
+      color: #a00
+    }
+
+    .kc,
+    .kd,
+    .kp,
+    .kr,
+    .kt {
+      font-weight: 700
+    }
+
+    .kt {
+      color: #458
+    }
+
+    .m {
+      color: #099
+    }
+
+    .s {
+      color: #d14
+    }
+
+    .na {
+      color: teal
+    }
+
+    .nb {
+      color: #0086b3
+    }
+
+    .nc {
+      color: #458;
+      font-weight: 700
+    }
+
+    .no {
+      color: teal
+    }
+
+    .ni {
+      color: purple
+    }
+
+    .ne,
+    .nf {
+      color: #900;
+      font-weight: 700
+    }
+
+    .nn {
+      color: #555
+    }
+
+    .nt {
+      color: navy
+    }
+
+    .nv {
+      color: teal
+    }
+
+    .ow {
+      font-weight: 700
+    }
+
+    .w {
+      color: #bbb
+    }
+
+    .mf,
+    .mh,
+    .mi,
+    .mo {
+      color: #099
+    }
+
+    .s2,
+    .sb,
+    .sc,
+    .sd,
+    .se,
+    .sh,
+    .si,
+    .sx {
+      color: #d14
+    }
+
+    .sr {
+      color: #009926
+    }
+
+    .s1 {
+      color: #d14
+    }
+
+    .ss {
+      color: #990073
+    }
+
+    .bp {
+      color: #999
+    }
+
+    .vc,
+    .vg,
+    .vi {
+      color: teal
+    }
+
+    .il {
+      color: #099
+    }
+  }
+
+  @media (prefers-color-scheme:dark) {
+    .highlight{
+      .c {
+        color: #545454;
+        font-style: italic
+      }
+
+      .err {
+        background-color: #e3d2d2;
+        color: #f07178
+      }
+
+      .k {
+        color: #89ddff
+      }
+
+      .k,
+      .o {
+        font-weight: 700
+      }
+
+      .cm {
+        color: #545454;
+        font-style: italic
+      }
+
+      .cp {
+        color: #545454;
+        font-weight: 700
+      }
+
+      .c1,
+      .cs {
+        color: #545454;
+        font-style: italic
+      }
+
+      .cs {
+        font-weight: 700
+      }
+
+      .gd {
+        background-color: #fdd;
+        color: #000
+      }
+
+      .gd .x {
+        background-color: #faa;
+        color: #000
+      }
+
+      .ge {
+        font-style: italic
+      }
+
+      .gr {
+        color: #f07178
+      }
+
+      .gh {
+        color: #999
+      }
+
+      .gi {
+        background-color: #dfd;
+        color: #000
+      }
+
+      .gi .x {
+        background-color: #afa;
+        color: #000
+      }
+
+      .go {
+        color: #888
+      }
+
+      .gp {
+        color: #555
+      }
+
+      .gs {
+        font-weight: 700
+      }
+
+      .gu {
+        color: #aaa
+      }
+
+      .gt {
+        color: #f07178
+      }
+
+      .kc,
+      .kd,
+      .kp,
+      .kr,
+      .kt {
+        font-weight: 700
+      }
+
+      .kt {
+        color: #ffcb6b
+      }
+
+      .m {
+        color: #f78c6c
+      }
+
+      .s {
+        color: #c3e88d
+      }
+
+      .na {
+        color: teal
+      }
+
+      .nb {
+        color: #eff
+      }
+
+      .nc {
+        color: #ffcb6b;
+        font-weight: 700
+      }
+
+      .no {
+        color: teal
+      }
+
+      .ni {
+        color: purple
+      }
+
+      .ne {
+        color: #900;
+        font-weight: 700
+      }
+
+      .nf {
+        color: #82aaff;
+        font-weight: 700
+      }
+
+      .nn {
+        color: #555
+      }
+
+      .nt {
+        color: #ffcb6b
+      }
+
+      .nv {
+        color: #eff
+      }
+
+      .ow {
+        font-weight: 700
+      }
+
+      .w {
+        color: #eff
+      }
+
+      .mf,
+      .mh,
+      .mi,
+      .mo {
+        color: #f78c6c
+      }
+
+      .s2,
+      .sb,
+      .sc,
+      .sd {
+        color: #c3e88d
+      }
+
+      .se {
+        color: #eff
+      }
+
+      .s1,
+      .sh,
+      .si,
+      .sr,
+      .ss,
+      .sx {
+        color: #c3e88d
+      }
+
+      .bp {
+        color: #999
+      }
+
+      .vc {
+        color: #ffcb6b
+      }
+
+      .vg,
+      .vi {
+        color: #eff
+      }
+
+      .il {
+        color: #f78c6c
+      }
+    }
+  }
 }

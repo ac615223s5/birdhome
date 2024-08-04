@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Games
-nav_list: game-pages
+nav_list: 
+  - nav-game
 ---
 
 ## Mine
@@ -9,8 +10,8 @@ nav_list: game-pages
 - [ImprovedFlightControls]({% link games/terraria.md%}#improvedflightcontrols) Terraria mod
 
 ## Not mine
-{% for game in site.data.game-pages %}{%unless game.title=="Games"%}
-- [{{game.title}}]({{game.url}}){%endunless%}{%endfor%}
+{% for game in site.data.nav-game offset:1%}
+- [{{game.title}}]({{game.url}}){%endfor%}
 
 ![under construction]({{"/assets/images/cat-element.gif" | relative_url}})
 

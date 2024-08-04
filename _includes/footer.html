@@ -1,40 +1,25 @@
-<footer class="site-footer h-card {{page.footerStyle}}">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.matrix -%}
-            <li><a class="u-matrix" href="https://matrix.to/#/{{ site.author.matrix }}">{{ site.author.matrix }}</a></li>
-          {%- endif %}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
-
+<footer class="container1 w-64 flex flex-col gap-2.5 max-lg:w-full max-lg:flex-row flex-wrap max-lg:justify-evenly">
+  <p class="feed-subscribe">
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+      <svg class="inline w-5 h-5">
+        <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+      </svg> Subscribe
+    </a>
+  </p>
+  <div>
+    <h2 class="header2">Contact</h2>
+    <ul class="contact-list mb-1">
+      <li><a class="u-matrix link" href="https://matrix.to/#/{{ site.author.matrix }}">{{ site.author.matrix }}</a></li>
+      <li><a class="u-email link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+    </ul>
     <div class="social-links">
       {%- include social.html -%}
     </div>
-
   </div>
-
+  <div class="max-lg:w-full">
+    <div class="max-lg:max-w-32 max-lg:mx-auto">
+      {%include themed-image.html src1="/assets/images/light/1038621yv64mh2h7b.gif"
+      src2="/assets/images/decorations/clipart-star-transparent-background-17-3497186973.png"%}
+    </div>
+  </div>
 </footer>

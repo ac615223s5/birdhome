@@ -3,17 +3,17 @@
 
 {%- include head.html -%}
 
-<body class="flex flex-col grow">
-  <div class="grow flex flex-col xl:flex-row gap-2.5 justify-center">
-    {%- include header.html -%}
-    {{ content }}
-    <aside class="container1 p-7 w-48 flex flex-col">
-      Decorative Block
-      <div class="grow"></div>
-      <img src="/assets/images/light/1038621yv64mh2h7b.gif">
-    </aside>
+<body class="flex flex-col">
+  <div class="absolute -z-10 max-w-72 right-0 top-0">
+    {%include themed-image.html src1="https://clipartcraft.com/images/flower-clipart-wisteria-6.png" src2=""%}
   </div>
-  {% include footer.html %}
+  <div class="grow">
+    <div class="flex max-lg:flex-col flex-row gap-2.5 justify-center">
+      {%- include header.html -%}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+  </div>
 </body>
 <style>
   body{
@@ -21,7 +21,7 @@
   }
   @media (prefers-color-scheme: dark) {
     body {
-      background: url(https://sadhost.neocities.org/images/tiles/starbub2.gif);
+      background: url(/assets/images/decorations/stars.gif);
     }
   }
 </style>
