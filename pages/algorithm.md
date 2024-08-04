@@ -402,7 +402,7 @@ Writing algorithms is one of my hobbies. I first got into it while preparing for
     {% for item in item.contests %}
     <li {%if item.highlight!="highlight" %}x-show="highlight" x-transition{%endif%}><img src="{{item.img | relative_url}}" class="h-5 w-5 -mb-1 inline">
       <a class="underline" {%if item.link%} href="{{item.link}}" {%endif%}>{{item.name}}</a> {{item.date}}
-      <p class="m-0">{{item.comment}}</p>
+      <p class="!m-0">{{item.comment}}</p>
     </li>
     {% endfor %}
   </ul>
