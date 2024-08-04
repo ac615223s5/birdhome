@@ -37,10 +37,9 @@ layout: base
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
+  {%if page.comments%}
+  <a href="{{page.comments}}" class="text-sm text-right block">View Comments </a>
+  {%endif%}
+  
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

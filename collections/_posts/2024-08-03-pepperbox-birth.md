@@ -2,6 +2,7 @@
 author: nieve
 title: Pepperbox is born
 tags: internal-news
+comments: https://matrix.to/#/!MYnIXfdNoeowBWxAvO:matrix.org/$2f9OIozqOW7-7mc-ynln_hz6y2BaHt99Klvzlx0yCA8?via=matrix.org
 ---
 
 After months of incubation inside a virtual machine, Pepperbox now runs on its own dedicated hardware! With 2 old processor cores, 8gB of memory, and 256gB of storage, it's not the most impressive system, but on the bright side it does have its own ~~battery~~ uninterruptible power supply. And hey, how much memory did you have as a baby? 
