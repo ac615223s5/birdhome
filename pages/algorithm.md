@@ -400,8 +400,7 @@ Writing algorithms is one of my hobbies. I first got into it while preparing for
   <h4>{{item.year}}</h4>
   <ul class="">
     {% for item in item.contests %}
-    <li {%if item.highlight!="highlight" %}x-show="highlight" x-transition{%endif%}><img
-        src="{{item.img | relative_url}}" class="h-5 w-5 mr-1 -mb-1 ">
+    <li {%if item.highlight!="highlight" %}x-show="highlight" x-transition{%endif%}><img src="{{item.img | relative_url}}" class="h-5 w-5 -mb-1 inline">
       <a class="underline" {%if item.link%} href="{{item.link}}" {%endif%}>{{item.name}}</a> {{item.date}}
       <p class="m-0">{{item.comment}}</p>
     </li>
@@ -414,8 +413,7 @@ Writing algorithms is one of my hobbies. I first got into it while preparing for
 This is really embarrassing...
 <ul class="contestList">
   {% for item in page.contests_bad %}
-  <li><img
-      src="{{item.img | relative_url}}" class="h-5 w-5 mr-1 -mb-1 ">
+  <li><img src="{{item.img | relative_url}}" class="h-5 w-5 mr-1 -mb-1 inline">
     <a class="underline" {%if item.link%} href="{{item.link}}" {%endif%}>{{item.name}}</a> {{item.date}}
     <p class="m-0">{{item.comment}}</p>
   </li>
