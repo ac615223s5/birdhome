@@ -143,11 +143,11 @@ body {
   }
 
   ul {
-    @apply list-disc list-inside ml-5;
+    @apply list-disc ml-5;
   }
 
   ol {
-    @apply list-decimal list-inside ml-5;
+    @apply list-decimal ml-5;
   }
 
   li>ol,
