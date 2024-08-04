@@ -415,7 +415,7 @@ This is really embarrassing...
   {% for item in page.contests_bad %}
   <li><img src="{{item.img | relative_url}}" class="h-5 w-5 mr-1 -mb-1 inline">
     <a class="underline" {%if item.link%} href="{{item.link}}" {%endif%}>{{item.name}}</a> {{item.date}}
-    <p class="m-0">{{item.comment}}</p>
+    <p class="!m-0">{{item.comment}}</p>
   </li>
   {% endfor %}
 </ul>
