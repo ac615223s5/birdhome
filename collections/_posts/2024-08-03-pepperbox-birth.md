@@ -13,6 +13,6 @@ By the way, my server is called Pepperbox because when I was installing linux I 
 
 Nope. Linux's drivers for the touchpad are still considerably worse than microsoft precision drivers, and touchscreen support is even worse.
 
-With its own body, Pepperbox can have much higher uptime and won't be taking up my graphics card's VRAM if I want to run a big neural network. It'll also no longer be a [container of containers](https://piped.agew.tech/watch?v=PivpCKEiQOQ&t=0).
+With its own body, Pepperbox can have much higher uptime and won't be taking up my video memory if I want to run a big neural network. It'll also no longer be a [container of containers](https://piped.agew.tech/watch?v=PivpCKEiQOQ&t=0).
 
 More updates to come. Y'all have a good day now.
