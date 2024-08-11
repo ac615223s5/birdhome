@@ -8,10 +8,16 @@
 }
 
 ::selection{
-  @apply bg-pink-300;
+  @apply bg-pink-300 dark:bg-amber-950;
 }
 :root{
   scrollbar-color: rgb(219 39 119 / 1) transparent;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    scrollbar-color: rgb(50 50 50 / 1) rgb(0 0 0);
+  }
+
 }
 
 body {
@@ -22,25 +28,28 @@ body {
   @apply bg-pink-100 dark:bg-stone-800/75 p-3 border border-solid border-pink-300 dark:border-0;
 }
 
-
 .link {
   @apply text-pink-600 dark:text-amber-300;
 }
 
-.header {
-  @apply text-pink-900 dark:text-amber-600 font-semibold;
-}
-
-.header2 {
-  @apply font-bold bg-pink-200 px-1 text-pink-900 dark:bg-amber-950 dark:text-amber-600;
-}
-
-.header3 {
-  @apply font-semibold text-pink-900 text-right border-b border-solid border-pink-900;
+.headerColor{
+  @apply text-pink-900 dark:text-amber-600;
 }
 
 .textColor {
   @apply text-pink-950 dark:text-white;
+}
+
+.header {
+  @apply headerColor font-semibold;
+}
+
+.header2 {
+  @apply font-bold bg-pink-200 px-1 dark:bg-amber-950 headerColor;
+}
+
+.header3 {
+  @apply font-semibold headerColor text-right border-b border-solid border-pink-900;
 }
 
 @media not all and (min-width: 640px) {
@@ -139,7 +148,7 @@ body {
   .highlighter-rouge .highlight,
   code,
   pre {
-    @apply bg-pink-200;
+    @apply bg-pink-200 dark:bg-black;
   }
 
   ul {
@@ -156,14 +165,14 @@ body {
   }
 
   table {
-    @apply border border-solid border-pink-300;
+    @apply border border-solid border-pink-300 dark:border-black;
     /*border-collapse:collapse;*/
     @apply mb-7 w-full overflow-x-auto;
     @apply text-left;
   }
 
   table tr:nth-child(2n) {
-    @apply bg-pink-50;
+    @apply bg-pink-50 dark:bg-black;
   }
 
   table td,
@@ -172,12 +181,11 @@ body {
   }
 
   table th {
-    @apply bg-pink-200;
-    @apply border border-solid border-pink-300;
+    @apply bg-pink-200 dark:bg-black;
   }
 
-  table td {
-    @apply border border-solid border-pink-300;
+  table td, table th {
+    @apply border border-solid border-pink-300 dark:border-black;
   }
 
   @media screen and (max-width:800px) {

@@ -1,6 +1,6 @@
 {% assign entry = include.item %}
-<a class="inline-block border border-solid border-gray-500 hover:border-black p-2.5" {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.user_url }}" target="_blank" title="{{ entry.title | default: entry.platform }}">
-  <svg class="w-5 h-5 align-text-bottom text-pink-900 fill-current">
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.user_url }}" target="_blank" title="{{ entry.title | default: entry.platform }}">
+  <svg class="w-5 h-5 align-text-bottom text-pink-900 dark:text-amber-900 fill-current">
     <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: entry.platform | relative_url }}"></use>
   </svg>
 </a>
