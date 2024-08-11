@@ -43,7 +43,7 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
   </div>
 </div>
 <div class="-mb-3 flex justify-center">
-  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/star-overlay-png-4.png"%}
+  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/Firefly-PNG-High-Quality-Image.png"%}
 </div>
 
 <style>

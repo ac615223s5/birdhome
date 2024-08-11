@@ -5,7 +5,7 @@
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   {%- if titles_size > 0 -%}
   <nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between h-full">
-    <a class="text-2xl" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="text-2xl dark:text-amber-400" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     <input type="checkbox" id="nav-trigger" class="hidden" />
     <label for="nav-trigger" class="sm:hidden">
       <span class="menu-icon">
