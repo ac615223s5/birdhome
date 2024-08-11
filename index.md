@@ -18,7 +18,7 @@ Enjoy your stay
 
 <div class="flex gap-2.5">
   <div class="w-1/4">
-    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2="https://dl.glitter-graphics.com/pub/567/567264q081as96la.gif"%}
+    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2=""%}
   </div>
   <div markdown="1" class="grow">
 ## About
