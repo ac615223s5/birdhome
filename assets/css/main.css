@@ -5,6 +5,9 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  img{
+    max-height: 100%;
+  }
 }
 
 ::selection{

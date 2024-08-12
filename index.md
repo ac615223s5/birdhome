@@ -17,8 +17,8 @@ Enjoy your stay
 {%include divider1.html%}
 
 <div class="flex gap-2.5">
-  <div class="w-1/4">
-    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2=""%}
+  <div class="h-40">
+    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2="/assets/images/decorations/239515.png"%}
   </div>
   <div markdown="1" class="grow">
 ## About
