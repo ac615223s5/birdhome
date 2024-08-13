@@ -13,8 +13,8 @@ permalink: /lookout
 </a>
 
 You can see the world from here.
-- Internal
-  - [Blogs]({{"/"|relative_url}})
+- [Internal](({{"/"|relative_url}}))
+  - [Blogs]({{"/blog"|relative_url}})
   - [Algorithm]({{"/algorithm"|relative_url}})
   - [Art]({{"/art"|relative_url}})
   - [Coding]({{"/coding"|relative_url}})
