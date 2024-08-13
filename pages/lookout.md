@@ -1,11 +1,10 @@
 ---
 layout: base
-title: Wormhole
-permalink: /wormhole
-mainStyle: dark:bg-zinc-900
-footerStyle: dark:bg-black !dark:border-0
-headerStyle: dark:bg-zinc-950 !dark:border-0
+title: Map
+permalink: /lookout
 ---
+<img class="absolute inline-block w-3/5 right-0" src="/assets/images/decorations/birds-flying-on-white-590836565.png">
+
 <a href="https://www.glitter-graphics.com/myspace/text_generator.php" target=_blank>
   <img class="inline" src="{{"/assets/images/l.gif"|relative_url}}">
   <img class="inline" src="{{"/assets/images/u.gif"|relative_url}}">
@@ -13,7 +12,7 @@ headerStyle: dark:bg-zinc-950 !dark:border-0
   <img class="inline" src="{{"/assets/images/a.gif"|relative_url}}">
 </a>
 
-Select your destination
+You can see the world from here.
 - Internal
   - [Blogs]({{"/"|relative_url}})
   - [Algorithm]({{"/algorithm"|relative_url}})
@@ -45,4 +44,7 @@ Select your destination
   - [Birdhome](https://birdhome.stellar.agew.tech/) (You are here)
 
 <style>
+  main{
+    position: relative;
+  }
 </style>
