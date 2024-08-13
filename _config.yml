@@ -56,18 +56,6 @@ minima:
     - { platform: codeberg, user_url: "https://codeberg.org/nieve" }
     - { platform: github, user_url: "https://github.com/ac615223s5" }
     - { platform: youtube, user_url: "https://www.youtube.com/channel/UCm8GhQcqqMeWz67SiMgCwTQ" }
-    
-
-header_pages:
-  - pages/blog.markdown
-  - pages/algorithm.md
-  - pages/coding.md
-  - games/index.md
-  - pages/art.md
-  - pages/music.md
-  - pages/wormhole.md
-  - pages/credits.md  
-  - pages/images.md
 
 #show_excerpts: true
 
