@@ -384,6 +384,12 @@ contests_set:
   link: "https://codeforces.com/blog/entry/88497"
 ---
 
+<style>
+  img{
+    display:inline;
+  }
+</style>
+
 #	Algorithm design ![]({{"/assets/images/orz.gif"|relative_url}})
 
 Writing algorithms is one of my hobbies. I first got into it while preparing for school competitions/olympaids and ended up taking classes taught by b<span style="color:red">ruce</span> . After that I did some more problems for fun.
