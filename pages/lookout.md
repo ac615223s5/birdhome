@@ -4,7 +4,8 @@ title: Map
 permalink: /lookout
 ---
 <div class="absolute inline-block w-3/5 right-0">
-  {%include themed-image.html src1="/assets/images/decorations/birds-flying-on-white-590836565.png" src2="/assets/images/decorations/stylized-star-constellation-1i0t05hg3at7ojjc.png"%}
+  {%include themed-image.html src1="/assets/images/decorations/birds-flying-on-white-590836565.png"
+  src2="/assets/images/decorations/a50f9a671f88ba17e5783b980fefacdafc61ec14.png"%}
 </div> 
 
 <a href="https://www.glitter-graphics.com/myspace/text_generator.php" target=_blank>
