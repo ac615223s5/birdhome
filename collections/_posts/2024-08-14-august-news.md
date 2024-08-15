@@ -2,6 +2,7 @@
 author: nieve
 title: August News (Nitter, Proxigram, Decorations, New Matrix Room)
 tags: internal-news
+comments: https://matrix.to/#/!MYnIXfdNoeowBWxAvO:matrix.org/$TRXchcqN5TN7wzbvUTzp_S7xSqvVF0HIwgr8eCY5hJY?via=matrix.org
 ---
 ## Site retheming
 
