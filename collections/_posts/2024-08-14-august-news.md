@@ -1,8 +1,14 @@
 ---
 author: nieve
-title: august news 
+title: August News (Nitter, Proxigram, Decorations, New Matrix Room)
 tags: internal-news
 ---
+## Site retheming
+
+I decorated the website! Do you like it?
+
+Birdhome no longer uses the default Minima theme for Jekyll. While it's great for quickly setting up blogs, I want to embrace the process of customizing my website and making it look pretty.
+
 ## Nitter
 I'm hosting Nitter, even though it's technically [discontinued](https://status.d420.de/rip) since twitter started requiring an account to see anything. All the more reason to set up my own and contribute to the total bandwidth. It's public because if only one person is using it and it's logged in as an account, that's not very anonymous, is it? 
 
@@ -16,16 +22,10 @@ There's also a proxigram instance now, at [proxigram.agew.tech](https://proxigra
 
 I started using [vscodium](https://vscodium.com/) instead of vscode because apparently this is the version that's actually open source. It was easy to switch, I just copied over my extensions from `.vscode/extensions` to `.vscode-oss/extensions` and my settings from `Code\User` to `VSCodium\User`. I'm not working on C# so everything worked the same. And yeah, that's it.
 
-## Site retheming
-
-Birdhome no longer uses the default Minima theme for Jekyll. While it's great for quickly setting up blogs, I want to embrace the process of decorating my personal website and making it look pretty.
 
 ## Matrix room
 
 I set up a [room](https://matrix.to/#/#duckgalaxy:matrix.org) on Matrix. You can use it to post comments about the blogs or other related discussion.
-
-
-
 
 
 
