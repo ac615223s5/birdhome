@@ -15,3 +15,7 @@ Other resources:
   - https://glitter-graphics.com/
   - https://cooltext.com/
 
+{%include themed-image.html
+src1=""
+src2="/assets/images/decorations/clipart-star-transparent-background-17-3497186973.png"
+%}
