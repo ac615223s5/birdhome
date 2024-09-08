@@ -25,6 +25,6 @@ So piped is really a proxy behind a reverse proxy. Which is really a proxy behin
 
 ![proxyproxyproxy](/assets/images/oacuewifmyso.png)
 
-And still! All these proxies don't just magically talk to each other, they are connected through a series of routers. And these routers are connected through relays and switches. And the relays are connected through cables. And your processor is connected to your network card through PCIE, which then connects to your router using ethernet or wifi. Wait, how does the internet work again?
+We haven't looked at the lower layers yet. All these proxies are connected through a series of routers. And these routers are connected through relays. And the relays are connected through cables. And your processor is connected to your network card through PCIE, which then connects to your router using ethernet.
 
 <iframe src="https://piped.agew.tech/embed/watch?v=_cZC67wXUTs" class="w-full aspect-video" allowfullscreen>
