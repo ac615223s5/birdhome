@@ -1,7 +1,7 @@
 ---
 title: I got a new toothbrush
 tags: discussion
-comments: 
+comments: https://matrix.to/#/!MYnIXfdNoeowBWxAvO:matrix.org/$_XNU1bnIq6H74w_S79y-Al51H5h2mb8OajaTXnFNBZk?via=matrix.org
 ---
 
 Toothbrushes are simple devices that haven't changed much. Companies started increasing the price and adding useless features such as a thousand "whitening", "massage", and "deep clean" modes that don't do anything, or "smart" bluetooth/internet connection so it can [sell your data and get hacked](https://piped.agew.tech/watch?v=L6vLvpsrAqs). I wouldn't be surprised if there are "AI" toothbrushes now that require a phone app and subscription to work now. But instead of any of that, my new toothbrush actually uses technology to do something useful and innovative.
