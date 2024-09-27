@@ -1,11 +1,10 @@
 ---
 author: nieve
 title: Proxy behind a reverse proxy behind a reverse proxy
-date: 9999-01-01
 tags: discussion
 ---
 
-As you know, Youtube is a mess, requiring an adblocker, custom filters, and several extensions just to make it usable. So instead you come to me, who retrieves the video from youtube for you and packages it up without all the bloat. From Youtube's perspective, all these requests are coming from my server Pepperbox, reducing the information they can have about you. Essentially, pepperbox is acting as your *proxy*.
+As you know, websites like Youtube are a mess, requiring an adblocker, custom filters, and several extensions just to make it usable. So instead you come to me, who retrieves the content and packages it up for you without all the bloat. From Youtube's perspective, all these requests are coming from my server Pepperbox, reducing the information they can have about you. Essentially, pepperbox is acting as your ✨proxy✨.
 
 But youtube and twitter want individual users who they can track and send ads to, not servers that send a lot of requests. In order to avoid getting blocked, pepperbox must now spread the requests over several of its own proxies. In other words, Piped and Nitter users are a group of users pretending to be an individual pretending to be another group of users. Wonderful.
 
@@ -25,6 +24,6 @@ So piped is really a proxy behind a reverse proxy. Which is really a proxy behin
 
 ![proxyproxyproxy](/assets/images/oacuewifmyso.png)
 
-We haven't looked at the lower layers yet. All these proxies are connected through a series of routers. And these routers are connected through relays. And the relays are connected through cables. And your processor is connected to your network card through PCIE, which then connects to your router using ethernet.
+All of this is layer 4 and above. The proxies are connected through a series of routers. And these routers are connected through relays. And the relays are connected through cables. And your router is connected to your network card using ethernet, which then connects with your motherboard and processor through PCIE. All so you can watch this video.
 
-<iframe src="https://piped.agew.tech/embed/watch?v=_cZC67wXUTs" class="w-full aspect-video" allowfullscreen>
+<iframe src="https://piped.agew.tech/watch?v=lTonHRerMC4" class="w-full aspect-video" allowfullscreen>
