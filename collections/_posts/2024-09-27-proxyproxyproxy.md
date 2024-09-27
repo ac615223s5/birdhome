@@ -2,6 +2,7 @@
 author: nieve
 title: Proxy behind a reverse proxy behind a reverse proxy
 tags: discussion
+comments: https://matrix.to/#/!MYnIXfdNoeowBWxAvO:matrix.org/$6wYXuKubeFrcbp2It3ueBVdK4Gj3cljlY02o7Q0xXjg?via=matrix.org
 ---
 
 As you know, websites like Youtube are a mess, requiring an adblocker, custom filters, and several extensions just to make it usable. So instead you come to me, who retrieves the content and packages it up for you without all the bloat. From Youtube's perspective, all these requests are coming from my server Pepperbox, reducing the information they can have about you. Essentially, pepperbox is acting as your ✨proxy✨.
