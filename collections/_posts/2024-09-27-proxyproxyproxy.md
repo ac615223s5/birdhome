@@ -27,4 +27,4 @@ So piped is really a proxy behind a reverse proxy. Which is really a proxy behin
 
 All of this is layer 4 and above. The proxies are connected through a series of routers. And these routers are connected through relays. And the relays are connected through cables. And your router is connected to your network card using ethernet, which then connects with your motherboard and processor through PCIE. All so you can watch this video.
 
-<iframe src="https://piped.agew.tech/watch?v=lTonHRerMC4" class="w-full aspect-video" allowfullscreen>
+<iframe src="https://piped.stellar.afs.ovh/watch?v=lTonHRerMC4" class="w-full aspect-video" allowfullscreen>

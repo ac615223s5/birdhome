@@ -17,7 +17,7 @@ If you use this instance regularly, I would ask you to create a new twitter acco
 
 ## Proxigram
 
-There's also a proxigram instance now, at [proxigram.agew.tech](https://proxigram.agew.tech/). Some resturants and organizations put all their information on instagram for some reason so now you can see it without an account. Remember how I didn't understand docker images? Well this time the image was [broken](https://codeberg.org/proxigram/proxigram/issues/42), so I had to build my own. Luckily, it's easy. From what I understand, I take all the commands I would normally run to start the program and put them in the Dockerfile in a specific format. Here's a decent tutorial: [Learn Docker in 7 Easy Steps](https://piped.agew.tech/watch?v=gAkwW2tuIqE).
+There's also a proxigram instance now, at [proxigram.stellar.afs.ovh](https://proxigram.stellar.afs.ovh/). Some resturants and organizations put all their information on instagram for some reason so now you can see it without an account. Remember how I didn't understand docker images? Well this time the image was [broken](https://codeberg.org/proxigram/proxigram/issues/42), so I had to build my own. Luckily, it's easy. From what I understand, I take all the commands I would normally run to start the program and put them in the Dockerfile in a specific format. Here's a decent tutorial: [Learn Docker in 7 Easy Steps](https://piped.stellar.afs.ovh/watch?v=gAkwW2tuIqE).
 
 ## Switching to VSCodium
 

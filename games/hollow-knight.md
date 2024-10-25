@@ -86,11 +86,11 @@ My favorite boss fight in the game. While it felt a little unfair at first, as I
 Pure vessel switches attacks very quickly, before you get the chance to recover your dash or reset your position. Many of its attacks have several good countermeasures depending on the situation, and if you make a mistake you can often improvise and still avoid getting hit. It is also relatively easy to stagger considering how much health it has. So as I got more practice, I did not feel like I was just memorizing the one correct response to each attack and reacting in time, but rather taking control of the flow of the fight.
 
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/WLwEhWpwens?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/WLwEhWpwens?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/LsKYc5mNdMg?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/LsKYc5mNdMg?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/RsY7s1oTFo4?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/RsY7s1oTFo4?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
 
 ---
 
@@ -98,4 +98,4 @@ Pure vessel switches attacks very quickly, before you get the chance to recover 
 
 Unofficial game based off hollow knight's  upcoming sequel. The inputs are a little unresponsive but it's otherwise very impressive and the art is good too.
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/aAgR35d-Aq4?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/aAgR35d-Aq4?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>

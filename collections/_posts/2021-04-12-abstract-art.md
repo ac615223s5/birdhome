@@ -10,7 +10,7 @@ Next, it starts at an unvisited node and traverses the graph, choosing the right
 These loops form the sections of the image, which are then colored.
 
 
-[Make your own](https://fairylands.stellar.agew.tech/widgets/2021-04-12-abstract-art.html)
+[Make your own](https://fairylands.stellar.afs.ovh/widgets/2021-04-12-abstract-art.html)
 
 ## Gallery
 {% capture images1 %}

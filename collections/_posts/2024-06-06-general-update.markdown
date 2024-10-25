@@ -11,6 +11,6 @@ I installed tailwind css alongside jekyll and alpine to help with my styling. I'
 
 ## Web Hosting
 
-I set up my own server "Pepperbox" and started hosting some websites. I was a little scared to use docker but it was actually quite simple. I've started off with [searxng](https://stellar.agew.tech/) and [redlib](https://redlib.agew.tech/) but there will be more in the future. I like the idea of building my own sovereign web "territory" that I can use for a variety of services.
+I set up my own server "Pepperbox" and started hosting some websites. I was a little scared to use docker but it was actually quite simple. I've started off with [searxng](https://stellar.afs.ovh/) and [redlib](https://redlib.stellar.afs.ovh/) but there will be more in the future. I like the idea of building my own sovereign web "territory" that I can use for a variety of services.
 
 Daylight has been getting real long lately, with sunlight penetrating into the 22:00s. It's crazy how we still aren't at the solstice yet. I hope you are enjoying the summer. Have a good weekend!

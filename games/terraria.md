@@ -89,10 +89,10 @@ I made my own mod containing mostly small edits I think the game should have. Le
 
 ### Terraria festival
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/25fS4ngupGs?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/25fS4ngupGs?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
 
 ### Custom Empress
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/7gFI5i0jKyA?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/7gFI5i0jKyA?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
 
-<iframe class="w-full aspect-video" src="https://piped.agew.tech/embed/eQ8as36dAmA?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" src="https://piped.stellar.afs.ovh/embed/eQ8as36dAmA?si=IDLnxypeSQ-VKVCN" allowfullscreen></iframe>
