@@ -30,7 +30,7 @@ Breaking news: this post took so long to come out that there is more stuff to ta
 
 ## Forever domain
 
-We have moved to a new and hopefully permanent address, [https://stellar.afs.ovh](https://stellar.afs.ovh). Technically, the top-level domain is just afs.ovh, but all of nieve space will be under stellar.afs.ovh. I'm not going to worry about spending money on some cool domain name when there is an infinite space of infinite levels of subdomains.
+We have moved to a new and hopefully permanent address, [https://stellar.afs.ovh](https://stellar.afs.ovh). Technically, the top-level domain is just afs.ovh, but all of nieve space will be under stellar.afs.ovh. I'm not going to worry about having some cool domain name when there is an infinite space of infinite levels of subdomains.
 
 When I was first setting up, I happened to have a 1 year trial on agew.tech. But now I want something more permanent, especially if I decide to share these websites publicly. However, most of the free domain services are shut down and/or untrustworthy, and https://nic.eu.org/ hasn't responded to my request after half a year. I also had problems with [dedyn.io](https://dedyn.io/) (shut down), [afraid.org](https://freedns.afraid.org/) (doesn't allow you to create subdomains), and [duckdns](https://www.duckdns.org/) (has [problems](https://community.letsencrypt.org/t/unable-to-create-wildcard-certificate-on-duckdns/190287) with ssl certificates). As for paid services, many of them required phone verification or government ID, or some other crap.
 
