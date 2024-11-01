@@ -18,6 +18,8 @@ So how well does it work? In my experience, it is fine and doesn't miss any spot
 
 But beyond the time saving, it feels nice to use. I only have to use one arm movement for each quadrant of the mouth, and once it's in position there is less worry about getting the right angle or pressure or missing any spots. It makes brushing much simpler and frees up a little of your mind, especially if you are tired in the morning or night and in a hurry to get to school or work or bed. For people going through mental problems, it mean having motivation to brush at all.
 
+Another advantage is that since you are spending less time brushing, the batteries and brush heads last for longer. The blue indicator lines on mine have yet to fade after 9 months of brushing twice per day.
+
 Anyway, I like it and would recommend looking into unconventional toothbrush shapes and seeing if one works for you. I hope you enjoyed this slightly unusual post, it was partially inspired by the youtube channel [Technology Connections](https://www.youtube.com/channel/UCy0tKL1T7wFoYcxCe0xjN6Q). I feel like too much of my blog is about computer software/programming, but that's because most people use a computer so these topics are relevant to almost everyone. If I share a new website or program I made, it's easy for you to check it out. Whereas there's not much for you to discuss or take away from a post about going on vacation or playing a sport. But I do have a few other topics and ideas.
 
 Happy moon festival, folks!
