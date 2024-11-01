@@ -50,7 +50,7 @@ Some news from the rest of the world:
 
 Firefox added an option showing tabs in a vertical list. That means the tabs will be listed in a panel on the side of the browser rather than the top. That's great; it will make better use of the screen space while fitting in with my vertical taskbar and birdhome's vertical navigation panel. 
 
-~~Except... the top panel (also known as the "chrome") didn't get any smaller. There's still 3 rows: the bookmarks, the address field, and the one with the exit button. But now the sidebar is just taking up more space for nothing. ~~How did that get messed up...~~ They changed it 🙂.
+~~Except... the top panel (also known as the "chrome") didn't get any smaller. There's still 3 rows: the bookmarks, the address field, and the one with the exit button. But now the sidebar is just taking up more space for nothing. How did that get messed up...~~ They changed it 🙂.
 
 Huh, I guess that's it. There's not much news where I have anything unique to add.
 
