@@ -12,6 +12,8 @@ Intuitively, one unit of toothbrush area brushing against one unit of tooth area
 
 So I did some searching and found this brush. It has 3 parts to clean all sides of the teeth at once. How cool is that?
 
+![toothbrush](/assets/images/2024-11-01-weather-report/ima_025b8cd.webp)
+
 In terms of specs, the [brand I got](https://www.amazon.com/Triple-Bristle-Sonic-Blue-Brush/dp/B09PQP4DSX) was similar to most other electric toothbrushes, with [soft bristles](https://www.ada.org/resources/ada-library/oral-health-topics/toothbrushes/) and 500hz vibration (30000 brushes/minute or 60000 strokes/minute). It's waterproof for use in the shower. It cost about 40$.
 
 So how well does it work? In my experience, it is fine and doesn't miss any spots. You're normally supposed to brush for 2 minutes, so 40 seconds should be enough with 3 sides. In practice I end up brushing for 70-90 seconds when going at a natural speed so the extra cleaning is just a bonus.
