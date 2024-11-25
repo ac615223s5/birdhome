@@ -42,7 +42,7 @@ My videos are now hosted locally at [https://vid.stellar.afs.ovh/c/nieve1/videos
 
 ## Toothbrush update
 
-I recently made a post about toothbrushes. I just meant to discuss a cool new invention, but looking back, it sounds a bit like a product review or advertisement and doesn't sit right with me. I will fix it soon; sorry about that.
+I recently made a post about toothbrushes. I just meant to discuss a cool new invention (partially inspired by the youtube channel [Technology Connections](https://www.youtube.com/channel/UCy0tKL1T7wFoYcxCe0xjN6Q)), but looking back, it sounds a bit like a product review or advertisement and doesn't sit right with me. I will fix it soon; sorry about that.
 
 Some news from the rest of the world:
 

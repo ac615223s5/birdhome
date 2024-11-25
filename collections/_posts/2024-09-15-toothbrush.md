@@ -22,6 +22,6 @@ But beyond the time saving, it feels nice to use. I only have to use one arm mov
 
 Since less time is spent brushing, the batteries and brush heads also last for longer. The blue indicator lines on mine have yet to fade after 9 months of brushing twice per day.
 
-Anyway, I like it and would recommend looking into unconventional toothbrush shapes and seeing if one works for you. I hope you enjoyed this slightly unusual post, it was partially inspired by the youtube channel [Technology Connections](https://www.youtube.com/channel/UCy0tKL1T7wFoYcxCe0xjN6Q). I feel like too much of my blog is about computer software/programming, but that's because most people use a computer so these topics are relevant to almost everyone. If I share a new website or program I made, it's easy for you to check it out. Whereas there's not much for you to discuss or take away from a post about going on vacation or playing a sport. But I do have a few other topics and ideas.
+Anyway, I like it and would recommend looking into unconventional toothbrush shapes and seeing if one works for you. I hope you enjoyed this slightly unusual post. I feel like too much of my blog is about computer software/programming, but that's because most people use a computer so these topics are relevant to almost everyone. If I share a new website or program I made, it's easy for you to check it out. Whereas there's not much for you to discuss or take away from a post about going on vacation or playing a sport. But I do have a few other topics and ideas.
 
 Happy moon festival, folks!

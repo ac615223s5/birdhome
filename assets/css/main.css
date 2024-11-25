@@ -173,9 +173,11 @@ body {
     @apply mb-7 w-full overflow-x-auto;
     @apply text-left;
   }
-
+  table tr{
+    @apply  dark:bg-stone-800;
+  }
   table tr:nth-child(2n) {
-    @apply bg-pink-50 dark:bg-black;
+    @apply bg-pink-50 dark:bg-stone-900;
   }
 
   table td,
