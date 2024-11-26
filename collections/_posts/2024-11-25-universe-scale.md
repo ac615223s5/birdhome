@@ -1,5 +1,6 @@
 ---
 title: The scale of the universe (Orders of magnitude)
+comments: https://matrix.to/#/!MYnIXfdNoeowBWxAvO:matrix.org/$XeIXlq1cdua-ePFTNSaspHdwzVIyKEvgAIyvJLWi5U0?via=matrix.org&via=envs.net
 ---
 
 
@@ -14,7 +15,6 @@ And below that there is a whole lot of nothing. At 1e-35 meters is the Planck le
 1 billion centimeters is almost the diameter of earth. If the earth and small planets were represented by small fruits, then medium and large planets are medium and large fruits, and the sun is a fruit shrub. If you’ve watched one of those star size comparison videos the sun might seem like a very small star, but 95% of stars are actually even smaller than the sun. On this scale the distances between the planets are like the distance to your nearest walmart walgreens target best buy. Beyond that are some distant comets and a lot of empty space. The size of the  solar system vs distance to nearby stars is similar to the nucleus inside the atom; about a factor of 30000, or square root of 1 billion.
 
 It’s easy to think of planets and stars and galaxies as all “big space stuff”, but at 1 billion earth diameters we have barely reached one light year. Interstellar distances are on a whole other level. If one light year was scaled to one centimeter, then galaxies would be 100 m to 10 km across. These galaxies form clusters and superclusters and finally filaments with a size around 1 billion light years. These filaments are spread evenly across the observable universe, about 100 billion light years in diameter.
-
 
 | A whole lot of nothing | Weird physics | small science stuff we can’t see  | Human scale | Planetary scale | interstellar scale  |
 | :---- | :---- | :---- | :---- | :---- | :---- |
