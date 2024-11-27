@@ -9,7 +9,7 @@ Enjoy your stay
 
   </div>
   <div class="w-2/5 -ml-2">
-    {%include themed-image.html src1="/assets/images/light/q9ykpqwrzesoi81rtvvkpfs9quey-3115486997.png" src2="/assets/images/decorations/christmas/christmas_garland_right.png"%}
+    {%include themed-image.html src1="/assets/images/light/q9ykpqwrzesoi81rtvvkpfs9quey-3115486997.png" src2="/assets/images/decorations/Space-Background-PNG-Image-1344297994.png"%}
   </div>
 
 </div>
@@ -18,7 +18,7 @@ Enjoy your stay
 
 <div class="flex gap-2.5">
   <div class="h-40">
-    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2="/assets/images/decorations/christmas/pngtree-christmas-mistletoe-with-berry-png-image_13669817-3658153765.png"%}
+    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2="/assets/images/decorations/239515.png"%}
   </div>
   <div markdown="1" class="grow">
 ## About
