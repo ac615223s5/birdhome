@@ -10,7 +10,7 @@ Effectively this is what a password manager does. It uses your master password a
 
 Passkeys take this a step further and derive a different secondary password not just for every service, but every time you log in to that service. So if your secondary password gets compromised once, it can't be used to log in again.
 
-2 factor authentication does the same thing as passkeys but worse. When you set it up, you store a new password inside your phone or authenticator app. This password is then used to derive new 6 digit codes every minute which you then have to enter manually. Since the code is so short, you still need a regular password to prevent brute force attacks.
+2 factor authentication does the same thing as passkeys but worse. When you set it up, you store a new password inside your phone or authenticator app. This password is used to derive new 6 digit codes every minute which you then have to enter manually. Since the code is so short, you still need a regular password to prevent brute force attacks.
 
 Passkeys make 2 factor authentication obsolete. Also, authenticator apps aren't really a second "factor". The password is something you know, the 2fa is something you have... that "thing" being some software storing another password haha.
 
