@@ -24,8 +24,7 @@ You can see the world from here.
   - [Games]({{"/games"|relative_url}}){% for game in site.data.game-pages %}{%unless game.title=="Games"%}
     - [{{game.title}}]({{game.url}}){%endunless%}{%endfor%}
   - [Music]({{"/music"|relative_url}})
-  - [Wormhole]({{"/wormhole"|relative_url}}) (You are here)
-  - [About]({{"/about"|relative_url}})
+  - [Lookout]({{"/lookout"|relative_url}}) (You are here)
   - [Credits]({{"/credits"|relative_url}})
   - [Images]({{"/images"|relative_url}})
 - [nieve space](https://stellar.afs.ovh)
