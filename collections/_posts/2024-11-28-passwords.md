@@ -1,4 +1,3 @@
-
 ---
 title: Passwords, passkeys, and 2-factor authentication
 tags: discussion
