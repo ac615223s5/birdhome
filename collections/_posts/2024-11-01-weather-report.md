@@ -14,7 +14,7 @@ I also set up a tunnel for SSH so I can access my server if anything goes wrong 
 
 Unfortunately, the VPS costs money, and the revenue of Nieve space comes out to a grand sum of zero. I have enough free azure credit to last for a couple of years, and we'll see what happens after that. May the sun shine forever.
 
-Speaking of which, what better time to set up a weather station? I created a [status monitor](https://status.stellar.afs.ovh/status/status) where you can check the uptime and see whether everything's working.
+Speaking of which, what better time to set up a weather station? I created a [status monitor](https://status.stellar.afs.ovh/status/stellar) where you can check the uptime and see whether everything's working.
 
 ## Weird nitter issue 
 
