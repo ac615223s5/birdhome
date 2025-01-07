@@ -1,0 +1,1 @@
+Sitemap: https://birdhome.stellar.afs.ovh/sitemap.xml

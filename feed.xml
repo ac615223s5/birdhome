@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://birdhome.stellar.afs.ovh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://birdhome.stellar.afs.ovh/" rel="alternate" type="text/html" /><updated>2025-01-07T21:16:51+00:00</updated><id>https://birdhome.stellar.afs.ovh/feed.xml</id><title type="html">Birdhome</title><subtitle></subtitle><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><entry><title type="html">January Chat</title><link href="https://birdhome.stellar.afs.ovh/2025/01/07/chat.html" rel="alternate" type="text/html" title="January Chat" /><published>2025-01-07T00:00:00+00:00</published><updated>2025-01-07T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2025/01/07/chat</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2025/01/07/chat.html"><![CDATA[<p>Happy solstice, christmas, boxing day, new years, and any other holidays you might be celebrating! Here are some <a href="https://vid.stellar.afs.ovh/w/tJyDFJCB24Y4PNU2pcNBiH">fireworks</a> to celebrate. Enjoy the new decorations!</p>
+
+<p>Nievespace just reached 2 months uptime! Not much news because nothing else has happened. Which is a good thing because self-hosting is supposed to be low maintainence and convenient. Overall, I’m quite satisfied with what’s become of my server.</p>
+
+<p>i’ve also been drawing a lot recently, more will be posted on matrix soon.</p>
+
+<p>there will still be more blogs but only when i think of a suitable topic. there are lots of random things i want to talk about (such as the best way to tape festive decorations to a wall) but my thoughts are too short for a blog. maybe i should do livestreams instead? hmm…</p>
+
+<p>how were your holidays, did you do anything fun over the break? i’d be happy to chat in the comments/matrix discussion. otherwise, that’s all for today. remember that you are valid, you are enough, you are loved. have a great 2025 ❤.</p>]]></content><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><category term="internal-news" /><summary type="html"><![CDATA[Happy solstice, christmas, boxing day, new years, and any other holidays you might be celebrating! Here are some fireworks to celebrate. Enjoy the new decorations!]]></summary></entry><entry><title type="html">Sysadmin confusion (I hate email)</title><link href="https://birdhome.stellar.afs.ovh/2024/12/01/sysadmin-nonsense.html" rel="alternate" type="text/html" title="Sysadmin confusion (I hate email)" /><published>2024-12-01T00:00:00+00:00</published><updated>2024-12-01T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/12/01/sysadmin-nonsense</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/12/01/sysadmin-nonsense.html"><![CDATA[<details>
+
+  <summary>warning: boring</summary>
+
+  <p>I never liked email but now I truly know how horrible it is.</p>
+
+  <p>With the recent <a href="https://cock.li/">cock.li</a> outages I decided to host my own email server and lighten the load a little. In my research I was recommended mailcow which seemed fine, just another docker stack. But then I saw that it requires 7x8gib of memory and 20x8gib storage for one account and I just thought, “what? You’re gonna be recieving a few kb of text per day, not trying to crack your users’ pgp encryption!” Other servers I checked also had similar requirements, and some of them have bloated features such as built in calendars or virus scanners to scan attachments (How is that the email server’s responsibility??). Finally I found <a href="https://maddy.email/">maddy</a>. It’s efficient but perhaps too much so, lacking any user interface. Like, I can understand not having a full web email client, but at least let users create an account without an administrator connecting to the server manually adding. It could be done with a single web form that costs almost nothing to run.</p>
+
+  <p>And then I started setting it up and realized how scuffed the technology is. Every other service and and messaging app works fine using on port 443. But email is such a spoiled child that it needs 4 ports, coupled with SPF, DKIM, DMARC, and other DNS crap for authentication. All of this really should just have been handled inside an https connection.</p>
+
+  <p>Also, don’t expect to send any email from your server because most recipients’ email provider (such as gmail) will simply block it (it won’t even show up in the spam filter).</p>
+
+  <p>After some confusion I managed to get it running. I’m going to keep it private for myself. It’s safe to say that email should never be used for sharing confidential information. Your messages are NOT end to end encrypted unless you use pgp which still does not protect the metadata. Communicate over another platform such as matrix when you can help it. And obviously don’t use email to store documents or send files to yourself or send yourself future reminders lol. Get yourself some proper software for that.</p>
+
+  <p>Also, I now use <a href="https://github.com/acmesh-official/acme.sh">acme.sh</a> to handle TLS for all my websites. It was easy to set up, no more messing around with various certbot tutorials that don’t work.</p>
+
+  <p>Also, if you noticed several hours of downtime in <del>the past month</del> November, that’s because the laptop’s power brick spontaneously stopped charging until it was replugged. Now that I’ve replaced it with a WORKING one it should not happen any more.</p>
+</details>]]></content><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><category term="internal-news" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Passwords, passkeys, and 2-factor authentication</title><link href="https://birdhome.stellar.afs.ovh/2024/11/28/passwords.html" rel="alternate" type="text/html" title="Passwords, passkeys, and 2-factor authentication" /><published>2024-11-28T00:00:00+00:00</published><updated>2024-11-28T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/11/28/passwords</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/11/28/passwords.html"><![CDATA[<p>Note: this post assumes you already know what a password manager is and why you shouldn’t use passwords like “12345” or your date of birth.</p>
+
+<p>We all know we shouldn’t use the same password for different accounts. If one service doesn’t handle your password properly and gets compromised, then that password can then be used for your accounts on other services. Instead, you take your primary password and derive a secondary password from it, then use that secondary password for the service. That way you prove to the service that you know your primary password without sending the primary password to them.</p>
+
+<p>Effectively, this is what a password manager does. It uses your master password along with some public data (your encrypted database) and derives the unencrypted service-specific password.</p>
+
+<p><code class="language-plaintext highlighter-rouge">master password (private) + encrypted database (public) -&gt; password</code></p>
+
+<p>Passkeys take this a step further and derive a different secondary password not just for every service, but every time you log in to that service. So if your secondary password gets compromised once, it can’t be used to log in again.</p>
+
+<p><code class="language-plaintext highlighter-rouge">master password (private) + encrypted database (public) -&gt; passkey</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">passkey + random number generated by server (public) -&gt; verification signature</code></p>
+
+<p>2-factor authentication does the same thing as passkeys but worse. When you set it up, you store a new key inside your phone or authenticator app. This key is used to derive new 6 digit codes every minute, which you then have to enter manually. Since the code is so short, you still need a regular password to prevent brute force attacks.</p>
+
+<p>Passkeys make authenticator apps obsolete. Also, authenticator apps aren’t really a second “factor”. The password is something you know, the 2fa is something you have… that “thing” being some software storing another password haha.</p>
+
+<p>Anyway notice how none of this has anything to do with biometrics, contrary to how big companies keep advertising passkeys as a way to log in using your face. When using biometrics, you are simply setting your master password to be a measurement of your face… the same face you walk out into public with for everyone to see… yeah, unless you plan on wearing a ski mask or wiping your fingerprints off everywhere you go, not a great idea for anything important.</p>
+
+<h2 id="choosing-a-password">Choosing a password</h2>
+
+<p>If you are going to be memorizing and typing the password yourself, then choose a list of several random words separated by spaces. For most humans, a single word such as “cat” is easier to remember than “P” or “9”, yet there are thousands of words vs only 26 letters. So words are a more efficient way of storing information in the brain, taking advantage of all the memorization you already did while learning a language. Technically, images and scenes are <a href="https://en.wikipedia.org/wiki/Method_of_loci">even more efficient</a>, but then you’ll have to convert it back into words at some point to type out. With practice, you’ll be able to type out a couple words/second, much faster than random letters or punctuation.</p>
+
+<p>Use simple words you know how to spell. Do not pick obscure words from languages or topics you are unfamiliar with. The two words “heard clear” are easier to remember, faster to type, and contain more entropy than “anthropogenic”. Do not use dashes as separators, this kills your typing speed. Do not try to “trick the attacker” by intentionally adding typos or capitalization. Would you rather remember the exact position and value of 3 typos, or just one more word?</p>
+
+<p>If you are on a phone, it’s probably best to use only numbers. I’ve found that in the same time, I can type either one word on the tiny phone keyboard or 4 digits on the numpad while making far fewer typos.</p>
+
+<p>For passwords you will not be memorizing, just choose a string of 50 random uppercase and lowercase letters, numbers, and symbols for 256 bits of security.</p>
+
+<h2 id="using-passwords-and-passkeys">Using passwords and passkeys</h2>
+
+<p>Passwords and passkeys can be stored in a password manager. You should only be memorizing passwords for devices that can’t (or can’t yet) open a password manager, such as your master password, phone unlock, computer/disk decryption, and maybe physical combination lock codes. You’ll need to back up your database to avoid losing all your passwords, and that might mean storing it in the cloud. Since anyone can try to decrypt your database, you’ll want to have a master password that’s at least 12 words long (128 bits of security). On your device, you can leave most passwords unencrypted and rely on the device unlock code to keep thieves and nosy acquaintances out (biometrics are also fine here), while keeping important passwords encrypted at all times to protect against targeted attacks. For example, on Bitwarden you can create several accounts with different vault timeout settings (do not use the master password reprompt feature!).</p>
+
+<p>Avoid Google, icloud, or other closed-source password/passkey managers. There is no way to verify that these programs are handling your data securely and not just sending everything directly to their server, unencrypted.</p>
+
+<h2 id="conclusionoutro">Conclusion/Outro</h2>
+
+<p>Passkeys are a good security protocol, but pretty much everyone explaining it ends up confusing it with biometrics and advertising Google or Apple’s proprietary password manager. Passphrases are also a good idea that many people misunderstand (see <a href="https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength#People_who_don.27t_understand_information_theory_and_security">here</a> for more examples). And then you get youtubers making fun of bad password rules before proceeding to make similar mistakes themselves (yeah, stick one period in there! They’ll never suspect that!). I got annoyed so I made this post. Hope it clears some things up.</p>]]></content><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><category term="discussion" /><summary type="html"><![CDATA[Note: this post assumes you already know what a password manager is and why you shouldn’t use passwords like “12345” or your date of birth.]]></summary></entry><entry><title type="html">it’s time for higher framerates in films</title><link href="https://birdhome.stellar.afs.ovh/2024/11/26/film-fps.html" rel="alternate" type="text/html" title="it’s time for higher framerates in films" /><published>2024-11-26T00:00:00+00:00</published><updated>2024-11-26T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/11/26/film-fps</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/11/26/film-fps.html"><![CDATA[<p>Pretty much every movie and series is shot at 24 frames per second (approximately). I think it’s time we move to higher framerates.</p>
+
+<h2 id="why">Why</h2>
+
+<p>If the resolution of a video is low, it appears blurry. The same goes for frame rate.</p>
+
+<p>Suppose there is a video of an object at 24 fps. In the time between the frames, the object could have moved elsewhere. If the object doesn’t move or stays near its original position (for example, someone’s mouth as they talk), then it’s not a big problem. But if the object is travelling in a single direction at a moderate speed of 500 pixels/second, then before the next frame is shown, the object will move 500/24=20.8 pixels away. In other words, the picture you see will appear to be up to 20 pixels away from where you expect it to be before snapping into the correct position and then drifting 20 pixels away again, 24 times every second. Blurbusters made a good explanation of this phenomenon <a href="https://blurbusters.com/faq/oled-motion-blur/">here</a>.</p>
+
+<video controls="" loop="" src="/assets/images/afsdeawf.webm"></video>
+
+<p>For example, if you follow the dvd logo in this video with your eyes you will see this:</p>
+
+<video controls="" loop="" src="/assets/images/ophacfuemw2.mp4"></video>
+
+<p>This jittering effect is especially noticeable when the camera is panning and the whole scene moves, making it hard to see anything.</p>
+
+<p>Now that it’s 2024 and we have modern technology, I wish movies would be available in higher framerates. Unfortunately, most people actually PREFER a low framerate for reasons that are hard to empathise with.</p>
+
+<blockquote>
+  <p>Motion blur is intentional</p>
+</blockquote>
+
+<p>Movies can have motion blur added to give a sense of movement. But this blurring is often not enough to bridge the gaps between frames, so the object would still appear to be jittering unnaturally. In addition, this jittering is present in scenes where motion blur is not intended, such as when camera slowly pans across a beautiful landscape.</p>
+
+<blockquote>
+  <p>What about the soap opera effect</p>
+</blockquote>
+
+<p>I don’t know what that is. Actually, I’ve never seen a soap opera before. But like, we don’t see films being shot in black and white today just because progamerXXX’s roblox videos are recorded in color.</p>
+
+<blockquote>
+  <p>High framerate videos are too realistic and don’t feel like movies anymore</p>
+</blockquote>
+
+<p>Today, many people pay for surround sound systems, OLED televisions, and other expensive technology to make the movie feel as realistic/immersive as possible. These movies look very different from the first black and white silent films, unless somebody decides to intentionally add film artifacts, flickering, etc to create that feeling.</p>
+
+<p>Finally, it’s easy to convert high framerate video to a lower framerate, not so much the other way around. You can use <a href="https://github.com/hooke007/MPV_lazy">frame generation with mpv</a> but requires a very powerful graphics card and the results aren’t great.</p>
+
+<blockquote>
+  <p>Can we use backlight strobing?</p>
+</blockquote>
+
+<p>Unfortunately 24hz is just too low. The strobing would be very noticeable and uncomfortable. It would also reduce brightness.</p>
+
+<p>What do you think? Are you fine with 24fps or is it noticeable to you? Let us discuss.</p>]]></content><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><category term="discussion" /><summary type="html"><![CDATA[Pretty much every movie and series is shot at 24 frames per second (approximately). I think it’s time we move to higher framerates.]]></summary></entry><entry><title type="html">Weather Report: Clear Skies (+ New Domain + Early November News)</title><link href="https://birdhome.stellar.afs.ovh/2024/11/01/weather-report.html" rel="alternate" type="text/html" title="Weather Report: Clear Skies (+ New Domain + Early November News)" /><published>2024-11-01T00:00:00+00:00</published><updated>2024-11-01T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/11/01/weather-report</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/11/01/weather-report.html"><![CDATA[<p>Hey everyone, happy <del>September</del> <del>October</del> November. I set up scribe, at <a href="https://scribe.stellar.afs.ovh/">scribe.stellar.afs.ovh</a>. Also, I made a new dark <a href="https://codeberg.org/nieve/private-frontends-manager/src/branch/main/theme-1-piped.css">theme</a> for piped. And now, the weather:</p>
+
+<p>Nieve Space has always been covered by fog and overcast, but today we are 100% cloud-free! That’s right, I did a little dance and blew away the rain. Also, I removed cloudflare tunnel and replaced it with my own tunnel running on a microsoft azure VPS. Now you might be wondering why I removed cloudflare only to use another big corporation, but I don’t have control over my router and would rather not expose my network even if I could forward ports. So that means either using an external datacenter or TOR (as a hidden service). The problem is that cloudflare was the one handling decryption for HTTPS traffic, so it can see everything. In the new setup, TLS is terminated locally, meaning that the Azure server is simply passing along your encrypted HTTPS traffic for decryption on my local machine. Also, I am no longer forced to use cloudflare’s domains or nameserver (DNS).</p>
+
+<p>As for the tunneling software, I initially used <a href="https://boringproxy.io/">boringproxy</a> but unfortunately tunnels were randomly failing and the software often had to be manually restarted. I then looked into <a href="https://github.com/fatedier/frp">frp</a>. Finally, I decided to use <a href="https://github.com/rapiz1/rathole">rathole</a> for its simplicity, reliability, and low resource usage.</p>
+
+<p>I also set up a tunnel for SSH so I can access my server if anything goes wrong while I’m away.</p>
+
+<p>Unfortunately, the VPS costs money, and the revenue of Nieve space comes out to a grand sum of zero. I have enough free azure credit to last for a couple of years, and we’ll see what happens after that. May the sun shine forever.</p>
+
+<p>Speaking of which, what better time to set up a weather station? I created a <a href="https://status.stellar.afs.ovh/status/stellar">status monitor</a> where you can check the uptime and see whether everything’s working.</p>
+
+<h2 id="weird-nitter-issue">Weird nitter issue</h2>
+
+<p>Nitter has a weird <a href="https://github.com/sekai-soft/guide-nitter-self-hosting/issues/13">issue</a> that causes it to break every time the container shuts down ungracefully. I haven’t looked into the code and don’t know how to fix it, but it shouldn’t happen very often. Also Piped has a strange problem with the video player. The video data is still being retrieved, and it’s not getting blocked by youtube; the videos are just not playing. Not to worry, I’ve got a <a href="https://github.com/TeamPiped/Piped/issues/3715">pull request</a> that’ll get things fixed up soon. Also, proxigram is completely broken: <del><a href="https://codeberg.org/proxigram/proxigram/issues/55">#55</a> <a href="https://codeberg.org/proxigram/proxigram/issues/53">#53</a></del> I fixed this too. And proxitok is <a href="https://github.com/pablouser1/ProxiTok/issues/213">not working quite right</a> either 😦.</p>
+
+<h2 id="redlib-filters">Redlib filters</h2>
+
+<p>Redlib now supports <a href="https://github.com/redlib-org/redlib/pull/146">default filters</a>, courtesy of yours truly. We will be making heavy use of this feature on our instance, mostly to block popular subreddits focusing on negativity or suggestive images. Now this might raise several concerns, the first being “Why should you get to decide what content to censor?” but these filters only affect r/popular or r/all, where the posts are already arbitrarily selected by Reddit. What about educating yourself on important political or controversial topics? Sure, but that should be done through conscious research from reputable sources, not some random meme you happen to see while scrolling the frontpage. Of course, you can modify your personal filter list in the settings if you don’t like it.</p>
+
+<p>The full blocklist can be found <a href="https://codeberg.org/nieve/private-frontends-manager/src/branch/main/redlib-blocklist-generator.py">here</a>. Suggestions are welcome.</p>
+
+<p>Breaking news: this post took so long to come out that there is more stuff to talk about.</p>
+
+<h2 id="forever-domain">Forever domain</h2>
+
+<p>We have moved to a new and hopefully permanent address, <a href="https://stellar.afs.ovh">https://stellar.afs.ovh</a>. Technically, the top-level domain is just afs.ovh, but all of nieve space will be under stellar.afs.ovh. I’m not going to worry about having some cool domain name when there is an infinite space of infinite levels of subdomains.</p>
+
+<p>When I was first setting up, I happened to have a 1 year trial on agew.tech. But now I want something more permanent, especially if I decide to share these websites publicly. However, most of the free domain services are shut down and/or untrustworthy, and https://nic.eu.org/ hasn’t responded to my request after half a year. I also had problems with <a href="https://dedyn.io/">dedyn.io</a> (shut down), <a href="https://freedns.afraid.org/">afraid.org</a> (doesn’t allow you to create subdomains), and <a href="https://www.duckdns.org/">duckdns</a> (has <a href="https://community.letsencrypt.org/t/unable-to-create-wildcard-certificate-on-duckdns/190287">problems</a> with ssl certificates). As for paid services, many of them required phone verification or government ID, or some other crap.</p>
+
+<p>So ovh.com was the cheapest place I could find that worked. The domain costs 3$/year which isn’t a lot, but again there is zero revenue.</p>
+
+<h2 id="domestic-video-hosting">Domestic video hosting</h2>
+
+<p>My videos are now hosted locally at <a href="https://vid.stellar.afs.ovh/c/nieve1/videos">https://vid.stellar.afs.ovh/c/nieve1/videos</a>. It’s a good alternative to Youtube without ads or copyright strikes. You can also download the original video in full quality/framerate and leave comments without a google account. I will not be hosting other people’s videos due to the high storage usage.</p>
+
+<h2 id="toothbrush-update">Toothbrush update</h2>
+
+<p>I recently made a post about toothbrushes. I just meant to discuss a cool new invention (partially inspired by the youtube channel <a href="https://www.youtube.com/channel/UCy0tKL1T7wFoYcxCe0xjN6Q">Technology Connections</a>), but looking back, it sounds a bit like a product review or advertisement and doesn’t sit right with me. I will fix it soon; sorry about that.</p>
+
+<p>Some news from the rest of the world:</p>
+
+<h2 id="firefox-adds-vertical-tabs">Firefox adds vertical tabs</h2>
+
+<p>Firefox added an option showing tabs in a vertical list. That means the tabs will be listed in a panel on the side of the browser rather than the top. That’s great; it will make better use of the screen space while fitting in with my vertical taskbar and birdhome’s vertical navigation panel.</p>
+
+<p><del>Except… the top panel (also known as the “chrome”) didn’t get any smaller. There’s still 3 rows: the bookmarks, the address field, and the one with the exit button. But now the sidebar is just taking up more space for nothing. How did that get messed up…</del> They changed it 🙂.</p>
+
+<p>Huh, I guess that’s it. There’s not much news where I have anything unique to add.</p>
+
+<h2 id="personal">Personal</h2>
+
+<p>All the trees suddenly got colorful! I hope you all have gotten a chance to play in the leaves and enjoy the autumn. I’ve been making good progress with my swimming and recently finished learning Rust. I’ve also acquired a tablet and started drawing more. Since it’s all digital, I feel like I’ve been able to draw more comfortably without fear of messing things up.</p>
+
+<p>But to be honest, the last few weeks have been quite stressful, and despite my efforts, I am going through some sad girl times. I’ll keep trying. Maybe I can find something fun to do this weekend, and I hope you do too. See you next time.</p>]]></content><author><name>nieve</name></author><category term="internal-news" /><category term="external-news" /><summary type="html"><![CDATA[Hey everyone, happy September October November. I set up scribe, at scribe.stellar.afs.ovh. Also, I made a new dark theme for piped. And now, the weather:]]></summary></entry><entry><title type="html">Proxy behind a reverse proxy behind a reverse proxy</title><link href="https://birdhome.stellar.afs.ovh/2024/09/27/proxyproxyproxy.html" rel="alternate" type="text/html" title="Proxy behind a reverse proxy behind a reverse proxy" /><published>2024-09-27T00:00:00+00:00</published><updated>2024-09-27T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/09/27/proxyproxyproxy</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/09/27/proxyproxyproxy.html"><![CDATA[<p>As you know, websites like Youtube are a mess, requiring an adblocker, custom filters, and several extensions just to make it usable. So instead you come to me, who retrieves the content and packages it up for you without all the bloat. From Youtube’s perspective, all these requests are coming from my server Pepperbox, reducing the information they can have about you. Essentially, pepperbox is acting as your ✨proxy✨.</p>
+
+<p>But youtube and twitter want individual users who they can track and send ads to, not servers that send a lot of requests. In order to avoid getting blocked, pepperbox must now spread the requests over several of its own proxies. In other words, Piped and Nitter users are a group of users pretending to be an individual pretending to be another group of users. Wonderful.</p>
+
+<p>Youtube might not know who you are, but your IP address is still visible to me. And in order to find my website, you have to know my IP. And our internet service providers can see both of our IPs communicating with each other. So you route your requests through a proxy, and I set up a reverse proxy, which is basically a proxy for the server. And you use your proxy to connect to my reverse proxy, and I connect to your proxy through my reverse proxy. Now you can’t see me, and I can’t see you, and we’re both happy.</p>
+
+<p><img src="/assets/images/2423p0.jpg" alt="proxy reverse proxy" /></p>
+
+<p>If you’re connecting over Tor, you’ll be using a series of 3 proxies instead of a single proxy. And if I decided to host a TOR hidden service, my “reverse proxy” would be another 3 jumps.</p>
+
+<p>That’s not all. In order to access my reverse proxy, you provide my domain to your DNS server, which points you to my reverse proxy’s IP address. Then I forward my reverse proxy’s port 443 over my reverse proxy’s internet service provider, and you connect to that IP and port through you or your proxy’s internet service provider.</p>
+
+<p>There are several services on Pepperbox, each with their own subdomain. And your DNS will point all of them to port 80 of my reverse proxy, which sends all of them to the same port on Pepperbox. All this goes through my second reverse proxy running locally, which reseparates the traffic for each service into their own port.</p>
+
+<p>Actually, some services have multiple subdomains too. For example, Piped has different subdomains for its frontend and backend, all managed by yet another reverse proxy ^v^</p>
+
+<p>So piped is really a proxy behind a reverse proxy. Which is really a proxy behind a proxy behind a reverse proxy. Which is really a proxy behind a proxy behind a reverse proxy behind a reverse proxy…</p>
+
+<p><img src="/assets/images/oacuewifmyso.png" alt="proxyproxyproxy" /></p>
+
+<p>All of this is layer 4 and above. The proxies are connected through a series of routers. And these routers are connected through relays. And the relays are connected through cables. And your router is connected to your network card using ethernet, which then connects with your motherboard and processor through PCIE. All so you can watch this video.</p>
+
+<iframe src="https://piped.stellar.afs.ovh/watch?v=lTonHRerMC4" class="w-full aspect-video" allowfullscreen="">
+</iframe>]]></content><author><name>nieve</name></author><category term="discussion" /><summary type="html"><![CDATA[As you know, websites like Youtube are a mess, requiring an adblocker, custom filters, and several extensions just to make it usable. So instead you come to me, who retrieves the content and packages it up for you without all the bloat. From Youtube’s perspective, all these requests are coming from my server Pepperbox, reducing the information they can have about you. Essentially, pepperbox is acting as your ✨proxy✨.]]></summary></entry><entry><title type="html">I got a new toothbrush</title><link href="https://birdhome.stellar.afs.ovh/2024/09/15/toothbrush.html" rel="alternate" type="text/html" title="I got a new toothbrush" /><published>2024-09-15T00:00:00+00:00</published><updated>2024-09-15T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/09/15/toothbrush</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/09/15/toothbrush.html"><![CDATA[<p><em>Update: I just wanted to discuss a new technology and didn’t mean to advertise any specific product. I edited the post to hopefully have less of that tone. Sorry about that.</em></p>
+
+<p>Toothbrushes are simple devices that haven’t changed much. Companies started increasing the price and adding useless features such as a thousand “whitening”, “massage”, and “deep clean” modes that don’t do anything, or “smart” bluetooth/internet connection so it can <a href="https://piped.stellar.afs.ovh/watch?v=L6vLvpsrAqs">sell your data and get hacked</a>. I wouldn’t be surprised if there are “AI” toothbrushes now that require a phone app and subscription. But aside from all of that, there are actually some interesting and useful ways to improve toothbrushes using modern technology.</p>
+
+<p>Intuitively, one unit of toothbrush area brushing against one unit of tooth area one time = one unit of cleaning, all else being equal. So there are a few obvious ways to improve cleaning: increase the number of brushes, increase the brushing area. You can increase the number of brushes by brushing for longer or using an electric toothbrush, but the toothbrush can’t be too powerful or it will damage your teeth. You can also try changing the toothpaste and brush material/layout and using more force, but it might be hard to come up with anything better that is safe for teeth. Which leaves one option, increasing the area. For some reason, electric toothbrush heads are so tiny, and I wondered if it would be possible to brush several teeth or even use two brushes at once (after all, I have two hands).</p>
+
+<p>So I did some searching and found this brush. It has 3 parts to clean all sides of the teeth at once. How cool is that?</p>
+
+<p><img src="/assets/images/2024-11-01-weather-report/ima_025b8cd.webp" alt="toothbrush" /></p>
+
+<p>In terms of specs, the <a href="https://www.amazon.com/Triple-Bristle-Sonic-Blue-Brush/dp/B09PQP4DSX">brand I got</a> was similar to most other electric toothbrushes, with <a href="https://www.ada.org/resources/ada-library/oral-health-topics/toothbrushes/">soft bristles</a> and 500hz vibration (30000 brushes/minute or 60000 strokes/minute). It’s waterproof for use in the shower. It cost about 40$.</p>
+
+<p>So how well does it work? In my experience, it is fine and doesn’t miss any spots. You’re normally supposed to brush for 2 minutes, so 40 seconds should be enough with 3 sides. In practice I end up brushing for 70-90 seconds when going at a natural speed so the extra cleaning is just a bonus.</p>
+
+<p>But beyond the time saving, it feels nice to use. I only have to use one arm movement for each quadrant of the mouth, and once it’s in position there is less worry about getting the right angle or pressure or missing any spots. It makes brushing much simpler and frees up a little of your mind, especially if you are tired in the morning or night and in a hurry to get to school or work or bed. For people going through mental problems, it mean having motivation to brush at all.</p>
+
+<p>Since less time is spent brushing, the batteries and brush heads also last for longer. The blue indicator lines on mine have yet to fade after 9 months of brushing twice per day.</p>
+
+<p>Anyway, I like it and would recommend looking into unconventional toothbrush shapes and seeing if one works for you. I hope you enjoyed this slightly unusual post. I feel like too much of my blog is about computer software/programming, but that’s because most people use a computer so these topics are relevant to almost everyone. If I share a new website or program I made, it’s easy for you to check it out. Whereas there’s not much for you to discuss or take away from a post about going on vacation or playing a sport. But I do have a few other topics and ideas.</p>
+
+<p>Happy moon festival, folks!</p>]]></content><author><name>nieve</name><email>ppu7haxj@duck.com</email></author><category term="discussion" /><summary type="html"><![CDATA[Update: I just wanted to discuss a new technology and didn’t mean to advertise any specific product. I edited the post to hopefully have less of that tone. Sorry about that.]]></summary></entry><entry><title type="html">August News (Nitter, Proxigram, Decorations, New Matrix Room)</title><link href="https://birdhome.stellar.afs.ovh/2024/08/14/august-news.html" rel="alternate" type="text/html" title="August News (Nitter, Proxigram, Decorations, New Matrix Room)" /><published>2024-08-14T00:00:00+00:00</published><updated>2024-08-14T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/08/14/august-news</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/08/14/august-news.html"><![CDATA[<h2 id="site-retheming">Site retheming</h2>
+
+<p>I decorated the website! Do you like it?</p>
+
+<p>Birdhome no longer uses the default Minima theme for Jekyll. While it’s great for quickly setting up blogs, I want to embrace the process of customizing my website and making it look pretty.</p>
+
+<h2 id="nitter">Nitter</h2>
+<p>I’m hosting Nitter, even though it’s technically <a href="https://status.d420.de/rip">discontinued</a> since twitter started requiring an account to see anything. All the more reason to set up my own and contribute to the total bandwidth. It’s public because if only one person is using it and it’s logged in as an account, that’s not very anonymous, is it?</p>
+
+<p>If you use this instance regularly, I would ask you to create a new twitter account yourself and send me the login information to add to our pool (contact info is at the side or bottom of the page). That way, you help increase our capacity and still get to access twitter content without signing in.</p>
+
+<h2 id="proxigram">Proxigram</h2>
+
+<p>There’s also a proxigram instance now, at <a href="https://proxigram.stellar.afs.ovh/">proxigram.stellar.afs.ovh</a>. Some resturants and organizations put all their information on instagram for some reason so now you can see it without an account. Remember how I didn’t understand docker images? Well this time the image was <a href="https://codeberg.org/proxigram/proxigram/issues/42">broken</a>, so I had to build my own. Luckily, it’s easy. From what I understand, I take all the commands I would normally run to start the program and put them in the Dockerfile in a specific format. Here’s a decent tutorial: <a href="https://piped.stellar.afs.ovh/watch?v=gAkwW2tuIqE">Learn Docker in 7 Easy Steps</a>.</p>
+
+<h2 id="switching-to-vscodium">Switching to VSCodium</h2>
+
+<p>I started using <a href="https://vscodium.com/">vscodium</a> instead of vscode because apparently this is the version that’s actually open source. It was easy to switch, I just copied over my extensions from <code class="language-plaintext highlighter-rouge">.vscode/extensions</code> to <code class="language-plaintext highlighter-rouge">.vscode-oss/extensions</code> and my settings from <code class="language-plaintext highlighter-rouge">Code\User</code> to <code class="language-plaintext highlighter-rouge">VSCodium\User</code>. I’m not working on C# so everything worked the same. And yeah, that’s it.</p>
+
+<h2 id="matrix-room">Matrix room</h2>
+
+<p>I set up a <a href="https://matrix.to/#/#duckgalaxy:matrix.org">room</a> on Matrix. You can use it to post comments about the blogs or other related discussion.</p>]]></content><author><name>nieve</name></author><category term="internal-news" /><summary type="html"><![CDATA[Site retheming]]></summary></entry><entry><title type="html">Pepperbox is born</title><link href="https://birdhome.stellar.afs.ovh/2024/08/03/pepperbox-birth.html" rel="alternate" type="text/html" title="Pepperbox is born" /><published>2024-08-03T00:00:00+00:00</published><updated>2024-08-03T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/08/03/pepperbox-birth</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/08/03/pepperbox-birth.html"><![CDATA[<p>After months of incubation inside a virtual machine, Pepperbox now runs on its own dedicated hardware! With 2 old processor cores, 8gB of memory, and 256gB of storage, it’s not the most impressive system, but on the bright side it does have its own <del>battery</del> uninterruptible power supply. And hey, how much memory did you have as a baby?</p>
+
+<p>By the way, my server is called Pepperbox because when I was installing linux I set my user account name to <code class="language-plaintext highlighter-rouge">pepper</code> and then Virtualbox automatically appended <code class="language-plaintext highlighter-rouge">box</code> to it as the name of the system.</p>
+
+<blockquote>
+  <p>Does that mean you’re going to start using linux regularly now</p>
+</blockquote>
+
+<p>Nope. Linux’s drivers for the touchpad are still considerably worse than microsoft precision drivers, and touchscreen support is even worse.</p>
+
+<p>With its own body, Pepperbox can have much higher uptime and won’t be taking up my video memory if I want to run a big neural network. It’ll also no longer be a <a href="https://piped.stellar.afs.ovh/watch?v=PivpCKEiQOQ&amp;t=0">container of containers</a>.</p>
+
+<p>More updates to come. Y’all have a good day now.</p>]]></content><author><name>nieve</name></author><category term="internal-news" /><summary type="html"><![CDATA[After months of incubation inside a virtual machine, Pepperbox now runs on its own dedicated hardware! With 2 old processor cores, 8gB of memory, and 256gB of storage, it’s not the most impressive system, but on the bright side it does have its own battery uninterruptible power supply. And hey, how much memory did you have as a baby?]]></summary></entry><entry><title type="html">Climb To Heaven Part 1: Small Transfinite Ordinals</title><link href="https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html" rel="alternate" type="text/html" title="Climb To Heaven Part 1: Small Transfinite Ordinals" /><published>2024-07-11T00:00:00+00:00</published><updated>2024-07-11T00:00:00+00:00</updated><id>https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1</id><content type="html" xml:base="https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html"><![CDATA[<p>Lets try to find the largest number we can.</p>
+
+<h2 id="zero">Zero</h2>
+<p>A good starting place. The largest number we have so far.</p>
+
+<h2 id="one">One</h2>
+<p>A good way to get large numbers is to take a number we’ve already found, apply some kind of function, and hopefully get something bigger. This will be our strategy for the majority of this post.</p>
+
+<p>Here’s an example of one such function:</p>
+
+\[s(x)=x+1\]
+
+<p>Also known as the successor function, it takes a number \(x\) and returns a bigger number \(f(x)\). Now lets try our fancy new function out:</p>
+
+\[s(0)=1\]
+
+<p>Just as intended, we now have the number 2, a bigger number than what we had before. Lets try doing it again:</p>
+
+\[s(s(0))=f(1)=2\]
+
+\[s(s(s(0)))=3\]
+
+\[s(s(s(s(0))))=4\]
+
+<p>…</p>
+
+<p>As you can see, we can just keep applying this function as much as we want and get bigger and bigger numbers forever. The end.</p>
+
+<h2 id="infinity">Infinity</h2>
+
+<p>…Or maybe not. Just because we can keep making our number bigger doesn’t necessarily mean we can get a number that is any size we want. It’s possible to have a number we will never reach. In the ordinals, that number is \(\omega\) and it comes after any number in the sequence \(1,s(1),s(s(1)),...\)</p>
+
+<p>This behaviour can be found in real life as well. For example, students in a class might be sorted by name and then age. In that case, it doesn’t matter if Alice is older than the universe itself, she will always come before Bob.</p>
+
+<p>Anyway, now that we have \(\omega\), we can apply \(s\) again and get \(s(\omega)\), then \(s(s(\omega)),s(s(s(\omega))),...\).</p>
+
+<p>But then we get stuck again. And here’s the thing with transfinite ordinals, unlike the finite ordinals: if we just keep applying the same function over and over, we will eventually get stuck. In order to represent numbers beyond, we will have be more creative. There are several approaches to what to do next.</p>
+
+<h3 id="option-1-define-a-new-symbol">Option 1: define a new symbol</h3>
+
+<p>Like we did before, we can just define a new ordinal. Let the first ordinal after \(s(s(\omega)),s(s(s(\omega))),...\) to be \(\omega_2\). Then we get \(s(\omega_2),s(s(\omega_2)),...\), and let the first one after that be \(\omega_3\). And if we keep doing this we get \(\omega_4,\omega_5,...\omega_{\omega},w_{w+1},w_{w_1},w_{w_{w_1}},...\) and we are stuck again. So lets call the first one after that \(a_1\). Then we get \(a_2,a_3,...a_w,a_{w_w},a_a,a_{a_a}\). Then we can define another ordinal \(b_1\). And so on…</p>
+
+<p>This process takes a lot of definitions and can be hard to think about. So lets look for another way.</p>
+
+<h3 id="option-2-arrays">Option 2: Arrays</h3>
+
+<p>We can add a second term, and every time the first term reaches infinity, increase the second by one.</p>
+
+<p>Let \(s(s(s(...(0)...)))=(1,0), (1,s(s(s(...))))=(2,0), (2,s(...))=(3,0)\)</p>
+
+<p>Then when the second term reaches infinity, add a third term.</p>
+
+\[(s(s(...)),0)=(1,0,0)\]
+
+<p>and so on.</p>
+
+<h3 id="option-3-ordinal-expressions">Option 3: ordinal expressions</h3>
+<p>The same way \(S(0)=0+1\), we can call \(S(w)=w+1,S(S(w))=w+2,S(S(S(w)))=w+3\), and the next one after \(S(S(...))=w+1+1+...=w+w=w2\). By the way, the first ordinal after a series of ordinals is the suprenum of that series. So \(\sup(w,w+1,w+2,...)=w2\). Then</p>
+
+<p>\(\sup(w2,w2+1,w2+2...)=w3\),</p>
+
+<p>\(\sup(w,w2,w3...)=w^2\),</p>
+
+<p>\(\sup(w^2,w^22,w^23,...)=w^3\),</p>
+
+<p>and \(\sup(w,w^2,w^3,...)=w^w\).</p>
+
+<p>Then we can keep going, \(\sup(w^w,w^w2,...)=w^ww=w^{w+1}, \sup(w^{w},w^{w+1},w^{w+2},...)=w^{w^2},\sup(w^w,w^{w^2},...)=w^{w^w}\), and so on.</p>
+
+<p>This method feels like a natural way to write it, since we are familiar with operators such as addition, multiplication, exponentiation in everyday arithmetic.</p>
+
+<p>Comparison of these methods:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>New Variables</th>
+      <th>Arrays</th>
+      <th>Expressions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w\)</td>
+      <td>(1,0)</td>
+      <td>\(w=w^{w^0}\)</td>
+    </tr>
+    <tr>
+      <td>\(w_2\)</td>
+      <td>(2,0)</td>
+      <td>\(w2\)</td>
+    </tr>
+    <tr>
+      <td>\(w_w\)</td>
+      <td>(1,0,0)</td>
+      <td>\(w^2\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{w_{w+1}+2}+3\)</td>
+      <td>(1,1,2,3)</td>
+      <td>\(w^3+w^2+2w+3\)</td>
+    </tr>
+    <tr>
+      <td>\(a_1\)</td>
+      <td>(1,0,…)</td>
+      <td>\(w^w=w^{w^1}\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{a+1}\)</td>
+      <td> </td>
+      <td>\(w^w+w\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{w_{a+1}}\)</td>
+      <td> </td>
+      <td>\(w^w+w^2\)</td>
+    </tr>
+    <tr>
+      <td>\(a_2\)</td>
+      <td> </td>
+      <td>\(w^w2\)</td>
+    </tr>
+    <tr>
+      <td>\(a_w\)</td>
+      <td> </td>
+      <td>\(w^{w+1}\)</td>
+    </tr>
+    <tr>
+      <td>\(a_a\)</td>
+      <td> </td>
+      <td>\(w^{w2}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_1\)</td>
+      <td> </td>
+      <td>\(w^{w^2}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_w\)</td>
+      <td> </td>
+      <td>\(w^{w^2+1}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_b\)</td>
+      <td> </td>
+      <td>\(w^{w^22}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_{b_{b_{...}}}\)</td>
+      <td> </td>
+      <td>\(w^{w^3}\)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>\(w^{w^w}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All those \(a,w_a,a_{a_a},b_b\) symbols seemed confusing before, but now it’s as clear as day.</p>
+
+<h2 id="repetition">Repetition</h2>
+
+<p>The same way multiplication is like repeated addition and exponentiation is like repeated multiplication, we can have a fourth operation <code class="language-plaintext highlighter-rouge">tetration</code> that represents repeated exponentiation, and then a fifth operation representing repeated tetration, and so on. Lets call the nth operation \(*^n\).</p>
+
+<p>So using this notation, \(w^{w^{w^{...}}}=w*^4w=w*^52\).</p>
+
+\[\underbrace{w+w+w+...}_{w}=w^2\]
+
+\[\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}w=w^w\]
+
+\[\underbrace{\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}\right\}...}_w=w*^4 w\]
+
+<p>Starting from \(s(x)=x+1\), we took advantage of our intution about everyday arithmetic to get expressions like \(w,w+1,w2,w^2,w^w\). What if we started with \(s(x)=x+w\) instead? Then \(2_{s(x)=x+w}=s(s(0))=w+w=w2\) And \(w_{s(x)=x+w}=w+w+...=w^2\). So by changing the \(s\) function, we can represent larger ordinals using the same expression.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(x+1\)</th>
+      <th>\(x+w\)</th>
+      <th>\(xw\)</th>
+      <th>\(w^x\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w\)</td>
+      <td>\(1\)</td>
+      <td>\(1\)</td>
+      <td>\(1\)</td>
+    </tr>
+    <tr>
+      <td>\(w2\)</td>
+      <td>\(2\)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^2\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^3\)</td>
+      <td>\(w^2\)</td>
+      <td>\(3\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^w\)</td>
+      <td>\(w^{w+1}\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+    </tr>
+    <tr>
+      <td>\(w^{w2}\)</td>
+      <td>\(\)</td>
+      <td>\(w2\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^{w^w}\)</td>
+      <td>\(\)</td>
+      <td>\(w^w\)</td>
+      <td>\(3\)</td>
+    </tr>
+    <tr>
+      <td>\(w^{w^{w^{...}}}\)</td>
+      <td> </td>
+      <td> </td>
+      <td>\(w\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w+1)\)</td>
+      <td> </td>
+      <td> </td>
+      <td>\(w+1\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Starting with 1 and \(w\), the ordinal \(x_{s(x)=x+w}=xw\), and \(xw_{s(x)=xw}=w^x\). You can see the pattern here, we are generating a higher level operator every time.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(x+1\)</th>
+      <th>\(w^x\)</th>
+      <th>\(w*^4x\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w*^4w=w*^52\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w+1)\)</td>
+      <td>\(w+1\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w^w)\)</td>
+      <td>\(w^w\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w*^4w*^4w=w*^53\)</td>
+      <td>\(w*^4w\)</td>
+      <td>\(3\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^5 w\)</td>
+      <td> </td>
+      <td>\(w\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To get a better feel for these ordinals, you can watch <a href="https://youtube.com/watch?v=SrU9YDoXE88">How To Count Past Infinity</a> by Vsauce.</p>
+
+<h3 id="back-to-the-finite">Back to the finite</h3>
+
+<p>Although it is possible to keep adding 1 to get any finite number, in reality we have limited patience to write stuff. We can use same techniques to represent very big finite numbers using less space. For example, there are 8,000,000,000 humans on earth. Instead of writing all those zeros, we can use a log scale, where \(log(1)=0\) and \(log(x+1)=10x\). Then \(8000000000=9.903_{s(x)=10x}\). Going further, \(10*^410=\underbrace{10^{10^{10^{...}}}}_{10}\), a large number indeed.</p>
+
+<p>Further reading:</p>
+
+<p><a href="https://youtube.com/watch?v=SrU9YDoXE88">How To Count Past Infinity</a> by Vsauce</p>
+
+<p><a href="https://waitbutwhy.com/2014/11/1000000-grahams-number.html">From 1,000,000 to Graham’s Number</a> by Tim Urban</p>
+<ul>
+  <li>Notice that a string of \(n\) arrows \(\underbrace{\uparrow\uparrow ...}_n\) is equivalent to \(*^{n+2}\).</li>
+</ul>
+
+<p><a href="https://youtube.com/playlist?list=PLt5AfwLFPxWKZEG7KVg6HfdN2uWFLIB5q&amp;cbrd=1">Graham’s Number on Numberphile</a> by Numberphile</p>
+
+<p><a href="https://youtube.com/watch?v=RJS3Z2DYEO4">Beyond Infinity Number Comparison</a> by Reigarw Comparisons</p>
+<ul>
+  <li>Everything after graham’s number is wrong</li>
+</ul>
+
+<p><a href="https://youtube.com/watch?v=5hfkzo_ojGE">Ultimate Large Numbers List 2024 - The Biggest Numbers Ever!!!</a> by Douglas Shamlin Jr.</p>
+<ul>
+  <li>up to 1:06:10, stuff after that will be covered in part 2</li>
+  <li>Also, this video is so slow, it might be best to skip around and/or watch at 6-10x speed…</li>
+</ul>
+
+<p><a href="https://youtube.com/watch?v=b-Bb_TyhC1A">The Search for the Longest Infinite Chess Game</a></p>]]></content><author><name>nieve</name></author><category term="discussion" /><summary type="html"><![CDATA[Lets try to find the largest number we can.]]></summary></entry></feed>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Climb To Heaven Part 1: Small Transfinite Ordinals | Birdhome</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Climb To Heaven Part 1: Small Transfinite Ordinals" />
+<meta name="author" content="nieve" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lets try to find the largest number we can." />
+<meta property="og:description" content="Lets try to find the largest number we can." />
+<link rel="canonical" href="https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html" />
+<meta property="og:url" content="https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html" />
+<meta property="og:site_name" content="Birdhome" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Climb To Heaven Part 1: Small Transfinite Ordinals" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"nieve"},"dateModified":"2024-07-11T00:00:00+00:00","datePublished":"2024-07-11T00:00:00+00:00","description":"Lets try to find the largest number we can.","headline":"Climb To Heaven Part 1: Small Transfinite Ordinals","mainEntityOfPage":{"@type":"WebPage","@id":"https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html"},"url":"https://birdhome.stellar.afs.ovh/2024/07/11/climb-to-heaven-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://birdhome.stellar.afs.ovh/feed.xml" title="Birdhome" /><link rel="stylesheet" href=/assets/css/main.css type="text/css">
+  <script src="//unpkg.com/alpinejs" defer></script> 
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body class="flex flex-col">
+  <div class="absolute -z-10 w-1/6 right-0 top-0">
+    <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/03eb2460745a2a7adf50c3a45985c3be-818976456-right.webp" class="hidden dark:block ">
+  </div>
+  <div class="absolute -z-10 w-1/6 left-0 top-0">
+    <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/03eb2460745a2a7adf50c3a45985c3be-818976456-left.webp" class="hidden dark:block ">
+  </div>
+  <div class="grow">
+    <div class="flex max-lg:flex-col flex-row gap-2.5 justify-center">
+      <div class="container1">
+<header class="site-header  w-44 max-lg:w-full lg:h-full"><nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between h-full">
+    <a class="text-2xl dark:text-amber-400" rel="author" href="/">Birdhome</a>
+    <input type="checkbox" id="nav-trigger" class="hidden" />
+    <label for="nav-trigger" class="sm:hidden">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path
+            d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+        </svg>
+      </span>
+    </label>
+    <div class="trigger flex flex-col max-lg:flex-row max-lg:gap-4 max-lg:flex-wrap max-sm:hidden max-sm:flex-col max-sm:absolute right-3 top-10"><a class="text-lg header" href="/blog">Blog</a><a class="text-lg header" href="/lookout">Map</a><a class="text-lg header" href="/credits">Credits</a><a class="text-lg header" href="/images">Images</a><a class="text-lg header" href="/coding">Coding</a><a class="text-lg header" href="/art">Art</a><a class="text-lg header" href="/algorithm">Algorithm</a><a class="text-lg header" href="/music">Music</a></div><div class="max-lg:hidden grow"></div>
+    <div class="max-lg:hidden">
+      <img src="/assets/images/decorations/christmas/transparent-snowflakes-tumblr-3.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/BcaE88bXi-365092411.png" class="hidden dark:block ">
+      
+    </div>
+  </nav></header>
+<style>
+  .site-nav input:checked~.trigger{
+    display:flex;
+  }
+</style></div>
+      <main class="grow max-w-screen-sm container1 mainStyle z-10" aria-label="Content">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header mb-7">
+    <h1 class="post-title p-name" itemprop="name headline">Climb To Heaven Part 1: Small Transfinite Ordinals</h1>
+    <p class="post-meta text-sm textColor2">
+          <a href="/blog#tag-discussion">discussion</a>
+        |<time class="dt-published" datetime="2024-07-11T00:00:00+00:00" itemprop="datePublished">
+        11 Jul, 2024
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">nieve</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Lets try to find the largest number we can.</p>
+
+<h2 id="zero">Zero</h2>
+<p>A good starting place. The largest number we have so far.</p>
+
+<h2 id="one">One</h2>
+<p>A good way to get large numbers is to take a number we’ve already found, apply some kind of function, and hopefully get something bigger. This will be our strategy for the majority of this post.</p>
+
+<p>Here’s an example of one such function:</p>
+
+\[s(x)=x+1\]
+
+<p>Also known as the successor function, it takes a number \(x\) and returns a bigger number \(f(x)\). Now lets try our fancy new function out:</p>
+
+\[s(0)=1\]
+
+<p>Just as intended, we now have the number 2, a bigger number than what we had before. Lets try doing it again:</p>
+
+\[s(s(0))=f(1)=2\]
+
+\[s(s(s(0)))=3\]
+
+\[s(s(s(s(0))))=4\]
+
+<p>…</p>
+
+<p>As you can see, we can just keep applying this function as much as we want and get bigger and bigger numbers forever. The end.</p>
+
+<h2 id="infinity">Infinity</h2>
+
+<p>…Or maybe not. Just because we can keep making our number bigger doesn’t necessarily mean we can get a number that is any size we want. It’s possible to have a number we will never reach. In the ordinals, that number is \(\omega\) and it comes after any number in the sequence \(1,s(1),s(s(1)),...\)</p>
+
+<p>This behaviour can be found in real life as well. For example, students in a class might be sorted by name and then age. In that case, it doesn’t matter if Alice is older than the universe itself, she will always come before Bob.</p>
+
+<p>Anyway, now that we have \(\omega\), we can apply \(s\) again and get \(s(\omega)\), then \(s(s(\omega)),s(s(s(\omega))),...\).</p>
+
+<p>But then we get stuck again. And here’s the thing with transfinite ordinals, unlike the finite ordinals: if we just keep applying the same function over and over, we will eventually get stuck. In order to represent numbers beyond, we will have be more creative. There are several approaches to what to do next.</p>
+
+<h3 id="option-1-define-a-new-symbol">Option 1: define a new symbol</h3>
+
+<p>Like we did before, we can just define a new ordinal. Let the first ordinal after \(s(s(\omega)),s(s(s(\omega))),...\) to be \(\omega_2\). Then we get \(s(\omega_2),s(s(\omega_2)),...\), and let the first one after that be \(\omega_3\). And if we keep doing this we get \(\omega_4,\omega_5,...\omega_{\omega},w_{w+1},w_{w_1},w_{w_{w_1}},...\) and we are stuck again. So lets call the first one after that \(a_1\). Then we get \(a_2,a_3,...a_w,a_{w_w},a_a,a_{a_a}\). Then we can define another ordinal \(b_1\). And so on…</p>
+
+<p>This process takes a lot of definitions and can be hard to think about. So lets look for another way.</p>
+
+<h3 id="option-2-arrays">Option 2: Arrays</h3>
+
+<p>We can add a second term, and every time the first term reaches infinity, increase the second by one.</p>
+
+<p>Let \(s(s(s(...(0)...)))=(1,0), (1,s(s(s(...))))=(2,0), (2,s(...))=(3,0)\)</p>
+
+<p>Then when the second term reaches infinity, add a third term.</p>
+
+\[(s(s(...)),0)=(1,0,0)\]
+
+<p>and so on.</p>
+
+<h3 id="option-3-ordinal-expressions">Option 3: ordinal expressions</h3>
+<p>The same way \(S(0)=0+1\), we can call \(S(w)=w+1,S(S(w))=w+2,S(S(S(w)))=w+3\), and the next one after \(S(S(...))=w+1+1+...=w+w=w2\). By the way, the first ordinal after a series of ordinals is the suprenum of that series. So \(\sup(w,w+1,w+2,...)=w2\). Then</p>
+
+<p>\(\sup(w2,w2+1,w2+2...)=w3\),</p>
+
+<p>\(\sup(w,w2,w3...)=w^2\),</p>
+
+<p>\(\sup(w^2,w^22,w^23,...)=w^3\),</p>
+
+<p>and \(\sup(w,w^2,w^3,...)=w^w\).</p>
+
+<p>Then we can keep going, \(\sup(w^w,w^w2,...)=w^ww=w^{w+1}, \sup(w^{w},w^{w+1},w^{w+2},...)=w^{w^2},\sup(w^w,w^{w^2},...)=w^{w^w}\), and so on.</p>
+
+<p>This method feels like a natural way to write it, since we are familiar with operators such as addition, multiplication, exponentiation in everyday arithmetic.</p>
+
+<p>Comparison of these methods:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>New Variables</th>
+      <th>Arrays</th>
+      <th>Expressions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w\)</td>
+      <td>(1,0)</td>
+      <td>\(w=w^{w^0}\)</td>
+    </tr>
+    <tr>
+      <td>\(w_2\)</td>
+      <td>(2,0)</td>
+      <td>\(w2\)</td>
+    </tr>
+    <tr>
+      <td>\(w_w\)</td>
+      <td>(1,0,0)</td>
+      <td>\(w^2\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{w_{w+1}+2}+3\)</td>
+      <td>(1,1,2,3)</td>
+      <td>\(w^3+w^2+2w+3\)</td>
+    </tr>
+    <tr>
+      <td>\(a_1\)</td>
+      <td>(1,0,…)</td>
+      <td>\(w^w=w^{w^1}\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{a+1}\)</td>
+      <td> </td>
+      <td>\(w^w+w\)</td>
+    </tr>
+    <tr>
+      <td>\(w_{w_{a+1}}\)</td>
+      <td> </td>
+      <td>\(w^w+w^2\)</td>
+    </tr>
+    <tr>
+      <td>\(a_2\)</td>
+      <td> </td>
+      <td>\(w^w2\)</td>
+    </tr>
+    <tr>
+      <td>\(a_w\)</td>
+      <td> </td>
+      <td>\(w^{w+1}\)</td>
+    </tr>
+    <tr>
+      <td>\(a_a\)</td>
+      <td> </td>
+      <td>\(w^{w2}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_1\)</td>
+      <td> </td>
+      <td>\(w^{w^2}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_w\)</td>
+      <td> </td>
+      <td>\(w^{w^2+1}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_b\)</td>
+      <td> </td>
+      <td>\(w^{w^22}\)</td>
+    </tr>
+    <tr>
+      <td>\(b_{b_{b_{...}}}\)</td>
+      <td> </td>
+      <td>\(w^{w^3}\)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>\(w^{w^w}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All those \(a,w_a,a_{a_a},b_b\) symbols seemed confusing before, but now it’s as clear as day.</p>
+
+<h2 id="repetition">Repetition</h2>
+
+<p>The same way multiplication is like repeated addition and exponentiation is like repeated multiplication, we can have a fourth operation <code class="language-plaintext highlighter-rouge">tetration</code> that represents repeated exponentiation, and then a fifth operation representing repeated tetration, and so on. Lets call the nth operation \(*^n\).</p>
+
+<p>So using this notation, \(w^{w^{w^{...}}}=w*^4w=w*^52\).</p>
+
+\[\underbrace{w+w+w+...}_{w}=w^2\]
+
+\[\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}w=w^w\]
+
+\[\underbrace{\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}}\right\}\left.\underbrace{w+w+w+...}_{\underbrace{w+w+w+...}_{...}}\right\}...}_w=w*^4 w\]
+
+<p>Starting from \(s(x)=x+1\), we took advantage of our intution about everyday arithmetic to get expressions like \(w,w+1,w2,w^2,w^w\). What if we started with \(s(x)=x+w\) instead? Then \(2_{s(x)=x+w}=s(s(0))=w+w=w2\) And \(w_{s(x)=x+w}=w+w+...=w^2\). So by changing the \(s\) function, we can represent larger ordinals using the same expression.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(x+1\)</th>
+      <th>\(x+w\)</th>
+      <th>\(xw\)</th>
+      <th>\(w^x\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w\)</td>
+      <td>\(1\)</td>
+      <td>\(1\)</td>
+      <td>\(1\)</td>
+    </tr>
+    <tr>
+      <td>\(w2\)</td>
+      <td>\(2\)</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^2\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^3\)</td>
+      <td>\(w^2\)</td>
+      <td>\(3\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^w\)</td>
+      <td>\(w^{w+1}\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+    </tr>
+    <tr>
+      <td>\(w^{w2}\)</td>
+      <td>\(\)</td>
+      <td>\(w2\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w^{w^w}\)</td>
+      <td>\(\)</td>
+      <td>\(w^w\)</td>
+      <td>\(3\)</td>
+    </tr>
+    <tr>
+      <td>\(w^{w^{w^{...}}}\)</td>
+      <td> </td>
+      <td> </td>
+      <td>\(w\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w+1)\)</td>
+      <td> </td>
+      <td> </td>
+      <td>\(w+1\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Starting with 1 and \(w\), the ordinal \(x_{s(x)=x+w}=xw\), and \(xw_{s(x)=xw}=w^x\). You can see the pattern here, we are generating a higher level operator every time.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(x+1\)</th>
+      <th>\(w^x\)</th>
+      <th>\(w*^4x\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(w*^4w=w*^52\)</td>
+      <td>\(w\)</td>
+      <td>\(2\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w+1)\)</td>
+      <td>\(w+1\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w*^4(w^w)\)</td>
+      <td>\(w^w\)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>\(w*^4w*^4w=w*^53\)</td>
+      <td>\(w*^4w\)</td>
+      <td>\(3\)</td>
+    </tr>
+    <tr>
+      <td>\(w*^5 w\)</td>
+      <td> </td>
+      <td>\(w\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To get a better feel for these ordinals, you can watch <a href="https://youtube.com/watch?v=SrU9YDoXE88">How To Count Past Infinity</a> by Vsauce.</p>
+
+<h3 id="back-to-the-finite">Back to the finite</h3>
+
+<p>Although it is possible to keep adding 1 to get any finite number, in reality we have limited patience to write stuff. We can use same techniques to represent very big finite numbers using less space. For example, there are 8,000,000,000 humans on earth. Instead of writing all those zeros, we can use a log scale, where \(log(1)=0\) and \(log(x+1)=10x\). Then \(8000000000=9.903_{s(x)=10x}\). Going further, \(10*^410=\underbrace{10^{10^{10^{...}}}}_{10}\), a large number indeed.</p>
+
+<p>Further reading:</p>
+
+<p><a href="https://youtube.com/watch?v=SrU9YDoXE88">How To Count Past Infinity</a> by Vsauce</p>
+
+<p><a href="https://waitbutwhy.com/2014/11/1000000-grahams-number.html">From 1,000,000 to Graham’s Number</a> by Tim Urban</p>
+<ul>
+  <li>Notice that a string of \(n\) arrows \(\underbrace{\uparrow\uparrow ...}_n\) is equivalent to \(*^{n+2}\).</li>
+</ul>
+
+<p><a href="https://youtube.com/playlist?list=PLt5AfwLFPxWKZEG7KVg6HfdN2uWFLIB5q&amp;cbrd=1">Graham’s Number on Numberphile</a> by Numberphile</p>
+
+<p><a href="https://youtube.com/watch?v=RJS3Z2DYEO4">Beyond Infinity Number Comparison</a> by Reigarw Comparisons</p>
+<ul>
+  <li>Everything after graham’s number is wrong</li>
+</ul>
+
+<p><a href="https://youtube.com/watch?v=5hfkzo_ojGE">Ultimate Large Numbers List 2024 - The Biggest Numbers Ever!!!</a> by Douglas Shamlin Jr.</p>
+<ul>
+  <li>up to 1:06:10, stuff after that will be covered in part 2</li>
+  <li>Also, this video is so slow, it might be best to skip around and/or watch at 6-10x speed…</li>
+</ul>
+
+<p><a href="https://youtube.com/watch?v=b-Bb_TyhC1A">The Search for the Longest Infinite Chess Game</a></p>
+
+  </div>
+  
+  
+  <a class="u-url" href="/2024/07/11/climb-to-heaven-1.html" hidden></a>
+</article>
+</main>
+      <footer class="container1 w-64 flex flex-col gap-2.5 max-lg:w-full max-lg:flex-row flex-wrap max-lg:justify-evenly">
+  <p class="feed-subscribe textColor">
+    <a href="https://birdhome.stellar.afs.ovh/feed.xml">
+      <svg class="inline w-5 h-5 fill-current">
+        <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+      </svg> Subscribe
+    </a>
+  </p>
+  <div>
+    <h2 class="header2">Contact</h2>
+    <ul class="contact-list mb-1">
+      <li><a class="u-matrix link" href="https://matrix.to/#/@alnvyuitw34:matrix.org">@alnvyuitw34:matrix.org</a></li>
+      <li><a class="u-email link" href="mailto:ppu7haxj@duck.com">ppu7haxj@duck.com</a></li>
+    </ul>
+    <div class="social-links"><div class="flex flex-wrap gap-2.5">
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2FlMAI_ct62DZ8LSS5w-TtWG4G8pT1kVr_%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAbhB6mjf8jT0GO3m5eqLEgRLZ7THEJRcnmXiKn-7aDHc%253D%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion" target="_blank" title="simplex">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#simplex"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://codeberg.org/nieve" target="_blank" title="codeberg">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#codeberg"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://github.com/ac615223s5" target="_blank" title="github">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://www.youtube.com/channel/UCm8GhQcqqMeWz67SiMgCwTQ" target="_blank" title="youtube">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#youtube"></use>
+  </svg>
+</a></div>
+</div>
+  </div>
+  <div class="max-lg:w-full">
+    <div class="max-lg:max-w-32 max-lg:mx-auto">
+      <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/christmas-balls-clip-art-7-2634342209.webp" class="hidden dark:block ">
+    </div>
+  </div>
+  <div class="grow"></div>
+  <div class="max-lg:w-full justify-center">
+    <img src="/assets/images/decorations/christmas/pngtree-snowy-house-vector-png-image_12147036.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/ab22dcc508d6b94604c05883e77d7bed.png" class="hidden dark:block ">
+</div>
+</footer>
+    </div>
+  </div>
+  <div class="main-snow">
+    <div class="initial-snow">
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+    </div>
+  </div>
+</body>
+<style>
+  @media (prefers-color-scheme: light) {
+    html {
+      cursor: url(/assets/images/decorations/christmas/cookie-run-frost-queen-cookie-and-staff-pointer.png), auto;
+      min-height: 100vh;
+    }
+    a{
+      cursor: url(/assets/images/decorations/christmas/cookie-run-frost-queen-cookie-and-staff-cursor.png), auto;
+    }
+  }
+    
+
+	@keyframes snowfall {
+		0% {
+			transform: translate3d(var(--left-ini), 0, 0);
+		}
+
+		100% {
+			transform: translate3d(var(--left-end), 110vh, 0);
+		}
+	}
+	.main-snow {
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		animation: main-loadup 1s forwards linear, main-loadup-bg 10s forwards linear;
+		animation-delay: 7s, 8s;
+		user-select: none;
+		pointer-events: none;
+		
+
+		.initial-snow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.initial-snow > * {
+			font-size: 15px;
+			color: white;
+			position: absolute;
+			top: -5vh;
+		}
+
+		.snow:nth-child(4n) {
+			filter: blur(1px);
+			font-size: 30px;
+		}
+
+		.snow:nth-child(12n) {
+			filter: blur(2px);
+			font-size: 40px;
+			opacity: 0.7;
+		}
+
+		.snow:nth-child(20n) {
+			filter: blur(5px);
+			font-size: 50px;
+			opacity: 0.5;
+		}
+
+		.snow:nth-child(1) {
+			--size: 0.8vw;
+			--left-ini: 0vw;
+			--left-end: -1vw;
+			left: 70vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(2) {
+			--size: 0.2vw;
+			--left-ini: -7vw;
+			--left-end: 10vw;
+			left: 65vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(3) {
+			--size: 1vw;
+			--left-ini: 6vw;
+			--left-end: 6vw;
+			left: 1vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(4) {
+			--size: 0.2vw;
+			--left-ini: -3vw;
+			--left-end: 9vw;
+			left: 88vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(5) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -9vw;
+			left: 74vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(6) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: 1vw;
+			left: 35vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(7) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 27vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(8) {
+			--size: 1vw;
+			--left-ini: -9vw;
+			--left-end: -2vw;
+			left: 69vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(9) {
+			--size: 0.2vw;
+			--left-ini: -1vw;
+			--left-end: -5vw;
+			left: 84vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(10) {
+			--size: 0.2vw;
+			--left-ini: 7vw;
+			--left-end: -9vw;
+			left: 82vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(11) {
+			--size: 0.6vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 48vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(12) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: 6vw;
+			left: 39vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(13) {
+			--size: 0.2vw;
+			--left-ini: 6vw;
+			--left-end: 5vw;
+			left: 3vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(14) {
+			--size: 0.8vw;
+			--left-ini: -5vw;
+			--left-end: -2vw;
+			left: 49vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(15) {
+			--size: 0.6vw;
+			--left-ini: 10vw;
+			--left-end: 4vw;
+			left: 77vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(16) {
+			--size: 0.8vw;
+			--left-ini: -3vw;
+			--left-end: 1vw;
+			left: 86vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(17) {
+			--size: 1vw;
+			--left-ini: 6vw;
+			--left-end: -7vw;
+			left: 18vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(18) {
+			--size: 1vw;
+			--left-ini: -9vw;
+			--left-end: 4vw;
+			left: 64vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(19) {
+			--size: 1vw;
+			--left-ini: 2vw;
+			--left-end: -7vw;
+			left: 52vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(20) {
+			--size: 0.4vw;
+			--left-ini: 0vw;
+			--left-end: 8vw;
+			left: 5vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(21) {
+			--size: 0.6vw;
+			--left-ini: -9vw;
+			--left-end: -2vw;
+			left: 10vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(22) {
+			--size: 0.8vw;
+			--left-ini: -3vw;
+			--left-end: -8vw;
+			left: 54vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(23) {
+			--size: 0.6vw;
+			--left-ini: -7vw;
+			--left-end: -8vw;
+			left: 20vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(24) {
+			--size: 0.4vw;
+			--left-ini: 10vw;
+			--left-end: -4vw;
+			left: 68vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(25) {
+			--size: 1vw;
+			--left-ini: 3vw;
+			--left-end: 5vw;
+			left: 90vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(26) {
+			--size: 1vw;
+			--left-ini: -7vw;
+			--left-end: 5vw;
+			left: 71vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(27) {
+			--size: 0.6vw;
+			--left-ini: 9vw;
+			--left-end: 4vw;
+			left: 2vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(28) {
+			--size: 1vw;
+			--left-ini: -5vw;
+			--left-end: 3vw;
+			left: 23vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(29) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 39vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(30) {
+			--size: 0.6vw;
+			--left-ini: -9vw;
+			--left-end: -5vw;
+			left: 76vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(31) {
+			--size: 0.4vw;
+			--left-ini: -5vw;
+			--left-end: 3vw;
+			left: 14vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(32) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: -1vw;
+			left: 86vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(33) {
+			--size: 0.4vw;
+			--left-ini: -3vw;
+			--left-end: 10vw;
+			left: 66vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(34) {
+			--size: 1vw;
+			--left-ini: -3vw;
+			--left-end: 6vw;
+			left: 75vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(35) {
+			--size: 1vw;
+			--left-ini: -6vw;
+			--left-end: 7vw;
+			left: 22vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(36) {
+			--size: 1vw;
+			--left-ini: 3vw;
+			--left-end: 4vw;
+			left: 10vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(37) {
+			--size: 0.6vw;
+			--left-ini: 2vw;
+			--left-end: 10vw;
+			left: 95vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(38) {
+			--size: 0.8vw;
+			--left-ini: 5vw;
+			--left-end: 8vw;
+			left: 34vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(39) {
+			--size: 0.8vw;
+			--left-ini: 4vw;
+			--left-end: 0vw;
+			left: 80vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(40) {
+			--size: 0.8vw;
+			--left-ini: 1vw;
+			--left-end: -7vw;
+			left: 45vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(41) {
+			--size: 0.2vw;
+			--left-ini: 9vw;
+			--left-end: 10vw;
+			left: 82vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(42) {
+			--size: 1vw;
+			--left-ini: 9vw;
+			--left-end: -9vw;
+			left: 22vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(43) {
+			--size: 0.6vw;
+			--left-ini: 5vw;
+			--left-end: 8vw;
+			left: 66vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(44) {
+			--size: 0.6vw;
+			--left-ini: -5vw;
+			--left-end: -2vw;
+			left: 75vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(45) {
+			--size: 0.2vw;
+			--left-ini: 0vw;
+			--left-end: 3vw;
+			left: 2vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(46) {
+			--size: 0.2vw;
+			--left-ini: 8vw;
+			--left-end: -3vw;
+			left: 94vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(47) {
+			--size: 0.6vw;
+			--left-ini: -6vw;
+			--left-end: -9vw;
+			left: 95vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(48) {
+			--size: 0.2vw;
+			--left-ini: -5vw;
+			--left-end: 6vw;
+			left: 34vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(49) {
+			--size: 0.8vw;
+			--left-ini: 4vw;
+			--left-end: 8vw;
+			left: 22vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(50) {
+			--size: 0.2vw;
+			--left-ini: -4vw;
+			--left-end: 4vw;
+			left: 100vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+	}
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: url(/assets/images/decorations/christmas/night_sky_snow-wallpaper-1920x1080.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  }
+</style>
+</html>

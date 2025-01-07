@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Algorithm | Birdhome</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Algorithm" />
+<meta name="author" content="nieve" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://birdhome.stellar.afs.ovh/algorithm" />
+<meta property="og:url" content="https://birdhome.stellar.afs.ovh/algorithm" />
+<meta property="og:site_name" content="Birdhome" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Algorithm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"nieve"},"headline":"Algorithm","url":"https://birdhome.stellar.afs.ovh/algorithm"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://birdhome.stellar.afs.ovh/feed.xml" title="Birdhome" /><link rel="stylesheet" href=/assets/css/main.css type="text/css">
+  <script src="//unpkg.com/alpinejs" defer></script> 
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body class="bg-cover bg-fixed bg-[url(../../assets/images/wp5619857-fantasy-anime-wallpapers.jpg)]">
+    <div class="fixed max-xl:w-screen xl:h-screen z-20 container1 !bg-white/60 dark:bg-indigo-950/60">
+<header class="site-header  w-44 max-lg:w-full lg:h-full"><nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between h-full">
+    <a class="text-2xl dark:text-amber-400" rel="author" href="/">Birdhome</a>
+    <input type="checkbox" id="nav-trigger" class="hidden" />
+    <label for="nav-trigger" class="sm:hidden">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path
+            d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+        </svg>
+      </span>
+    </label>
+    <div class="trigger flex flex-col max-lg:flex-row max-lg:gap-4 max-lg:flex-wrap max-sm:hidden max-sm:flex-col max-sm:absolute right-3 top-10"><a class="text-lg header" href="/blog">Blog</a><a class="text-lg header" href="/lookout">Map</a><a class="text-lg header" href="/credits">Credits</a><a class="text-lg header" href="/images">Images</a><a class="text-lg header" href="/coding">Coding</a><a class="text-lg header" href="/art">Art</a><a class="text-lg header" href="/algorithm">Algorithm</a><a class="text-lg header" href="/music">Music</a></div><div>
+      <a class="header3 block text-" href="#">Top</a>
+      <ul class="list-disc pl-6"><li><a class="link" href="#algorithm-contests">Contests</a></li><li><a class="link" href="#problemsetting">Problemsetting</a></li><li><a class="link" href="#resources">Resources</a></li><li><a class="link" href="#other">Other</a></li></ul>
+    </div><div class="max-lg:hidden grow"></div>
+    <div class="max-lg:hidden">
+      <img src="/assets/images/decorations/christmas/transparent-snowflakes-tumblr-3.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/BcaE88bXi-365092411.png" class="hidden dark:block ">
+      
+    </div>
+  </nav></header>
+<style>
+  .site-nav input:checked~.trigger{
+    display:flex;
+  }
+</style></div>
+    <div class="flex flex-col grow">
+      <div class="coding mb-16">
+        <div class="h-screen bg-[url(../../assets/images/wp5619865-fantasy-anime-wallpapers.jpg)] bg-cover bg-fixed overflow-auto flex items-center justify-center">
+          <div class="grow max-w-screen-sm p-5 bg-white/20 text-black dark:bg-indigo-950/20 dark:text-white text-xl">
+            <h1 class="text-4xl my-7">Algorithm design</h1>
+            <p>Dmoj: <a href="https://dmoj.ca/user/Aaeria" style="color:darkviolet;">Aaeria</a> |
+              Codeforces: <a href="https://codeforces.com/profile/Aaeria" style="color:orange;">Aaeria</a></p>
+            <ol>
+              <li><a class="decoration-inherit !text-inherit" href="#algorithm-contests">Algorithm Contests</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#problemsetting">Problemsetting</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#resources">Resources</a></li>
+              <li><a class="decoration-inherit !text-inherit" href="#other">Other</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="mx-auto md:py-24 md:px-10 max-w-screen-md bg-white shadow-[0_0_10px_0_white] mainStyle" style="margin-top: 150px;">
+          <style>
+  img{
+    display:inline;
+  }
+</style>
+
+<h1 id="algorithm-design-">Algorithm design <img src="/assets/images/orz.gif" alt="" /></h1>
+
+<p>Writing algorithms is one of my hobbies. I first got into it while preparing for school competitions/olympaids and ended up taking classes taught by b<span style="color:red">ruce</span> . After that I did some more problems for fun.</p>
+
+<p><img src="/assets/images/bruc.webp" alt="bruc" /></p>
+
+<h2 id="algorithm-contests">Algorithm Contests</h2>
+
+<div x-data="{highlight:false}">
+  <h3>Notable contests I did</h3>
+  <input type="checkbox" id="showHighlight" x-on:click="highlight=!highlight" />
+  <label for="showHighlight">Extended list (includes some bad contests)</label>
+  
+  <h4>2023</h4>
+  <ul class="">
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/facebook.svg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/certificate/1709445762890453">Facebook Hacker Cup 2023</a> 2023-11-04
+      <p class="!m-0">185 - got triple FST on round 2, messed up B,C,D on round 3, somehow still got top 200</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline">USACO Jan 2023 Platinum</a> 
+      <p class="!m-0">1st - for some reason I didn't appear on the leaderboard</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2022</h4>
+  <ul class="">
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1641/standings/participant/135622538#p135622538">Codeforces Round #773 (Div. 1) (Virtual)</a> 
+      <p class="!m-0">38 (2972 perf)</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc21c10/ranking/#!Aaeria">Canadian Computing Olympiad 2022 Day 2 (mirror)</a> 
+      <p class="!m-0">168 - Solved p6 but missed a single modulus and got WA</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/cco22d1/ranking/#!Aaeria">Canadian Computing Olympiad 2022 Day 1 (mirror)</a> 
+      <p class="!m-0">1</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1685/standings/participant/133661296#p133661296">Codeforces Round #794 (Div. 1)</a> 
+      <p class="!m-0">55 (2937 perf) - rare afternoon round</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1627/standings/participant/129322171#p129322171">Codeforces Round 766 (Div. 2) (Virtual)</a> 
+      <p class="!m-0">40 - did lookcook's round</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2021</h4>
+  <ul class="">
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/google.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codingcompetitions.withgoogle.com/kickstart/round/0000000000435914">Google Kickstart 2021 H</a> 
+      <p class="!m-0">47</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/aac3/ranking/#!Aaeria">An Animal Contest 3</a> 
+      <p class="!m-0">238</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/cpc21c1/ranking/#!Aaeria">CPC '21 Contest 1</a> 
+      <p class="!m-0">74 - solved last 2</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://lit.lhsmathcs.org/scoreboard2021">LIT 2021</a> 
+      <p class="!m-0">10th</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://mbit.mbhs.edu/archive/2021s">mBIT Spring 2021</a> 
+      <p class="!m-0">5th (2nd in high school) - got carried by team</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1528/standings/participant/114430240#p114430240">Codeforces Round #722 (Div. 1)</a> 
+      <p class="!m-0">193rd - Had so much penalty and still half asleep but no fst this time woohoo!</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://www.cemc.uwaterloo.ca/contests/past_contests/2021/2021CCOResults.pdf">Canadian Computing Olympiad 2021D1</a> 
+      <p class="!m-0">5th - problems too hard :blobweary</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc20c4/ranking/#!Aaeria">DMOPC '20 April Contest</a> 
+      <p class="!m-0">7th - Should have solved p5 instead of trying p6</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://whs-resources.github.io/whs-cpt-public/">Westlake High School Competitive Programming Tournament</a> 
+      <p class="!m-0">1st (Team) - some problems had bad data but at least we won</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1458/standings/participant/111220894#p111220894">Codeforces Round #691 (Div. 1) (Virtual)</a> 
+      <p class="!m-0">63rd</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc20c4/ranking/#!Aaeria">DMOPC '20 March Contest</a> 
+      <p class="!m-0">12th</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1491/standings/participant/110909404#p110909404">Codeforces Global Round 13 (Virtual)</a> 
+      <p class="!m-0">327th</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="http://www.usaco.org/current/data/feb20_platinum_results.html">USACO Feb 2021 Platinum</a> 
+      <p class="!m-0">16th - should have done p3 partials instead of going to sleep</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1470/standings/participant/110291644#p110291644">Codeforces Round #694 (Div. 1) (Virtual)</a> 
+      <p class="!m-0">491st</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1477/standings/participant/110252878#p110252878">Codeforces Round #698 (Div. 1) (Virtual)</a> 
+      <p class="!m-0">152nd</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1487/standings/participant/110110189#p110110189">Educational Codeforces Round 104 (Rated for Div. 2) (Virtual)</a> 
+      <p class="!m-0">91st</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1490/standings/participant/110034040#p110034040">Codeforces Round #702 (Div. 3) (Virtual)</a> 
+      <p class="!m-0">253th</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://cemc.uwaterloo.ca/contests/past_contests/CCCResults.pdf">CCC 2021 Senior</a> 
+      <p class="!m-0">1st</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1485/standings/participant/109926892#p109926892">Codeforces Round #701 (Div. 2) (Virtual)</a> 
+      <p class="!m-0">129th</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1479/standings/participant/109511523#p109511523">Codeforces Round #700 (Div. 1) (Virtual)</a> 
+      <p class="!m-0">31st - D was similar to old christmas lights 2</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/appleby20/ranking/#!Aaeria">Appleby Contest '20</a> 
+      <p class="!m-0">9th</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/nccc8s/ranking/#!Aaeria">Mock CCC '21 Senior</a> 
+      <p class="!m-0">6th</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2020</h4>
+  <ul class="">
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1408/standings/participant/103753607#p103753607">Grakn Forces 2020 (virtual)</a> 
+      <p class="!m-0">275</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="htthttps://codeforces.com/contest/1404/standings/participant/102518158#p102518158">Codeforces Round 668 (Div. 1) (virtual)</a> 
+      <p class="!m-0">296</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1407/standings/participant/102462929#p102462929">Codeforces Round 669 (Div. 2) (virtual)</a> 
+      <p class="!m-0">69</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codeforces.com/contest/1406/standings/participant/102455812#p102455812">Codeforces Round 670 (Div. 2) (virtual)</a> 
+      <p class="!m-0">120</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/ioi.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/ioi20d1/ranking/#!Aaeria">2020 International Olympiad in Informatics Day 1 (Mirror)</a> 
+      <p class="!m-0">43rd</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://www.cemc.uwaterloo.ca/contests/past_contests/2020/2020CCOResults.pdf">Canadian Computing Olympiad 2020</a> 
+      <p class="!m-0">11th place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c7/ranking/#!Aaeria">DMOPC '19 April Contest</a> 
+      <p class="!m-0">14th place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://ucccoders.github.io/contest/2020/main.html">2020 UCC Coding Competition</a> 
+      <p class="!m-0">2nd place - Coder of the year lets go!!!</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c6/ranking/#!Aaeria">DMOPC '19 March Contest</a> 
+      <p class="!m-0">18th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/google.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codingcompetitions.withgoogle.com/codejam/round/000000000019ff31">Google CodeJam 2020 2</a> 
+      <p class="!m-0">2060th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/google.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd74">Google CodeJam 2020 1A</a> 
+      <p class="!m-0">1174th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/google.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codingcompetitions.withgoogle.com/codejam/round/000000000019ffc8">Google Kickstart 2020 B</a> 
+      <p class="!m-0">347th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/google.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://codingcompetitions.withgoogle.com/codejam/round/000000000019ffc7">Google Kickstart 2020 A</a> 
+      <p class="!m-0">390th place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="http://www.usaco.org/current/data/feb20_platinum_results.html">USACO Feb 2020 Platinum</a> 
+      <p class="!m-0">148th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="http://www.usaco.org/current/data/feb20_gold_results.html">USACO Feb 2020 Gold</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://www.uwaterloo.ca/contests/past_contests/2020/2020CCCResults.pdf">CCC 2020 Senior</a> 
+      <p class="!m-0">12th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/mockccc2020c1j/ranking/#!Aaeria">Mock CCC '20 Contest 1 Junior</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/mccc2/ranking/#!Aaeria">Mock CCC '20 Contest 2 Senior</a> 
+      <p class="!m-0">13th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/mccc1/ranking/#!Aaeria">Mock CCC '20 Contest 1 Senior</a> 
+      <p class="!m-0">8th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/wac3/ranking/#!Aaeria">Wesley’s Anger Contest 3</a> 
+      <p class="!m-0">16th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="http://www.usaco.org/current/data/jan20_silver_results.html">USACO Jan 2020 Silver</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2019</h4>
+  <ul class="">
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c4/ranking/#!Aaeria">DMOPC '19 December Contest</a> 
+      <p class="!m-0">24th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/usaco.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="http://www.usaco.org/current/data/dec19_bronze_results.html">USACO Dec 2019 Bronze</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/globexcup19s/ranking/#!Aaeria">GlobeX Cup '19 Senior</a> 
+      <p class="!m-0">12th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/globexcup19j/ranking/#!Aaeria">GlobeX Cup '19 Junior</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c3/ranking/#!Aaeria">DMOPC '19 November Contest</a> 
+      <p class="!m-0">21st place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/wac2/ranking/#!Aaeria">Wesley’s Anger Contest 2</a> 
+      <p class="!m-0">14th place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c2/ranking/#!Aaeria">DMOPC '19 October Contest</a> 
+      <p class="!m-0">17th place</p>
+    </li>
+    
+    <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/dmopc19c1/ranking/#!Aaeria">DMOPC '19 September Contest</a> 
+      <p class="!m-0">12th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/bfs19/ranking/#!Darcy___Liu">Back From Summer '19</a> 
+      <p class="!m-0">21st place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://dmoj.ca/contest/acc5/ranking/#!Darcy___Liu">Another Contest 5</a> 
+      <p class="!m-0">13th place</p>
+    </li>
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline">ECOO 2019 round 1-3</a> 
+      <p class="!m-0">don't remember score but it was fun</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2018</h4>
+  <ul class="">
+    
+    <li x-show="highlight" x-transition=""><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline">ECOO 2018 round 1-2</a> 
+      <p class="!m-0">don't remember score but round 1 was fun</p>
+    </li>
+    
+  </ul>
+  
+  <h4>2017</h4>
+  <ul class="">
+    
+    <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 -mb-1 inline" />
+      <a class="underline" href="https://www.cemc.uwaterloo.ca/contests/past_contests/2017/2017CCCResults.pdf">CCC 2017 Junior</a> 
+      <p class="!m-0">1st place</p>
+    </li>
+    
+  </ul>
+  
+</div>
+
+<h3 id="contest-fails">Contest Fails</h3>
+<p>This is really embarrassing…</p>
+<ul class="contestList">
+  
+  <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://codeforces.com/contest/1504/standings/participant/111981305#p111981305">Codeforces Round #712 (Div. 2)</a> 
+    <p class="!m-0">Another round, another fst (at least I'm not a 2nd class citizen on AC server anymore woohoo)</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://dmoj.ca/contest/rccc1/ranking/#!Aaeria">Riolku's Mock CCC</a> 
+    <p class="!m-0">We don't talk about this one.</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://codeforces.com/contest/1481/standings/participant/109419946#p109419946">Codeforces Round #699 (Div. 2) Virtual</a> 
+    <p class="!m-0">We don't talk about this one.</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://dmoj.ca/contest/dmopc20c3/ranking/#!Aaeria">DMOPC '20 January Contest</a> 
+    <p class="!m-0"> Didn't believe my own proof for p3</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/dmoj.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://dmoj.ca/contest/dmopc20c1/ranking/#!Aaeria">DMOPC '20 October Contest</a> 
+    <p class="!m-0">Forgot how to implement classic matrix multiplcation</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://codeforces.com/contest/1422/standings/participant/103395450#p103395450">Codeforces Round #675 (Div. 2)</a> 
+    <p class="!m-0">I'll fst my way to purple if I have to...</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://codeforces.com/contest/1333/standings/participant/48740984#p48740984">Codeforces Round #632 (Div. 2)</a> 
+    <p class="!m-0">Double fst</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/codeforces.png" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://codeforces.com/contest/1417/standings/participant/103093904#p103093904">Codeforces Round #673 (Div. 2)</a> 
+    <p class="!m-0">FSTx2 + tried to bash lct on F</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://www.cemc.uwaterloo.ca/contests/computing/2019/stage%201/2019CCCResults.pdf">CCC 2019 Senior</a> 
+    <p class="!m-0">s3</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/uwaterloo.ico" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="https://www.cemc.uwaterloo.ca/contests/past_contests/2018/2018CCCResults.pdf">CCC 2018 Senior</a> 
+    <p class="!m-0">Used float for S1</p>
+  </li>
+  
+  <li><img src="/assets/images/contest-icons/computer.jpg" class="h-5 w-5 mr-1 -mb-1 inline" />
+    <a class="underline" href="">And many more...</a> 
+    <p class="!m-0"></p>
+  </li>
+  
+</ul>
+
+<h2 id="problemsetting">Problemsetting</h2>
+<p>Contests I set or tested:</p>
+
+<ul>
+  
+  <li><a href="https://codeforces.com/blog/entry/121025">Codeforces Round #902 (Div. 1, Div. 2, based on COMPFEST 15 — Final Round)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/114847">Codeforces Round 865</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/108451">Codeforces Round #831 (Div. 1 + Div. 2, based on COMPFEST 14 Final)</a></li>
+  
+  <li><a href="https://dmoj.ca/contest/dmopc21c1">DMOPC '21 September Contest</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/92392">Canada Day '21 Contest</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/91617">Codeforces Round (Div. 1 + Div. 2)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/88497">Codeforces Round #706</a></li>
+  
+  <li><a href="https://dmoj.ca/contest/utso21">UTS Open '21</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/79620">Codeforces Global Round 9</a></li>
+  
+  <li><a href="https://dmoj.ca/contest/dmopc19c5">DMOPC '19 February Contest</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/115007">Codeforces Round #866 (Div.1, Div.2, based on Lipetsk Team Olympiad)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/113672">Codeforces Round #857 (Div.1, Div.2, based on Moscow Open Olympiad in Informatics, rated)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/104923">Codeforces Round #809 (Div. 2)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/94468">Codeforces Round #742 (Div. 2)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/90194">Codeforces Global Round 14</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/89891">Contest 2050 and Codeforces Round #718 (Div.1 + Div.2)</a></li>
+  
+  <li><a href="https://codeforces.com/blog/entry/88497">Codeforces Round #706</a></li>
+  
+</ul>
+
+<p><a href="https://lucent-brioche-94aab5.netlify.app/tag/637c0df979745a397c4e5a67">List of my problems</a></p>
+
+<p><a href="https://github.com/ac615223s5/programming-contest-resources/tree/main/my%20problems">Bonus problemsetting content</a></p>
+<h2 id="resources">Resources</h2>
+<ul>
+  <li>
+    <h3 id="learning">Learning</h3>
+    <ul>
+      <li><a href="https://usaco.guide/"><strong>USACO guide</strong></a></li>
+      <li>Books:
+        <ul>
+          <li><a href="https://usaco.guide/CPH.pdf"><strong>Competitive Programmer’s Handbook</strong></a> by Antti Laaksonen</li>
+          <li><a href="https://cpbook.net/"><strong>CP3</strong></a></li>
+          <li><a href="https://drive.google.com/file/d/1mVP--DuFX4HAMsN2CjOq3xCL5STZFlkV/view">Introduction to algorithms</a></li>
+        </ul>
+      </li>
+      <li>Codeforces resources:
+        <ul>
+          <li>Wide topic coverage but varying quality</li>
+          <li><a href="https://codeforces.com/blog/entry/23054">Good Blog Post Resources about Algorithm and Data Structures</a></li>
+          <li><a href="https://codeforces.com/blog/entry/57282">All the good tutorials found for Competitive Programming</a></li>
+        </ul>
+      </li>
+      <li>Other
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLl0KD3g-oDOHpWRyyGBUJ9jmul0lUOD80">Algo Lectures</a> by Errichto</li>
+        </ul>
+      </li>
+      <li>
+        <h4 id="particularly-good-explanations-of-topics">Particularly good explanations of topics</h4>
+        <ul>
+          <li>Dominator tree
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=imx06O-cJDA">A&amp;DS S03E04. Dominator Tree</a></li>
+            </ul>
+          </li>
+          <li>Eertree
+            <ul>
+              <li><a href="https://medium.com/@alessiopiergiacomi/eertree-or-palindromic-tree-82453e75025b">Eertree (or palindromic tree)</a></li>
+              <li><a href="https://codeforces.com/blog/entry/74599">Short story about palindromes</a></li>
+            </ul>
+          </li>
+          <li>Bitwise convolution</li>
+          <li>Link cut trees, euler tour trees
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=XZLN6NxEQWo&amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf&amp;index=19&amp;pp=iAQB">19. Dynamic Graphs I</a> by MIT OpenCourseWare</li>
+              <li><a href="https://www.youtube.com/watch?v=L7ywsci9ujo&amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf&amp;index=20&amp;pp=iAQB">20. Dynamic Graphs II</a> by MIT OpenCourseWare</li>
+              <li>MIT video does not do rerooting, learn how to do that after you watch</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="practice">Practice</h3>
+    <ul>
+      <li>Problems
+        <ul>
+          <li><a href="https://herriot.tk/"><strong>Herriot</strong></a> <strong>problem organizer</strong></li>
+          <li><a href="https://github.com/ac615223s5/tle">https://github.com/ac615223s5/tle</a> codeforce bot</li>
+          <li><a href="https://vjudge.net/">https://vjudge.net/</a> alternative submission and judge frontend</li>
+        </ul>
+      </li>
+      <li>Contests
+        <ul>
+          <li><a href="https://atcoder.jp/"><strong>Atcoder</strong></a></li>
+          <li><a href="http://codeforces.com/">Codeforces</a></li>
+          <li><a href="https://clist.by/">clist</a></li>
+          <li><a href="https://dmoj.ca/">dmoj</a></li>
+          <li>do virtual contests if live contests do not fit your schedule</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="how-to-improve">How to improve</h3>
+    <ul>
+      <li>All skill levels
+        <ul>
+          <li>usaco guide</li>
+          <li>Cp handbook/cp3 book</li>
+        </ul>
+      </li>
+      <li>After finishing usaco guide gold (and completing most of the practice problems)
+        <ul>
+          <li>find a set of high quality practice problems and do random problems that are difficult for you
+            <ul>
+              <li>search on herriot</li>
+              <li>gitgud command on tle bot</li>
+              <li>directly searching codeforces or atcoder</li>
+              <li>other problem lists</li>
+            </ul>
+          </li>
+          <li>do contests and virtual contests
+            <ul>
+              <li>codeforces, atcoder</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Once you can solve problems 2100r or harder
+        <ul>
+          <li>read through some of the codeforces blogs and watch interesting videos for more knowledge on advanced algorithms if you want</li>
+          <li>Keep practicing more difficult problems</li>
+        </ul>
+      </li>
+      <li><a href="https://codeforces.com/blog/entry/47516">F.A.Q.</a></li>
+      <li><a href="https://github.com/bqi343/USACO/blob/master/Resources/Questions.md">FAQ part 2</a></li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="tools">Tools</h3>
+    <ul>
+      <li><a href="https://csacademy.com/app/graph_editor/">Graph visualizer</a></li>
+      <li>Algorithm and template implementations:
+        <ul>
+          <li><a href="https://github.com/kth-competitive-programming/kactl">https://github.com/kth-competitive-programming/kactl</a></li>
+          <li><a href="https://github.com/bqi343/USACO">https://github.com/bqi343/USACO</a></li>
+        </ul>
+      </li>
+      <li>Algorithms reference
+        <ul>
+          <li><a href="http://cp-algorithms.com/">http://cp-algorithms.com/</a></li>
+          <li><a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">https://www.geeksforgeeks.org/fundamentals-of-algorithms/</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="other">Other</h2>
+<p><a href="https://github.com/ac615223s5/programming-contest-resources/tree/main/templates">My templates</a></p>
+
+<h3 id="discord-server">Discord Server</h3>
+<p><a href="https://discord.com/invite/VEWFpgPhnz">Join the CCC</a></p>
+
+        </div>
+      </div>
+      <div class="bg-white/80 dark:bg-indigo-950/60 flex justify-center">
+        <footer class="container1 w-64 flex flex-col gap-2.5 max-lg:w-full max-lg:flex-row flex-wrap max-lg:justify-evenly">
+  <p class="feed-subscribe textColor">
+    <a href="https://birdhome.stellar.afs.ovh/feed.xml">
+      <svg class="inline w-5 h-5 fill-current">
+        <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+      </svg> Subscribe
+    </a>
+  </p>
+  <div>
+    <h2 class="header2">Contact</h2>
+    <ul class="contact-list mb-1">
+      <li><a class="u-matrix link" href="https://matrix.to/#/@alnvyuitw34:matrix.org">@alnvyuitw34:matrix.org</a></li>
+      <li><a class="u-email link" href="mailto:ppu7haxj@duck.com">ppu7haxj@duck.com</a></li>
+    </ul>
+    <div class="social-links"><div class="flex flex-wrap gap-2.5">
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2FlMAI_ct62DZ8LSS5w-TtWG4G8pT1kVr_%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAbhB6mjf8jT0GO3m5eqLEgRLZ7THEJRcnmXiKn-7aDHc%253D%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion" target="_blank" title="simplex">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#simplex"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://codeberg.org/nieve" target="_blank" title="codeberg">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#codeberg"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://github.com/ac615223s5" target="_blank" title="github">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://www.youtube.com/channel/UCm8GhQcqqMeWz67SiMgCwTQ" target="_blank" title="youtube">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#youtube"></use>
+  </svg>
+</a></div>
+</div>
+  </div>
+  <div class="max-lg:w-full">
+    <div class="max-lg:max-w-32 max-lg:mx-auto">
+      <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/christmas-balls-clip-art-7-2634342209.webp" class="hidden dark:block ">
+    </div>
+  </div>
+  <div class="grow"></div>
+  <div class="max-lg:w-full justify-center">
+    <img src="/assets/images/decorations/christmas/pngtree-snowy-house-vector-png-image_12147036.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/ab22dcc508d6b94604c05883e77d7bed.png" class="hidden dark:block ">
+</div>
+</footer>
+      </div>
+    </div>
+  </body>
+
+</html>

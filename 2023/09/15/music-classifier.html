@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Music Classification Using Convolutional Neural Network | Birdhome</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Music Classification Using Convolutional Neural Network" />
+<meta name="author" content="nieve" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don’t think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song." />
+<meta property="og:description" content="I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don’t think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song." />
+<link rel="canonical" href="https://birdhome.stellar.afs.ovh/2023/09/15/music-classifier.html" />
+<meta property="og:url" content="https://birdhome.stellar.afs.ovh/2023/09/15/music-classifier.html" />
+<meta property="og:site_name" content="Birdhome" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Music Classification Using Convolutional Neural Network" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"nieve"},"dateModified":"2023-09-15T00:00:00+00:00","datePublished":"2023-09-15T00:00:00+00:00","description":"I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don’t think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song.","headline":"Music Classification Using Convolutional Neural Network","mainEntityOfPage":{"@type":"WebPage","@id":"https://birdhome.stellar.afs.ovh/2023/09/15/music-classifier.html"},"url":"https://birdhome.stellar.afs.ovh/2023/09/15/music-classifier.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="https://birdhome.stellar.afs.ovh/feed.xml" title="Birdhome" /><link rel="stylesheet" href=/assets/css/main.css type="text/css">
+  <script src="//unpkg.com/alpinejs" defer></script> 
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body class="flex flex-col">
+  <div class="absolute -z-10 w-1/6 right-0 top-0">
+    <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/03eb2460745a2a7adf50c3a45985c3be-818976456-right.webp" class="hidden dark:block ">
+  </div>
+  <div class="absolute -z-10 w-1/6 left-0 top-0">
+    <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/03eb2460745a2a7adf50c3a45985c3be-818976456-left.webp" class="hidden dark:block ">
+  </div>
+  <div class="grow">
+    <div class="flex max-lg:flex-col flex-row gap-2.5 justify-center">
+      <div class="container1">
+<header class="site-header  w-44 max-lg:w-full lg:h-full"><nav class="site-nav z-20 flex flex-col gap-3 max-lg:flex-row max-lg:justify-between h-full">
+    <a class="text-2xl dark:text-amber-400" rel="author" href="/">Birdhome</a>
+    <input type="checkbox" id="nav-trigger" class="hidden" />
+    <label for="nav-trigger" class="sm:hidden">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path
+            d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z" />
+        </svg>
+      </span>
+    </label>
+    <div class="trigger flex flex-col max-lg:flex-row max-lg:gap-4 max-lg:flex-wrap max-sm:hidden max-sm:flex-col max-sm:absolute right-3 top-10"><a class="text-lg header" href="/blog">Blog</a><a class="text-lg header" href="/lookout">Map</a><a class="text-lg header" href="/credits">Credits</a><a class="text-lg header" href="/images">Images</a><a class="text-lg header" href="/coding">Coding</a><a class="text-lg header" href="/art">Art</a><a class="text-lg header" href="/algorithm">Algorithm</a><a class="text-lg header" href="/music">Music</a></div><div class="max-lg:hidden grow"></div>
+    <div class="max-lg:hidden">
+      <img src="/assets/images/decorations/christmas/transparent-snowflakes-tumblr-3.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/BcaE88bXi-365092411.png" class="hidden dark:block ">
+      
+    </div>
+  </nav></header>
+<style>
+  .site-nav input:checked~.trigger{
+    display:flex;
+  }
+</style></div>
+      <main class="grow max-w-screen-sm container1 mainStyle z-10" aria-label="Content">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header mb-7">
+    <h1 class="post-title p-name" itemprop="name headline">Music Classification Using Convolutional Neural Network</h1>
+    <p class="post-meta text-sm textColor2">
+          <a href="/blog#tag-writeup">writeup</a>
+        |<time class="dt-published" datetime="2023-09-15T00:00:00+00:00" itemprop="datePublished">
+        15 Sep, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">nieve</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have learned a lot about artificial intelligence recently and wanted to build my own to test my skills. However, like in my previous projects, I wanted to work on an something that would actually be used (I don’t think many real estate agents would be interested in yet another housing price predictor). One of my friends enjoys listening to a lot of music and was lately trying to find some new songs to add to their collection, so eventually I decided to make a personalized music classifier to predict whether or not they will enjoy a song.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Sound is really just waves of pressure through the air, and the audio files we play are digital recordings of how the air pressure changes over time. However, human ears do not directly detect the air pressure. Instead, the ear contains many hairs each detect sound waves of a particular frequency, and the sum of these vibrations is what we hear. Because the program is trying to classify sound according to human characteristics, it makes sense to transform the input features into what humans percieve. This can be done by using the audio signal to creating a spectrogram, which display how intense the vibrations of each frequency are at each point in time.</p>
+
+<p>Next, the data can be classified using artificial intelligence. Convolutional neural networks are a suitable model for this purpose, for the following reasons</p>
+<ul>
+  <li>The input will be a 2 dimensional spectrogram</li>
+  <li>The data should be continuous, as the intensity of two points very close in time or frequency should be nearly the same</li>
+  <li>playing the entire song earlier or later in time does not affect how we percieve the song</li>
+  <li>shifting the frequency of the song by a small amount is also unlikely to affect the listening experience</li>
+</ul>
+
+<p>The model will be built in Python using Pytorch.</p>
+
+<h2 id="obtaining-data">Obtaining Data</h2>
+
+<p>Fortunately, my friend already had a library of about 1000 songs. Also, Youtube kept a convenient history of all previously listened songs. So using <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, I downloaded the full library and about 3000 songs from the history.</p>
+
+<h2 id="cleaning-data">Cleaning data</h2>
+<p>Some of the files were podcasts, song/album compilations, and other undesirable data.
+Luckily, almost all songs had the song title and author provided in the file metadata, so I simply deleted the files without it. I also removed duplicate files with the same title and author, and deleted audio shorter than 1 minute or longer than 5 minutes. Finally, based on the filename (title and author also works), I removed songs from the full history that also appeared in the set of good songs, and chose about 1000 random remaining songs to be the ‘bad’ dataset.</p>
+
+<h2 id="processing-data">Processing data</h2>
+<p>All of the files are then converted to 48khz <code class="language-plaintext highlighter-rouge">.wav</code> format using <a href="https://ffmpeg.org/">ffmpeg</a>. Since wav files do not have compression, the encoding process is very fast.</p>
+
+<p>The files get placed in the ‘data’ folder, sorted by their classification. In this case, the folders are <code class="language-plaintext highlighter-rouge">data/good/</code> and <code class="language-plaintext highlighter-rouge">data/bad/</code>.</p>
+
+<h2 id="processing-data-part-2">Processing data part 2</h2>
+<p>Next, the data will be converted into spectrograms. Pytorch as</p>
+
+<p>First, the data is loaded. At this point, the dataset was over 70GB, much more than the memory on my system. So only filename and classification are stored, while the audio signial will be loaded as needed.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+import torch
+import torchaudio
+from torchaudio import transforms
+import matplotlib.pyplot as plt
+from torch.utils.data import Dataset, DataLoader
+from pathlib import Path
+import math,random
+from IPython.display import Audio
+
+#load data
+def load_audio_files(path: str, label:str):
+
+    dataset = []
+    walker = sorted(str(p) for p in Path(path).glob(f'*.wav'))
+
+    for i, file_path in enumerate(walker):
+        path, filename = os.path.split(file_path)
+    
+        # Load audio
+        #waveform, sample_rate = torchaudio.load(file_path)
+        dataset.append([file_path, label])
+        
+    return dataset
+
+trainset_music_good = load_audio_files('./data/good', 'good')
+trainset_music_bad = load_audio_files('./data/bad', 'bad')
+trainset_music=trainset_music_good+trainset_music_bad
+
+</code></pre></div></div>
+
+<p>The audio for each file is read, converted to single channel, and truncated to 2 minutes (if it is shorter than 2 minutes, it is padded with silence). This is so all the inputs have the same shape, and listening to 2 minutes of a song should be enough to form an opinion on it (my guess). Next, it is converted to a spectrogram. Humans percieve pitch and loudness on a logarithmic scale (for example, doubling a music note increases it by one octave), so a mel spectrogram with a decibel scale is used.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+def open_file(audio_file):
+    waveform, sample_rate = torchaudio.load(audio_file)
+    return (waveform, sample_rate)
+
+#convert stereo to mono to save resources
+def toMono(audio):
+    waveform,s=audio
+    return (waveform[:1,:],s)
+
+def pad_trunc(aud, max_ms):
+    sig, sr = aud
+    num_rows, sig_len = sig.shape
+    max_len = sr//1000 * max_ms
+
+    if (sig_len &gt; max_len):
+        # Truncate the signal to the given length
+        sig = sig[:,:max_len]
+
+    elif (sig_len &lt; max_len):
+        # Length of padding to add at the beginning and end of the signal
+        pad_begin_len = random.randint(0, max_len - sig_len)
+        pad_end_len = max_len - sig_len - pad_begin_len
+
+        # Pad with 0s
+        pad_begin = torch.zeros((num_rows, pad_begin_len))
+        pad_end = torch.zeros((num_rows, pad_end_len))
+
+        sig = torch.cat((pad_begin, sig, pad_end), 1)
+        
+    return (sig, sr)
+
+def spectro_gram(aud, n_mels=512, n_fft=4096, hop_len=None):
+    sig,sr = aud
+    top_db = 80
+
+    # spec has shape [channel, n_mels, time], where channel is mono, stereo etc
+    spec = transforms.MelSpectrogram(sr, n_fft=n_fft, hop_length=hop_len, n_mels=n_mels)(sig)
+
+    # Convert to decibels
+    spec = transforms.AmplitudeToDB(top_db=top_db)(spec)
+    return (spec)
+
+
+for data in trainset_music:
+    filename=data[0]
+    
+    wv=open_file(filename)
+    wv=toMono(wv)
+    wv=pad_trunc(wv,60000*2)
+
+    spec=spectro_gram(wv)
+    spec=spec[0].detach().numpy()
+
+    label=data[1]
+
+    _,filename=os.path.split(filename)
+    filename,_=os.path.splitext(filename)
+
+    plt.imsave(f'./data/spectrograms/{label}/{filename}.png',spec,cmap='gray')
+</code></pre></div></div>
+<p>This conversion took over an hour on my computer. The resulting spectrogram is saved as a file so it does not have to be recalculated every time I train the model.</p>
+
+<p><img src="/assets/images/spectrogram.png" alt="spectrogram" /></p>
+
+<h2 id="training">Training</h2>
+
+<p>The spectrograms are converted back from an image file to a tensor and loaded into a training and testing dataset, with 80% used for training.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data_path = './data/spectrograms' #looking in subfolder train
+dataset = datasets.ImageFolder(root=data_path,transform=transforms.Compose([transforms.Grayscale(),transforms.ToTensor()]))
+class_map=dataset.class_to_idx
+print(class_map)
+
+#split data to test and train
+#use 80% to train
+train_size = int(0.8 * len(dataset))
+test_size = len(dataset) - train_size
+train_dataset, test_dataset = torch.utils.data.random_split(dataset, [train_size, test_size])
+
+print("Training size:", len(train_dataset))
+print("Testing size:",len(test_dataset))
+
+train_dataloader = torch.utils.data.DataLoader(
+    train_dataset,
+    batch_size=15,
+    num_workers=2,
+    shuffle=True
+)
+
+test_dataloader = torch.utils.data.DataLoader(
+    test_dataset,
+    batch_size=50,
+    num_workers=2,
+    shuffle=True
+)
+print(torch.cuda.is_available())
+</code></pre></div></div>
+
+<p>Now it is time to build the model. Initially, I used 4 convolutional layers followed by 2 dense layers.</p>
+
+<p>Compared to image object classification I’ve done before, the spectrograms are very high resolution. I do not want to reduce the initial resolution because it could destroy a lot of data in the sound timbre, and in addition music can sound very bad if the notes are a semitone off (but it’s just my thought process, I am not an expert in sound).</p>
+
+<p>Instead, I used max pooling after the convolutional layers where it has hopefully already extracted the important features.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class CNNet (nn.Module):
+    # ----------------------------
+    # Build the model architecture
+    # ----------------------------
+    def __init__(self):
+        super().__init__()
+        conv_layers = []
+
+        # First Convolution Block with Relu and Batch Norm. Use Kaiming Initialization
+        self.conv1 = nn.Conv2d(1, 8, kernel_size=5)
+        self.relu1 = nn.ReLU()
+        self.bn1 = nn.BatchNorm2d(8)
+        nn.init.kaiming_normal_(self.conv1.weight, a=0.1)
+        self.conv1.bias.data.zero_()
+        conv_layers += [self.conv1, self.relu1,self.bn1]
+
+        # Second Convolution Block
+        self.conv2 = nn.Conv2d(8, 16, kernel_size=3)
+        self.relu2 = nn.ReLU()
+        self.bn2 = nn.BatchNorm2d(16)
+        nn.init.kaiming_normal_(self.conv2.weight, a=0.1)
+        self.conv2.bias.data.zero_()
+        self.drop2 = nn.Dropout2d()
+        self.pool2=nn.MaxPool2d(2)
+        conv_layers += [self.conv2, self.pool2, self.relu2,self.bn2]
+
+        # third Convolution Block
+        self.conv3 = nn.Conv2d(16, 32, kernel_size=3)
+        self.relu3 = nn.ReLU()
+        self.bn3 = nn.BatchNorm2d(32)
+        nn.init.kaiming_normal_(self.conv3.weight, a=0.1)
+        self.conv3.bias.data.zero_()
+        self.drop3 = nn.Dropout2d()
+        self.pool3=nn.MaxPool2d(2)
+        conv_layers += [self.conv3, self.drop3, self.pool3,self.relu3,self.bn3]
+
+        # fourth Convolution Block
+        self.conv4 = nn.Conv2d(32, 64, kernel_size=3)
+        self.relu4 = nn.ReLU()
+        self.bn4 = nn.BatchNorm2d(64)
+        nn.init.kaiming_normal_(self.conv4.weight, a=0.1)
+        self.conv4.bias.data.zero_()
+        self.drop4 = nn.Dropout2d()
+        self.pool4=nn.MaxPool2d(2)
+        conv_layers += [self.conv4, self.drop4, self.pool4,self.relu4,self.bn4]
+
+        # 5 Block
+        self.conv5 = nn.Conv2d(64, 64, kernel_size=3)
+        self.relu5 = nn.ReLU()
+        self.bn5 = nn.BatchNorm2d(64)
+        nn.init.kaiming_normal_(self.conv5.weight, a=0.1)
+        self.conv5.bias.data.zero_()
+        self.drop5 = nn.Dropout2d()
+        self.pool5=nn.MaxPool2d(2)
+        conv_layers += [self.conv5, self.drop5, self.pool5,self.relu5,self.bn5]
+
+        # Block 6
+        self.conv6 = nn.Conv2d(64, 64, kernel_size=3, stride=(2, 2))
+        self.relu6 = nn.ReLU()
+        self.bn6 = nn.BatchNorm2d(64)
+        nn.init.kaiming_normal_(self.conv6.weight, a=0.1)
+        self.conv6.bias.data.zero_()
+        self.drop6 = nn.Dropout2d()
+        self.pool6=nn.MaxPool2d(2)
+        conv_layers += [self.conv6, self.drop6, self.pool6,self.relu6,self.bn6]
+
+        self.flatten=nn.Flatten()
+        # Linear Classifier
+        self.lin1 = nn.Linear(19264,50)
+        self.lin2=nn.Linear(50,2)
+
+        # Wrap the Convolutional Blocks
+        self.conv = nn.Sequential(*conv_layers)
+ 
+    # ----------------------------
+    # Forward pass computations
+    # ----------------------------
+    def forward(self, x):
+        # Run the convolutional blocks
+        x = self.conv(x)
+
+        # Adaptive pool and flatten for input to linear layer
+        x = x.view(x.shape[0], -1)
+        x=self.flatten(x)
+
+        # Linear layer
+        x = F.relu(self.lin1(x))
+        x=self.lin2(x)
+
+        # Final output
+        x=F.log_softmax(x,dim=1)
+        return x
+
+# Create the model and put it on the GPU if available
+myModel = CNNet()
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+myModel = myModel.to(device)
+# Check that it is on Cuda
+next(myModel.parameters()).device
+
+summary(myModel, input_size=(25,1,2813,512))
+</code></pre></div></div>
+
+<p>Training took about 30 minutes on my single Nvidia RTX 3090:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># cost function used to determine best parameters
+cost = torch.nn.CrossEntropyLoss()
+
+# used to create optimal parameters
+learning_rate = 0.0001
+optimizer = torch.optim.Adam(myModel.parameters(), lr=learning_rate)
+
+# Create the training function
+
+def train(dataloader, model, loss, optimizer):
+    model.train()
+    size = len(dataloader.dataset)
+    for batch, (X, Y) in enumerate(dataloader):
+        
+        X, Y = X.to(device), Y.to(device)
+        optimizer.zero_grad()
+        pred = model(X)
+        loss = cost(pred, Y)
+        loss.backward()
+        optimizer.step()
+
+        if batch % 60 == 0:
+            loss, current = loss.item(), batch * len(X)
+            print(f'loss: {loss:&gt;7f}  [{current:&gt;5d}/{size:&gt;5d}]')
+
+
+# Create the validation/test function
+
+def test(dataloader, model):
+    model.eval()
+    test_loss, correct = 0, 0
+
+    with torch.no_grad():
+        for batch, (X, Y) in enumerate(dataloader):
+            X, Y = X.to(device), Y.to(device)
+            pred = model(X)
+
+            test_loss += cost(pred, Y).item()
+            correct += (pred.argmax(1)==Y).type(torch.float).sum().item()
+
+    test_loss /= len(dataloader)
+    correct /= len(dataloader.dataset)
+
+    print(f'\nTest Error:\nacc: {(100*correct):&gt;0.1f}%, avg loss: {test_loss:&gt;8f}\n')
+
+#training
+epochs = 15
+
+for t in range(epochs):
+    print(f'Epoch {t+1}\n-------------------------------')
+    train(train_dataloader, myModel, cost, optimizer)
+    test(test_dataloader, myModel)
+print('Done!')
+</code></pre></div></div>
+
+<p>The training loss quickly approached 0, but the the testing loss did not decrease significantly. At the end, the model had 60% accuracy, barely better than random guessing. So it was clearly overfitting.</p>
+
+<p>I added a dropout layer after every convolutional layer other than the first, and reran the training. This time, the training loss fluctuated highly and sometimes even increased. In the end, both the training and testing performance were not great.
+This was fixed by decreasing the learning rate and increasing the number of training epochs to 25, by which point the process significant slowed down.</p>
+
+<p>I then added more convolutional layers and decreased the learning rate. I also decided to increase the dataset through data augmentation.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+def open_file(audio_file):
+    waveform, sample_rate = torchaudio.load(audio_file)
+    return (waveform, sample_rate)
+
+#convert stereo to mono to save resources
+def toMono(audio):
+    waveform,s=audio
+    return (waveform[:1,:],s)
+
+def pad_trunc(aud, max_ms):
+    sig, sr = aud
+    num_rows, sig_len = sig.shape
+    max_len = sr//1000 * max_ms
+
+    if (sig_len &gt; max_len):
+        # Truncate the signal to the given length
+        sig = sig[:,:max_len]
+
+    elif (sig_len &lt; max_len):
+        # Length of padding to add at the beginning and end of the signal
+        pad_begin_len = random.randint(0, max_len - sig_len)
+        pad_end_len = max_len - sig_len - pad_begin_len
+
+        # Pad with 0s
+        pad_begin = torch.zeros((num_rows, pad_begin_len))
+        pad_end = torch.zeros((num_rows, pad_end_len))
+
+        sig = torch.cat((pad_begin, sig, pad_end), 1)
+        
+    return (sig, sr)
+
+def time_shift(aud, shift_limit):
+    sig,sr = aud
+    _, sig_len = sig.shape
+    shift_amt = int(random.random() * shift_limit * sig_len)
+    return (sig.roll(shift_amt), sr)
+
+def pitch_shift(aud, shift_limit):
+    sig,sr = aud
+    shift_amt = int(random.random() * shift_limit)
+    sig=transforms.PitchShift(sample_rate=sr, n_steps=shift_amt)(sig)
+    return (sig,sr)
+def speed_shift(aud, shift_limit):
+    sig,sr = aud
+    shift_amt = int(random.random() * shift_limit)
+    sig=transforms.Speed(sig,sr, shift_amt)
+    return (sig,sr)
+
+def data_augment(aud):
+    aud=pitch_shift(aud,4)
+    aud=time_shift(aud,0.1)
+    return aud
+def stretch(spec):
+    rate=int(random.random()*0.2)+0.9
+    spec=transforms.TimeStretch(n_freq=512,fixed_rate=rate)(spec)
+    return spec
+
+def spectro_gram(aud, n_mels=512, n_fft=4096, hop_len=None):
+    sig,sr = aud
+    top_db = 80
+
+    # spec has shape [channel, n_mels, time], where channel is mono, stereo etc
+    spec = transforms.MelSpectrogram(sr, n_fft=n_fft, hop_length=hop_len, n_mels=n_mels)(sig)
+
+    # Convert to decibels
+    spec = transforms.AmplitudeToDB(top_db=top_db)(spec)
+    return (spec)
+
+
+for i in range(0,3):
+    for data in trainset_music:
+        filename=data[0]
+        
+        wv=open_file(filename)
+        wv=toMono(wv)
+        wv=pad_trunc(wv,60000*2)
+        if i&gt;0:
+            wv=data_augment(wv)
+        spec=spectro_gram(wv)
+        spec=spec[0].detach().numpy()
+
+        label=data[1]
+
+        _,filename=os.path.split(filename)
+        filename,_=os.path.splitext(filename)
+
+        plt.imsave(f'./data/spectrograms/{label}/{filename}_{i}.png',spec,cmap='gray')
+
+</code></pre></div></div>
+
+<p>There are several ways to augment audio data. First, the audio can be simply shifted in time. The pitch can be slightly adjusted up or down, and the song can be sped up or slowed down by a small factor. For each song, I added two more datapoints by applying a random combination of these 3 transformations.</p>
+
+<p>After these changes, the model finally began learning again. For my final attempt, I increase the training epochs to 50. After training for 2.5 hours, it had a test accuracy of about 88%.</p>
+
+<h2 id="prediction">Prediction</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#predictions
+def predict(data, model):
+    model.eval()
+    test_loss, correct = 0, 0
+    with torch.no_grad():
+        for filename,(X, Y) in zip(data.imgs,data):
+            X.unsqueeze_(-1)
+            X=X.transpose(1,3)
+            X=X.to(device)
+            pred = model(X)
+            pred=pred.argmax(1)
+            print(filename,reverse_class_map[pred])
+            
+
+
+#convert to spectrogram first using data_prep
+inference_dataset = datasets.ImageFolder(root='./data/test/',transform=transforms.Compose([transforms.Grayscale(),transforms.ToTensor()]))
+predict(inference_dataset,myModel)
+
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>It’s possible that one’s taste in music has changed over time, so the earlier datapoints were harmful to the training.</p>
+
+<p>Unfortunately the performance is not as great as I was used to on more standard CNN tasks such as <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a>. In addition, it required a large collection of labeled data on my friend’s music preferences, which many people may not have. Still, after downloading and using the model to filter through some new songs (and listening the remaining ones myself) them I was able make several recommendations my friend enjoyed.</p>
+
+<p><a href="https://github.com/ac615223s5/music-classifier">Source code</a></p>
+
+<h2 id="retraining-for-other-tasks">Retraining for other tasks</h2>
+
+<p>Since I already had all the code written, I wanted to see if the same model could be retrained to work for other sound classification tasks. This time, I found and downloaded a playlist of <a href="https://www.youtube.com/playlist?list=PLCaYobZ79uQrZOWJNbtSPb2vq39LAy_pv">classical music</a> and <a href="https://www.youtube.com/playlist?list=PLa1E0oX0lRB_sbxnVBWYVQj7B3aQwD9Uk">electronic music</a>. The audio was again converted to spectrograms, without data augmentation. I then retrained the model on this data, and it had an accuracy of 99.7%. So that was definitely a success.</p>
+
+  </div>
+  
+  
+  <a class="u-url" href="/2023/09/15/music-classifier.html" hidden></a>
+</article>
+</main>
+      <footer class="container1 w-64 flex flex-col gap-2.5 max-lg:w-full max-lg:flex-row flex-wrap max-lg:justify-evenly">
+  <p class="feed-subscribe textColor">
+    <a href="https://birdhome.stellar.afs.ovh/feed.xml">
+      <svg class="inline w-5 h-5 fill-current">
+        <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+      </svg> Subscribe
+    </a>
+  </p>
+  <div>
+    <h2 class="header2">Contact</h2>
+    <ul class="contact-list mb-1">
+      <li><a class="u-matrix link" href="https://matrix.to/#/@alnvyuitw34:matrix.org">@alnvyuitw34:matrix.org</a></li>
+      <li><a class="u-email link" href="mailto:ppu7haxj@duck.com">ppu7haxj@duck.com</a></li>
+    </ul>
+    <div class="social-links"><div class="flex flex-wrap gap-2.5">
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://simplex.chat/contact#/?v=2-5&smp=smp%3A%2F%2FUkMFNAXLXeAAe0beCa4w6X_zp18PwxSaSjY17BKUGXQ%3D%40smp12.simplex.im%2FlMAI_ct62DZ8LSS5w-TtWG4G8pT1kVr_%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAbhB6mjf8jT0GO3m5eqLEgRLZ7THEJRcnmXiKn-7aDHc%253D%26srv%3Die42b5weq7zdkghocs3mgxdjeuycheeqqmksntj57rmejagmg4eor5yd.onion" target="_blank" title="simplex">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#simplex"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://codeberg.org/nieve" target="_blank" title="codeberg">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#codeberg"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://github.com/ac615223s5" target="_blank" title="github">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#github"></use>
+  </svg>
+</a>
+<a class="inline-block border border-solid border-gray-500 hover:border-black dark:hover:border-white p-2.5" rel="me" href="https://www.youtube.com/channel/UCm8GhQcqqMeWz67SiMgCwTQ" target="_blank" title="youtube">
+  <svg class="w-5 h-5 align-text-bottom text-cyan-900 dark:text-amber-900 fill-current">
+    <use xlink:href="/assets/minima-social-icons.svg#youtube"></use>
+  </svg>
+</a></div>
+</div>
+  </div>
+  <div class="max-lg:w-full">
+    <div class="max-lg:max-w-32 max-lg:mx-auto">
+      <img src="" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/christmas-balls-clip-art-7-2634342209.webp" class="hidden dark:block ">
+    </div>
+  </div>
+  <div class="grow"></div>
+  <div class="max-lg:w-full justify-center">
+    <img src="/assets/images/decorations/christmas/pngtree-snowy-house-vector-png-image_12147036.png" class="dark:hidden ">
+<img src="/assets/images/decorations/christmas/ab22dcc508d6b94604c05883e77d7bed.png" class="hidden dark:block ">
+</div>
+</footer>
+    </div>
+  </div>
+  <div class="main-snow">
+    <div class="initial-snow">
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+      <div class="snow">&#10052;</div>
+    </div>
+  </div>
+</body>
+<style>
+  @media (prefers-color-scheme: light) {
+    html {
+      cursor: url(/assets/images/decorations/christmas/cookie-run-frost-queen-cookie-and-staff-pointer.png), auto;
+      min-height: 100vh;
+    }
+    a{
+      cursor: url(/assets/images/decorations/christmas/cookie-run-frost-queen-cookie-and-staff-cursor.png), auto;
+    }
+  }
+    
+
+	@keyframes snowfall {
+		0% {
+			transform: translate3d(var(--left-ini), 0, 0);
+		}
+
+		100% {
+			transform: translate3d(var(--left-end), 110vh, 0);
+		}
+	}
+	.main-snow {
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		animation: main-loadup 1s forwards linear, main-loadup-bg 10s forwards linear;
+		animation-delay: 7s, 8s;
+		user-select: none;
+		pointer-events: none;
+		
+
+		.initial-snow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.initial-snow > * {
+			font-size: 15px;
+			color: white;
+			position: absolute;
+			top: -5vh;
+		}
+
+		.snow:nth-child(4n) {
+			filter: blur(1px);
+			font-size: 30px;
+		}
+
+		.snow:nth-child(12n) {
+			filter: blur(2px);
+			font-size: 40px;
+			opacity: 0.7;
+		}
+
+		.snow:nth-child(20n) {
+			filter: blur(5px);
+			font-size: 50px;
+			opacity: 0.5;
+		}
+
+		.snow:nth-child(1) {
+			--size: 0.8vw;
+			--left-ini: 0vw;
+			--left-end: -1vw;
+			left: 70vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(2) {
+			--size: 0.2vw;
+			--left-ini: -7vw;
+			--left-end: 10vw;
+			left: 65vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(3) {
+			--size: 1vw;
+			--left-ini: 6vw;
+			--left-end: 6vw;
+			left: 1vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(4) {
+			--size: 0.2vw;
+			--left-ini: -3vw;
+			--left-end: 9vw;
+			left: 88vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(5) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -9vw;
+			left: 74vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(6) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: 1vw;
+			left: 35vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(7) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 27vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(8) {
+			--size: 1vw;
+			--left-ini: -9vw;
+			--left-end: -2vw;
+			left: 69vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(9) {
+			--size: 0.2vw;
+			--left-ini: -1vw;
+			--left-end: -5vw;
+			left: 84vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(10) {
+			--size: 0.2vw;
+			--left-ini: 7vw;
+			--left-end: -9vw;
+			left: 82vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(11) {
+			--size: 0.6vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 48vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(12) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: 6vw;
+			left: 39vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(13) {
+			--size: 0.2vw;
+			--left-ini: 6vw;
+			--left-end: 5vw;
+			left: 3vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(14) {
+			--size: 0.8vw;
+			--left-ini: -5vw;
+			--left-end: -2vw;
+			left: 49vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(15) {
+			--size: 0.6vw;
+			--left-ini: 10vw;
+			--left-end: 4vw;
+			left: 77vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(16) {
+			--size: 0.8vw;
+			--left-ini: -3vw;
+			--left-end: 1vw;
+			left: 86vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(17) {
+			--size: 1vw;
+			--left-ini: 6vw;
+			--left-end: -7vw;
+			left: 18vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(18) {
+			--size: 1vw;
+			--left-ini: -9vw;
+			--left-end: 4vw;
+			left: 64vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -7s;
+		}
+
+		.snow:nth-child(19) {
+			--size: 1vw;
+			--left-ini: 2vw;
+			--left-end: -7vw;
+			left: 52vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(20) {
+			--size: 0.4vw;
+			--left-ini: 0vw;
+			--left-end: 8vw;
+			left: 5vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(21) {
+			--size: 0.6vw;
+			--left-ini: -9vw;
+			--left-end: -2vw;
+			left: 10vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(22) {
+			--size: 0.8vw;
+			--left-ini: -3vw;
+			--left-end: -8vw;
+			left: 54vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(23) {
+			--size: 0.6vw;
+			--left-ini: -7vw;
+			--left-end: -8vw;
+			left: 20vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -3s;
+		}
+
+		.snow:nth-child(24) {
+			--size: 0.4vw;
+			--left-ini: 10vw;
+			--left-end: -4vw;
+			left: 68vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -8s;
+		}
+
+		.snow:nth-child(25) {
+			--size: 1vw;
+			--left-ini: 3vw;
+			--left-end: 5vw;
+			left: 90vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(26) {
+			--size: 1vw;
+			--left-ini: -7vw;
+			--left-end: 5vw;
+			left: 71vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(27) {
+			--size: 0.6vw;
+			--left-ini: 9vw;
+			--left-end: 4vw;
+			left: 2vw;
+			animation: snowfall 15s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(28) {
+			--size: 1vw;
+			--left-ini: -5vw;
+			--left-end: 3vw;
+			left: 23vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(29) {
+			--size: 0.4vw;
+			--left-ini: -2vw;
+			--left-end: -1vw;
+			left: 39vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(30) {
+			--size: 0.6vw;
+			--left-ini: -9vw;
+			--left-end: -5vw;
+			left: 76vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(31) {
+			--size: 0.4vw;
+			--left-ini: -5vw;
+			--left-end: 3vw;
+			left: 14vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(32) {
+			--size: 0.2vw;
+			--left-ini: 5vw;
+			--left-end: -1vw;
+			left: 86vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(33) {
+			--size: 0.4vw;
+			--left-ini: -3vw;
+			--left-end: 10vw;
+			left: 66vw;
+			animation: snowfall 6s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(34) {
+			--size: 1vw;
+			--left-ini: -3vw;
+			--left-end: 6vw;
+			left: 75vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(35) {
+			--size: 1vw;
+			--left-ini: -6vw;
+			--left-end: 7vw;
+			left: 22vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(36) {
+			--size: 1vw;
+			--left-ini: 3vw;
+			--left-end: 4vw;
+			left: 10vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(37) {
+			--size: 0.6vw;
+			--left-ini: 2vw;
+			--left-end: 10vw;
+			left: 95vw;
+			animation: snowfall 13s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(38) {
+			--size: 0.8vw;
+			--left-ini: 5vw;
+			--left-end: 8vw;
+			left: 34vw;
+			animation: snowfall 9s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(39) {
+			--size: 0.8vw;
+			--left-ini: 4vw;
+			--left-end: 0vw;
+			left: 80vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(40) {
+			--size: 0.8vw;
+			--left-ini: 1vw;
+			--left-end: -7vw;
+			left: 45vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(41) {
+			--size: 0.2vw;
+			--left-ini: 9vw;
+			--left-end: 10vw;
+			left: 82vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -2s;
+		}
+
+		.snow:nth-child(42) {
+			--size: 1vw;
+			--left-ini: 9vw;
+			--left-end: -9vw;
+			left: 22vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(43) {
+			--size: 0.6vw;
+			--left-ini: 5vw;
+			--left-end: 8vw;
+			left: 66vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -1s;
+		}
+
+		.snow:nth-child(44) {
+			--size: 0.6vw;
+			--left-ini: -5vw;
+			--left-end: -2vw;
+			left: 75vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(45) {
+			--size: 0.2vw;
+			--left-ini: 0vw;
+			--left-end: 3vw;
+			left: 2vw;
+			animation: snowfall 7s linear infinite;
+			animation-delay: -5s;
+		}
+
+		.snow:nth-child(46) {
+			--size: 0.2vw;
+			--left-ini: 8vw;
+			--left-end: -3vw;
+			left: 94vw;
+			animation: snowfall 8s linear infinite;
+			animation-delay: -9s;
+		}
+
+		.snow:nth-child(47) {
+			--size: 0.6vw;
+			--left-ini: -6vw;
+			--left-end: -9vw;
+			left: 95vw;
+			animation: snowfall 11s linear infinite;
+			animation-delay: -4s;
+		}
+
+		.snow:nth-child(48) {
+			--size: 0.2vw;
+			--left-ini: -5vw;
+			--left-end: 6vw;
+			left: 34vw;
+			animation: snowfall 10s linear infinite;
+			animation-delay: -6s;
+		}
+
+		.snow:nth-child(49) {
+			--size: 0.8vw;
+			--left-ini: 4vw;
+			--left-end: 8vw;
+			left: 22vw;
+			animation: snowfall 12s linear infinite;
+			animation-delay: -10s;
+		}
+
+		.snow:nth-child(50) {
+			--size: 0.2vw;
+			--left-ini: -4vw;
+			--left-end: 4vw;
+			left: 100vw;
+			animation: snowfall 14s linear infinite;
+			animation-delay: -9s;
+		}
+	}
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: url(/assets/images/decorations/christmas/night_sky_snow-wallpaper-1920x1080.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  }
+</style>
+</html>
