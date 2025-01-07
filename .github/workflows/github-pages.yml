@@ -6,7 +6,7 @@ name: Build and deploy this site to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - christmas
 
 jobs:
   github-pages:
