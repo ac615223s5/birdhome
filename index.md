@@ -43,7 +43,7 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
   </div>
 </div>
 <div class="-mb-3 flex justify-center">
-  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/Firefly-PNG-High-Quality-Image.png"%}
+  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/christmas/sparkling-2025-new-year-celebration-with-fiery-golden-sparkler-light-trails-black-background_174533-96715.png"%}
 </div>
 
 <style>
