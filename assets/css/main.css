@@ -11,7 +11,7 @@
 }
 
 ::selection{
-  @apply bg-pink-300 dark:bg-amber-950;
+  @apply bg-cyan-300 dark:bg-amber-950;
 }
 :root{
   scrollbar-color: rgb(219 39 119 / 1) transparent;
@@ -24,23 +24,23 @@
 }
 
 body {
-  @apply bg-pink-50;
+  @apply bg-cyan-100;
 }
 
 .container1 {
-  @apply bg-pink-100 dark:bg-stone-800 p-3 border border-solid border-pink-300 dark:border-0;
+  @apply bg-cyan-50 dark:bg-stone-800 p-3 border border-solid border-white dark:border-0;
 }
 
 .link {
-  @apply text-pink-600 dark:text-amber-300;
+  @apply text-cyan-600 dark:text-amber-300;
 }
 
 .headerColor{
-  @apply text-pink-900 dark:text-amber-600;
+  @apply text-cyan-900 dark:text-amber-600;
 }
 
 .textColor {
-  @apply text-pink-950 dark:text-white;
+  @apply text-cyan-950 dark:text-white;
 }
 
 .header {
@@ -48,11 +48,11 @@ body {
 }
 
 .header2 {
-  @apply font-bold bg-pink-200 px-1 dark:bg-amber-950 headerColor;
+  @apply font-bold bg-cyan-200 px-1 dark:bg-amber-950 headerColor;
 }
 
 .header3 {
-  @apply font-semibold headerColor text-right border-b border-solid border-pink-900;
+  @apply font-semibold headerColor text-right border-b border-solid border-cyan-900;
 }
 
 @media not all and (min-width: 640px) {
@@ -124,7 +124,7 @@ body {
 
   code,
   pre {
-    @apply border border-solid border-pink-300;
+    @apply border border-solid border-cyan-300;
     font-family: Menlo, Inconsolata, Consolas, Roboto Mono, Ubuntu Mono, Liberation Mono, Courier New, monospace;
     @apply text-sm;
   }
@@ -151,7 +151,7 @@ body {
   .highlighter-rouge .highlight,
   code,
   pre {
-    @apply bg-pink-200 dark:bg-black;
+    @apply bg-cyan-200 dark:bg-black;
   }
 
   ul {
@@ -168,7 +168,7 @@ body {
   }
 
   table {
-    @apply border border-solid border-pink-300 dark:border-black;
+    @apply border border-solid border-cyan-300 dark:border-black;
     /*border-collapse:collapse;*/
     @apply mb-7 w-full overflow-x-auto;
     @apply text-left;
@@ -177,7 +177,7 @@ body {
     @apply  dark:bg-stone-800;
   }
   table tr:nth-child(2n) {
-    @apply bg-pink-50 dark:bg-stone-900;
+    @apply bg-cyan-50 dark:bg-stone-900;
   }
 
   table td,
@@ -186,11 +186,11 @@ body {
   }
 
   table th {
-    @apply bg-pink-200 dark:bg-black;
+    @apply bg-cyan-200 dark:bg-black;
   }
 
   table td, table th {
-    @apply border border-solid border-pink-300 dark:border-black;
+    @apply border border-solid border-cyan-300 dark:border-black;
   }
 
   @media screen and (max-width:800px) {

@@ -1,24 +1,21 @@
 ---
 layout: base 
 ---
-<div class="flex">
-  <div markdown="1" class="grow">
+<div markdown="1" class="relative">
 # Welcome to Birdhome!
 
 Enjoy your stay
-
-  </div>
-  <div class="w-2/5 -ml-2">
-    {%include themed-image.html src1="/assets/images/light/q9ykpqwrzesoi81rtvvkpfs9quey-3115486997.png" src2="/assets/images/decorations/christmas/christmas_garland_right.png"%}
-  </div>
-
+<div class="w-4/5 -ml-2 absolute top-0 right-0 -z-10">
+  {%include themed-image.html src1="/assets/images/decorations/christmas/snow-transparent-background-11.png" src2="/assets/images/decorations/christmas/christmas_garland_right.png"%}
 </div>
+
+<div class="spacer h-32"></div>
 
 {%include divider1.html%}
 
 <div class="flex gap-2.5">
   <div class="h-40">
-    {%include themed-image.html src1="/assets/images/light/birdsbasket-1232019815.png" src2="/assets/images/decorations/christmas/pngtree-christmas-mistletoe-with-berry-png-image_13669817-3658153765.png"%}
+    {%include themed-image.html src1="/assets/images/decorations/christmas/cute-baby-penguin-illustration-vector.png" src2="/assets/images/decorations/christmas/Fireworks-PNG-HD-2278837964.png"%}
   </div>
   <div markdown="1" class="grow">
 ## About
@@ -30,6 +27,7 @@ I'm Nieve and this is my website.
 
 {%include divider1.html%}
 
+</div>
 ## Contact
 
 <div class="flex gap-2.5">
@@ -43,7 +41,7 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
   </div>
 </div>
 <div class="-mb-3 flex justify-center">
-  {%include themed-image.html src1="/assets/images/light/wild-flowers-field-border-sketch-hand-drawn-vector-illustration_666729-531.png" src2="/assets/images/decorations/christmas/sparkling-2025-new-year-celebration-with-fiery-golden-sparkler-light-trails-black-background_174533-96715.png"%}
+  {%include themed-image.html src1="" src2="/assets/images/decorations/christmas/sparkling-2025-new-year-celebration-with-fiery-golden-sparkler-light-trails-black-background_174533-96715.png"%}
 </div>
 
 <style>
