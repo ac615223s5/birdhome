@@ -1,5 +1,5 @@
 ---
-title: November Sysadmin confusion (I hate email)
+title: Sysadmin confusion (I hate email)
 tags: internal-news
 comments: 
 ---
