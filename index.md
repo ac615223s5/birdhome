@@ -5,11 +5,11 @@ layout: base
 # Welcome to Birdhome!
 
 Enjoy your stay
-<div class="w-4/5 -ml-2 absolute top-0 right-0 -z-10">
+<div class="w-4/5 dark:w-2/5 -ml-2 absolute top-0 right-0 -z-10">
   {%include themed-image.html src1="/assets/images/decorations/christmas/snow-transparent-background-11.png" src2="/assets/images/decorations/christmas/christmas_garland_right.png"%}
 </div>
 
-<div class="spacer h-32"></div>
+<div class="spacer h-32 dark:hidden"></div>
 
 {%include divider1.html%}
 
